@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+<html lang="en" dir="rtl">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+
+	<!-- Title -->
+	<title>login</title>
+
+<!-- Favicon -->
+<link rel="icon" href="{{ url_for('static', filename='assets/img/brand/favicon.png') }}" type="image/x-icon">
+
+<!-- styles code -->
+
+<!-- Bootstrap css -->
+<link href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet" id="style">
+
+<!-- Style css -->
+<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='assets/css/plugins.css') }}" rel="stylesheet">
+
+<!-- Font css -->
+<link href="{{ url_for('static', filename='assets/font/Morabba/fontiran.css') }}" rel="stylesheet">
+
+<!-- Icons css -->
+<link href="{{ url_for('static', filename='assets/css/icons.css') }}" rel="stylesheet">
+
+<!-- Animations css -->
+<link href="{{ url_for('static', filename='assets/css/animate.css') }}" rel="stylesheet">
+
+<!-- Optional Bootstrap RTL (if needed) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.rtl.min.css') }}">
+
+</head>
+
+
+<body class="app sidebar-mini ltr login-img">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+
+	<div class="square-box">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<!-- page -->
+	<div class="page login-img">
+		<!-- main-signin-wrapper -->
+		<div class="">
+			<div class="my-auto page page-h">
+				<div class="main-signin-wrapper">
+					<div class="w-full">
+						<div class="login-form">
+							<div class="login-image">
+								<a href="/">
+									<img src="../static/assets/img/brand/logo-white.png" class="h-8" alt="">
+								</a>
+							</div>
+							<div class="login-form-box">
+								<div class="main-signin-header">
+									<div>
+										<h2>خوش آمدید!</h2>
+										<h4>برای ورود یا ثبت‌نام شماره موبایل خود را وارد کنید</h4>
+									</div>
+									<form id="sms-login-form" action="#" onsubmit="return false;">
+										<div class="form-group">
+											<label>شماره موبایل</label>
+											<input id="mobile-input" class="form-control"
+												placeholder="شماره موبایل خود را وارد کنید" type="text" maxlength="11"
+												required>
+										</div>
+										<div id="otp-section" style="display:none;">
+											<div class="form-group">
+												<label>کد تایید پیامک شده</label>
+												<input id="otp-input" class="form-control"
+													placeholder="کد تایید را وارد کنید" type="text" maxlength="6"
+													required>
+											</div>
+											<button id="resend-btn" type="button" class="btn btn-link"
+												style="padding:0;display:inline;" disabled>ارسال مجدد کد <span
+													id="timer">60</span></button>
+										</div>
+										<div id="new-user-section" style="display:none;">
+											<div class="form-group">
+												<label>نام</label>
+												<input id="first-name-input" class="form-control"
+													placeholder="نام خود را وارد کنید" type="text" required>
+											</div>
+											<div class="form-group">
+												<label>نام خانوادگی</label>
+												<input id="last-name-input" class="form-control"
+													placeholder="نام خانوادگی خود را وارد کنید" type="text" required>
+											</div>
+										</div>
+
+										<!-- چک‌باکس قوانین با مدال -->
+										<div class="form-group mb-3">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="acceptRules" required>
+												<label class="form-check-label" for="acceptRules">
+													من <a href="#" data-bs-toggle="modal" data-bs-target="#rulesModal">قوانین و شرایط</a> را خوانده‌ام و قبول دارم.
+												</label>
+												<div id="rules-error" class="error-message">لطفا قوانین را بپذیرید.</div>
+											</div>
+										</div>
+
+										<button id="submit-btn" class="btn btn-min btn-secondary btn-block btn-orange-hover me-2"
+											type="submit">ادامه
+										</button>
+
+										<!-- Rules Modal -->
+										<div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-scrollable">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="rulesModalLabel">قوانین و شرایط استفاده</h5>
+														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+													</div>
+													<div class="modal-body" style="text-align: right;">
+														<h3>قوانین و مقررات استفاده از سامانه آیکال (Aykal)</h3>
+														<p>با ورود و استفاده از سامانه آیکال، شما به‌عنوان کاربر تمامی مفاد این توافق‌نامه را مطالعه نموده، پذیرفته و به آن متعهد می‌شوید.</p>
+														
+														<ol>
+															<li class="section-title">مسئولیت استفاده از خدمات</li>
+															<ul>
+																<li>کلیه خدمات ارائه‌شده در آیکال صرفاً با مسئولیت شخصی کاربر مورد استفاده قرار می‌گیرد.</li>
+																<li>سامانه آیکال هیچ‌گونه تعهدی نسبت به عملکرد آینده اکانت‌های کاربران در پلتفرم‌های ثالث (از جمله احتمال تعلیق، بن یا محدودسازی دسترسی) نداشته و کاربر با آگاهی کامل از این احتمال، اقدام به استفاده از خدمات می‌نماید.</li>
+															</ul>
+
+															<li class="section-title">قطع خدمات یا تغییر شرایط</li>
+															<ul>
+																<li>آیکال در هر زمان حق تغییر، محدودسازی یا قطع موقت یا دائم هر یک از خدمات خود را بدون اطلاع قبلی محفوظ می‌دارد.</li>
+																<li>همچنین در صورت شناسایی تخلف از شرایط اعلام‌شده یا سیاست‌های استفاده منصفانه، دسترسی کاربر می‌تواند بدون هشدار قبلی لغو شود.</li>
+															</ul>
+
+															<li class="section-title">سلب مسئولیت</li>
+															<ul>
+																<li>آیکال تحت هیچ شرایطی در قبال خسارات مستقیم یا غیرمستقیم، از جمله تعلیق یا بن شدن اکانت کاربر در سایر پلتفرم‌ها، مسئول نخواهد بود.</li>
+																<li>کاربر با پذیرش این شرایط، صراحتاً حق هرگونه ادعا، شکایت یا پیگیری قانونی در این زمینه را از خود سلب می‌نماید.</li>
+															</ul>
+
+															<li class="section-title">تأیید نهایی</li>
+															<ul>
+																<li>با ثبت‌نام، ورود یا استفاده از خدمات سامانه آیکال، کاربر تأیید می‌کند که این شرایط را به‌دقت مطالعه کرده و بدون هیچ قید و شرطی پذیرفته است.</li>
+															</ul>
+														</ol>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</form>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- End Page -->
+
+	<!-- scripts code -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/assets/js/eva-icons.min.js"></script>
+    <script src="../static/assets/js/custom.js"></script>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+
+
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script> <!-- End scripts -->
+    <script>
+        document.getElementById('resend-btn').addEventListener('click', function () {
+            let phone_number = document.getElementById('mobile-input').value;
+            let code = document.getElementById('otp-input').value;
+            if (phone_number) {
+                if (phone_number_regex.test(phone_number) && !code) {
+                    fetch('/api/check_phone', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            phone: phone_number
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Server says:', data);
+                        if (data.status == '1') {
+                            startTimer();
+                            document.getElementById('otp-section').style.display = 'block';
+                        } else {
+                            alert('خطا: ');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error contacting server:', error);
+                        alert('مشکلی پیش آمده است');
+                    });
+                } else if (phone_number && code) {
+                    fetch('/api/check_code', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            phone: phone_number,
+                            vcode: code
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Server says:', data);
+                        if (data.redirect_url) {
+                            window.location.href = data.redirect_url;
+                        } else if (data.error) {
+                            alert(data.error);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error contacting server:', error);
+                        alert('مشکلی پیش آمده است');
+                    });
+                } else {
+                    console.log('Number is not ok');
+                    alert('شماره موبایل معتبر نیست');
+                }
+            }
+        });
+
+        function startTimer() {
+            let timer = 60;
+            document.getElementById('resend-btn').disabled = true;
+            document.getElementById('timer').innerText = timer;
+            let timerInterval = setInterval(() => {
+                timer--;
+                document.getElementById('timer').innerText = timer;
+                if (timer <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('resend-btn').disabled = false;
+                    document.getElementById('timer').innerText = '';
+                }
+            }, 1000);
+        }
+
+        const phone_number_regex = /^09\d{9}$/;
+
+        function checker(event) {
+            event.preventDefault();
+            let phone_number = document.getElementById('mobile-input').value;
+            let code = document.getElementById('otp-input').value;
+            let acceptRules = document.getElementById('acceptRules').checked;
+            let rulesError = document.getElementById('rules-error');
+
+            // Check if the rules checkbox is checked
+            if (!acceptRules) {
+                rulesError.style.display = 'block';
+                return;
+            } else {
+                rulesError.style.display = 'none';
+            }
+
+            if (phone_number) {
+                if (phone_number_regex.test(phone_number) && !code) {
+                    fetch('/api/check_phone', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            phone: phone_number
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Server says:', data);
+                        if (data.status == '1') {
+                            startTimer();
+                            document.getElementById('otp-section').style.display = 'block';
+                        } else {
+                            alert('خطا: ');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error contacting server:', error);
+                        alert('مشکلی پیش آمده است');
+                    });
+                } else if (phone_number && code) {
+                    fetch('/api/check_code', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            phone: phone_number,
+                            vcode: code
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Server says:', data);
+                        if (data.redirect_url) {
+                            window.location.href = data.redirect_url;
+                        } else if (data.error) {
+                            alert(data.error);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error contacting server:', error);
+                        alert('مشکلی پیش آمده است');
+                    });
+                } else {
+                    console.log('Number is not ok');
+                    alert('شماره موبایل معتبر نیست');
+                }
+            }
+        }
+
+        const button = document.getElementById('submit-btn');
+        button.addEventListener('click', checker);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const hiddenInputs = document.querySelectorAll('#otp-section input, #new-user-section input');
+            hiddenInputs.forEach(input => {
+                input.removeAttribute('required');
+            });
+
+            // Ensure error message is hidden by default
+            document.getElementById('rules-error').style.display = 'none';
+        });
+    </script>
+
+	<!-- <script>
+	document.getElementById('resend-btn').addEventListener('click', function () {
+		let phone_number = document.getElementById('mobile-input').value;
+		let code = document.getElementById('otp-input').value;
+		if (phone_number) {
+			if (phone_number_regex.test(phone_number) && ! code) {
+				// Send request to your API
+
+				fetch('/api/check_phone', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						phone: phone_number
+					})
+				})
+				.then(response => response.json())
+				.then(data => {
+					console.log('Server says:', data);
+					if (data.status=='1') {
+						startTimer();
+						document.getElementById('otp-section').style.display = 'block';
+					} else {
+						alert('خطا: ' );
+					}
+				})
+				.catch(error => {
+					console.error('Error contacting server:', error);
+					alert('مشکلی پیش آمده است');
+				});
+			} 
+			else if(phone_number && code){
+				fetch('/api/check_code', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						phone: phone_number,
+						vcode:code
+					})
+				})
+				.then(response => response.json())
+				.then(data => {
+					console.log('Server says:', data);
+					if (data.redirect_url) {
+						window.location.href = data.redirect_url;  // Redirect user
+					} else if (data.error) {
+						alert(data.error); // Show error message
+					}
+				})
+				.catch(error => {
+					console.error('Error contacting server:', error);
+					alert('مشکلی پیش آمده است');
+				});
+			}
+			else {
+				console.log('Number is not ok');
+				alert('شماره موبایل معتبر نیست');
+			}
+		}
+	
+		});
+	function startTimer() {
+			timer = 60;
+			document.getElementById('resend-btn').disabled = true;
+			document.getElementById('timer').innerText = timer;
+			timerInterval = setInterval(() => {
+				timer--;
+				document.getElementById('timer').innerText = timer;
+				if (timer <= 0) {
+					clearInterval(timerInterval);
+					document.getElementById('resend-btn').disabled = false;
+					document.getElementById('timer').innerText = '';
+				}
+			}, 1000);
+		}
+	const phone_number_regex = /^09\d{9}$/;	
+	function checker(event){
+		event.preventDefault(); // Don't let the form reload the page
+	
+		let phone_number = document.getElementById('mobile-input').value;
+		let code = document.getElementById('otp-input').value;
+		if (phone_number) {
+			if (phone_number_regex.test(phone_number) && ! code) {
+				// Send request to your API
+
+				fetch('/api/check_phone', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						phone: phone_number
+					})
+				})
+				.then(response => response.json())
+				.then(data => {
+					console.log('Server says:', data);
+					if (data.status=='1') {
+						startTimer();
+						document.getElementById('otp-section').style.display = 'block';
+					} else {
+						alert('خطا: ' );
+					}
+				})
+				.catch(error => {
+					console.error('Error contacting server:', error);
+					alert('مشکلی پیش آمده است');
+				});
+			} 
+			else if(phone_number && code){
+				fetch('/api/check_code', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						phone: phone_number,
+						vcode:code
+					})
+				})
+				.then(response => response.json())
+				.then(data => {
+					console.log('Server says:', data);
+					if (data.redirect_url) {
+						window.location.href = data.redirect_url;  // Redirect user
+					} else if (data.error) {
+						alert(data.error); // Show error message
+					}
+				})
+				.catch(error => {
+					console.error('Error contacting server:', error);
+					alert('مشکلی پیش آمده است');
+				});
+			}
+			else {
+				console.log('Number is not ok');
+				alert('شماره موبایل معتبر نیست');
+			}
+		}
+	}
+	const button = document.getElementById('submit-btn');
+	//main register
+	button.addEventListener('click',checker);
+	// Remove required from hidden inputs
+	document.addEventListener('DOMContentLoaded', function() {
+		const hiddenInputs = document.querySelectorAll('#otp-section input, #new-user-section input');
+		hiddenInputs.forEach(input => {
+			input.removeAttribute('required');
+		});
+	});
+
+
+ </script> -->
+
+</body>
+
+
+</html>

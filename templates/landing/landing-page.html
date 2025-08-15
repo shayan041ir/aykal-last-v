@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="هوش مصنوعی آیکال">
+    <meta name="Author" content="هوش مصنوعی آیکال">
+    <meta name="Keywords" content="هوش مصنوعی آیکال">
+    <meta name="enamad" content="75357708" />
+    <!-- Title -->
+    <title>هوش مصنوعی آیکال</title>
+
+<!-- Favicon -->
+<link rel="icon" href="{{ url_for('static', filename='assets/img/brand/favicon.png') }}" type="image/x-icon">
+
+<!-- styles code -->
+<!-- Bootstrap css -->
+<link href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet" id="style">
+
+<!-- Icons css -->
+<link href="{{ url_for('static', filename='assets/css/icons.css') }}" rel="stylesheet">
+
+<!-- Font css -->
+<link href="{{ url_for('static', filename='assets/font/Morabba/fontiran.css') }}" rel="stylesheet">
+
+<!-- Style css -->
+<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+
+<!-- Switcher css -->
+<link href="{{ url_for('static', filename='assets/switcher/css/switcher.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='assets/switcher/demo.css') }}" rel="stylesheet">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.rtl.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+</head>
+
+<body class="main-body app sidebar-mini rtl landing-page horizontalmenu" dir="rtl">
+
+    <div id="global-loader">
+        <img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+    <!-- PAGE -->
+    <div class="page">
+        <div class="page-main">
+
+            <!-- app header code -->
+
+            <div class="main-header side-header">
+                <div class="main-container container-fluid">
+                    <div class="main-header-left">
+                        <a class="main-header-menu-icon" href="javascript:void(0)"
+                            id="mainSidebarToggle"><span></span></a>
+                        <div class="hor-logo">
+                            <a class="main-logo" href="/">
+                                <img src="../static/assets/img/brand/logo-white.png" class="header-brand-img desktop-logo"
+                                    alt="logo">
+                                <img src="../static/assets/img/brand/logo.png" class="header-brand-img desktop-logo-dark"
+                                    alt="logo">
+                            </a>
+                            <!-- <div class="switch-toggle d-flex mt-2">
+                                <span class="me-auto">تم تیره</span>
+                                <p class="onoffswitch2 my-0">
+                                    <input type="radio" name="onoffswitch1" id="myonoffswitch2" class="onoffswitch2-checkbox">
+                                    <label for="myonoffswitch2" class="onoffswitch2-label"></label>
+                                </p>
+                            </div>
+                            <div class="switch-toggle d-flex">
+                                <span class="me-auto">تم روشن</span>
+                                <p class="onoffswitch2 my-0">
+                                    <input type="radio" name="onoffswitch1" id="myonoffswitch1" class="onoffswitch2-checkbox" checked>
+                                    <label for="myonoffswitch1" class="onoffswitch2-label"></label>
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="main-header-center">
+                        <div class="responsive-logo">
+                            <a href="/"><img src="../static/assets/img/brand/logo.png" class="mobile-logo"
+                                    alt="logo"></a>
+                            <a href="/"><img src="../static/assets/img/brand/logo-white.png" class="mobile-logo-dark"
+                                    alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="main-header-right">
+                        <button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+                        </button>
+                        <!-- Navresponsive closed -->
+                        <div
+                            class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                                <div class="d-flex order-lg-2 ms-auto">
+                                    <!-- SEARCH -->
+                                    <div class="header-nav-right p-3">
+                                        <a href="login" class="btn ripple btn-min w-sm btn-outline-primary me-2"
+                                            target="_blank">
+                                            خرید اشتراک
+                                        </a>
+                                        <a href="login" class="btn ripple btn-min w-sm btn-primary me-2"
+                                            target="_blank">
+                                            ورود و ثبت نام
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End app header Code -->
+            <!-- app sidebar Code -->
+
+           {%include 'landing/landing_header.html'%}
+                <!-- navbar -->
+
+                <div class="demo-screen-headline main-demo main-demo-1 spacing-top overflow-hidden reveal" id="home">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-6 animation-zidex pos-relative">
+                                <h5 class="text-secondary">مدیریت کسب و کار با هوش مصنوعی</h5>
+                                <h1 class="text-start fw-bold text-white">ما به ساخت مستحکم‌ترین کسب و کار شما کمک میکنیم!</h1>
+                                <ul class="pb-4 text-white-80 list-disk">
+                                    <li class="h4" style="list-style-type: disc;">کاربر یاب  مشتری ‌یاب کاملا هدفمند</li>
+                                    <li class="h4" style="list-style-type: disc;">ارسال انبوه متن و پست</li>
+                                    <li class="h4" style="list-style-type: disc;">تعامل کار خودکار بدون بلاک</li>
+                                    <li class="h4" style="list-style-type: disc;">آنتی روح کاملا خودکار و هوشمند</li>
+                                    <li class="h4" style="list-style-type: disc;">دایرکت هوشمند (پاسخگویی سریع)</li>
+                                    <li class="h4" style="list-style-type: disc;">کامنت هوشمند (بدون محدودیت)</li>
+                                </ul>
+                                <a href="/redirect" target="_blank"
+                                    class="btn ripple btn-lg w-lg me-2 btn-light btn-black-hover mb-2">
+                                    <!-- <i class="fe fe-play me-2"></i> -->
+                                      رایگان شروع کنید
+                                </a>
+                                <a href="#Features" class="btn ripple btn-lg w-lg btn-secondary me-2 mb-2 btn-orange-hover">
+                                    <!-- <i class="fe fe-eye me-2"></i> -->
+                                      امکانات و اطلاعات بیشتر
+                                </a>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 my-auto d-flex">
+                                <img src="../static/assets/landing/images/desktop-computer-bro.svg" alt=""
+                                    class="banner-img ms-sm-auto mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End app sidebar Code -->
+            <!--app-content open-->
+            <div class="main-content mt-0 ms-0">
+                <div class="side-app ">
+                    <!-- ROW-2 OPEN -->
+                    <div class="sptb section bg-white-2" id="Features">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="text-center fw-semibold landing-card-header">امکانات</h4>
+                                <span class="landing-title"></span>
+                                <h2 class="text-center mb-4">امکانات اصلی هوش مصنوعی آیکال</h2>
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="card bg-transparent border-0 shadow-none">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="icon-box-features">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="feature-svg-icons" viewBox="0 0 24 24">
+                                                            <path fill="#bd9a7a" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4zm6 5H6v-.99c.2-.72 3.3-2.01 6-2.01s5.8 1.29 6 2v1z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-left counter-body">
+                                                        <h4 class="fw-bold">کاربریاب و مشتری‌یاب</h4>
+                                                        <p class="mb-0 text-justify">
+                                                            کاربریاب آیکال با تحلیل رفتار و علاقه‌مندی کاربران ، مخاطب واقعی و هدفمند شما را شناسایی می‌کند.
+                                                            با استفاده از فیلترهای هوشمند، افرادی که به محتوای شما علاقه‌مندند و احتمال تعامل بالایی دارند انتخاب می‌شوند.
+                                                            این یعنی وقت و انرژی شما صرف رشد واقعی می‌شود، نه جذب فالوورهای بی‌اثر.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="card bg-transparent border-0 shadow-none">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="icon-box-features">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="feature-svg-icons" viewBox="0 0 24 24">
+                                                            <path fill="#bd9a7a" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-left counter-body">
+                                                        <h4 class="fw-bold">ارسال انبوه متن و پست</h4>
+                                                        <p class="mb-0 text-justify">
+                                                            با استفاده از هوش مصنوعی آیکال ، پیام‌ های تبلیغاتی شما از طریق سیستم اختصاصی آیکال به کاربران هدف انتخاب شده توسط
+                                                            شما ارسال می‌شود؛ بدون نیاز به ورود به پیج شما.
+                                                            کاملاً امن، بدون ریسک بلاک، با نرخ بازدهی بالا.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="card bg-transparent border-0 shadow-none">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="icon-box-features">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="feature-svg-icons" viewBox="0 0 24 24">
+                                                            <path fill="#bd9a7a" d="M15 8c0-1.42-.5-2.73-1.33-3.76.42-.14.86-.24 1.33-.24 2.21 0 4 1.79 4 4s-1.79 4-4 4c-.43 0-.84-.09-1.23-.21-.03-.01-.06-.02-.1-.03A5.98 5.98 0 0 0 15 8zm1.66 5.13C18.03 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.58-3.47-6.34-3.87zM9 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 9c-2.7 0-5.8 1.29-6 2.01V18h12v-.99c-.2-.72-3.3-2.01-6-2.01z"/>
+                                                            <path fill="#bd9a7a" d="M9 4c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 9c2.67 0 8 1.34 8 4v3H1v-3c0-2.66 5.33-4 8-4z" opacity=".3"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-left counter-body">
+                                                        <h4 class="fw-bold">آنتی روح هوشمند</h4>
+                                                        <p class="mb-0 text-justify">
+                                                            آنتی روح، فالوورهای روح و بدون تعامل پیجت رو شناسایی می‌کنه
+                                                            و با تعاملات کاملا انسانی با فالوور های روح دوباره فعالشون می‌کنه.
+                                                            بدون هیچ گونه ریسک بلاک یا بن شدن.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="card bg-transparent border-0 shadow-none">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="icon-box-features">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="feature-svg-icons" viewBox="0 0 24 24">
+                                                            <path fill="#bd9a7a" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-left counter-body">
+                                                        <h4 class="fw-bold">تعامل کار خودکار</h4>
+                                                        <p class="mb-0 text-justify">
+                                                            تعامل کارخودکار با تمامی کاربران انتخاب شده توسط شما
+                                                            تعاملات کاملا انسانی انجام میده و کاربران انتخابی شما رو به فالوور های هدفمند پیج شما تبدیل میکنه .
+                                                            بدون هیچ گونه ریسک بلاک یا بن شدن .
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="card bg-transparent border-0 shadow-none">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="icon-box-features">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="feature-svg-icons" viewBox="0 0 24 24">
+                                                            <path fill="#bd9a7a" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-left counter-body">
+                                                        <h4 class="fw-bold">دایرکت هوشمند</h4>
+                                                        <div class="text-center">
+                                                            <p class="mb-1">پاسخ به مشتریان و کاربران شما توسط دایرکت</p>
+                                                            <ul>
+                                                                <li>پاسخ هوشمند ریپلای استوری</li>
+                                                                <li>پاسخ هوشمند کامنت و لایو</li>
+                                                                <li>ویترین ساز</li>
+                                                                <li>پاسخ هوشمند دایرکت</li>
+                                                                <li>فالوآپ پشتیبان هوشمند</li>
+                                                                <li>برگزاری نظرسنجی</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="card bg-transparent border-0 shadow-none">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="icon-box-features">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="feature-svg-icons" viewBox="0 0 24 24">
+                                                            <path fill="#bd9a7a" d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="text-left counter-body">
+                                                        <h4 class="fw-bold">استخدام و همکاری</h4>
+                                                        <p class="mb-0 text-justify">
+                                                            شما میتوانید با ثبت نام در بخش همکاری و بازاریاب شو یک شغل خانگی و پر درآمد راه اندازی کنید .
+                                                            تمامی مشتریان احتمالی توسط خود شرکت در اختیار شما نماینده عزیز قرار خواهد گرفت .
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-2 CLOSED -->
+                    <!-- ROW-2 OPEN -->
+                    <div class="section testimonial-owl-landing">
+                        <div class="container">
+                            <div class="row">
+                                <div class="card bg-transparent mb-0">
+                                    <h4 class="text-center fw-semibold text-white landing-card-header">امکانات</h4>
+                                    <span class="landing-title"></span>
+                                    <div class="demo-screen-skin code-quality">
+                                        <div class="text-center p-0">
+                                            <h2 class="text-center fw-semibold text-white">
+                                                بخش‌بندی ابزارها و امکانات
+                                            </h2>
+                                            <div class="row justify-content-center">
+                                                <div class="col-lg-12 px-0">
+                                                    <div class="feature-logos mt-5">
+                                                        <div class="slide">
+                                                            <div class="feature-img">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="feature-svg-icons" viewBox="0 0 24 24"
+                                                                    style="width: 64px; height: 64px;">
+                                                                    <path fill="#ffffff"
+                                                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4zm6 5H6v-.99c.2-.72 3.3-2.01 6-2.01s5.8 1.29 6 2v1z" />
+                                                                </svg>
+                                                            </div>
+                                                            <h5 class="mt-3 text-white">کاربریاب و مشتری‌یاب</h5>
+                                                        </div>
+                                                        <div class="slide">
+                                                            <div class="feature-img">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="feature-svg-icons" viewBox="0 0 24 24"
+                                                                    style="width: 64px; height: 64px;">
+                                                                    <path fill="#ffffff"
+                                                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" />
+                                                                </svg>
+                                                            </div>
+                                                            <h5 class="mt-3 text-white">ارسال انبوه متن و پست</h5>
+                                                        </div>
+                                                        <div class="slide">
+                                                            <div class="feature-img">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="feature-svg-icons" viewBox="0 0 24 24"
+                                                                    style="width: 64px; height: 64px;">
+                                                                    <path fill="#ffffff"
+                                                                        d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+                                                                </svg>
+                                                            </div>
+                                                            <h5 class="mt-3 text-white">دایرکت هوشمند</h5>
+                                                        </div>
+                                                        <div class="slide">
+                                                            <div class="feature-img">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="feature-svg-icons" viewBox="0 0 24 24"
+                                                                    style="width: 64px; height: 64px;">
+                                                                    <path fill="#ffffff"
+                                                                        d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                                                                </svg>
+                                                            </div>
+                                                            <h5 class="mt-3 text-white">تعامل کار خودکار</h5>
+                                                        </div>
+                                                        <div class="slide">
+                                                            <div class="feature-img">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="feature-svg-icons" viewBox="0 0 24 24"
+                                                                    style="width: 64px; height: 64px;">
+                                                                    <path fill="#ffffff"
+                                                                        d="M15 8c0-1.42-.5-2.73-1.33-3.76.42-.14.86-.24 1.33-.24 2.21 0 4 1.79 4 4s-1.79 4-4 4c-.43 0-.84-.09-1.23-.21-.03-.01-.06-.02-.1-.03A5.98 5.98 0 0 0 15 8zm1.66 5.13C18.03 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.58-3.47-6.34-3.87zM9 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 9c-2.7 0-5.8 1.29-6 2.01V18h12v-.99c-.2-.72-3.3-2.01-6-2.01z" />
+                                                                    <path fill="#ffffff"
+                                                                        d="M9 4c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 9c2.67 0 8 1.34 8 4v3H1v-3c0-2.66 5.33-4 8-4z"
+                                                                        opacity=".3" />
+                                                                </svg>
+                                                            </div>
+                                                            <h5 class="mt-3 text-white">آنتی روح هوشمند</h5>
+                                                        </div>
+                                                        <div class="slide">
+                                                            <div class="feature-img">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="feature-svg-icons" viewBox="0 0 24 24"
+                                                                    style="width: 64px; height: 64px;">
+                                                                    <path fill="#ffffff"
+                                                                        d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+                                                                </svg>
+                                                            </div>
+                                                            <h5 class="mt-3 text-white">درآمدزایی</h5>
+                                                        </div>
+                                                        <div class="slide">
+                                                            <div class="feature-img">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" class="feature-svg-icons" viewBox="0 0 24 24"
+                                                                    style="width: 64px; height: 64px;">
+                                                                    <path fill="#ffffff"
+                                                                        d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13z" />
+                                                                    <path fill="#ffffff"
+                                                                        d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+                                                                </svg>
+                                                            </div>
+                                                            <h5 class="mt-3 text-white">بهینه‌سازی تبلیغات و مدیریت پیج</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-2 CLOSED -->
+                    <!-- ROW-3 OPEN -->
+                    <div class="section bg-landing working-section  bg-white-2" id="About">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="text-center fw-semibold landing-card-header">ماموریت ما</h4>
+                                <span class="landing-title"></span>
+                                <div class="text-center">
+                                    <h2 class="text-center fw-semibold mb-4">
+                                        ماموریت ما افزایش کاربران و مشتریان شما و بهینه سازی تبلیغات شماست .
+                                    </h2>
+                                </div>
+                                <div class="reveal">
+                                    <div class="working-container">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 col-lg-4 p-2">
+                                                <div class="d-flex item-features-shadow">
+                                                    <div class="features-icon me-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icons-lg" viewBox="0 0 24 24"></svg>
+                                                            <path fill="#623aa2"
+                                                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4zm6 5H6v-.99c.2-.72 3.3-2.01 6-2.01s5.8 1.29 6 2v1z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mx-1">کاربریابی هدفمند</h4>
+                                                        <p class="text-muted mb-3 mx-1">کاربریاب آیکال با تحلیل رفتار و علاقه‌مندی کاربران، مخاطب واقعی و
+                                                            هدفمند شما را شناسایی می‌کند …</p><a class="mx-1" href="/blog/blog-details/9">ادامه مطلب <i
+                                                                class="fe fe-chevron-left"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4 p-2">
+                                                <div class="d-flex item-features-shadow">
+                                                    <div class="features-icon me-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icons-lg" viewBox="0 0 24 24">
+                                                            <path fill="#623aa2"
+                                                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mx-1">ارسال هدفمند متن و پست</h4>
+                                                        <p class="text-muted mb-3 mx-1">با کمک هوش مصنوعی آیکال، پیام‌های شما از طریق سیستم مرکزی و امن ما
+                                                            به کاربران هدف ارسال می‌شود…</p>
+                                                        <a class="mx-1" href="/blog/blog-details/12">ادامه مطلب <i class="fe fe-chevron-left"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4 p-2">
+                                                <div class="d-flex item-features-shadow">
+                                                    <div class="features-icon me-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icons-lg" viewBox="0 0 24 24">
+                                                            <path fill="#623aa2"
+                                                                d="M15 8c0-1.42-.5-2.73-1.33-3.76.42-.14.86-.24 1.33-.24 2.21 0 4 1.79 4 4s-1.79 4-4 4c-.43 0-.84-.09-1.23-.21-.03-.01-.06-.02-.1-.03A5.98 5.98 0 0 0 15 8zm1.66 5.13C18.03 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.58-3.47-6.34-3.87zM9 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 9c-2.7 0-5.8 1.29-6 2.01V18h12v-.99c-.2-.72-3.3-2.01-6-2.01z" />
+                                                            <path fill="#623aa2"
+                                                                d="M9 4c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 9c2.67 0 8 1.34 8 4v3H1v-3c0-2.66 5.33-4 8-4z"
+                                                                opacity=".3" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mx-1">شکار فالور های روح</h4>
+                                                        <p class="text-muted mb-3 mx-1">فالوورهای خاموش(روح) پیجت رو شناسایی می‌کنه و باهاشون وارد تعاملات
+                                                            انسانی میشه و به فالوور های کاملا فعال تبدیل میکنه …</p>
+                                                        <a class="mx-1" href="/blog/blog-details/11">ادامه مطلب <i class="fe fe-chevron-left"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4 p-2">
+                                                <div class="d-flex item-features-shadow">
+                                                    <div class="features-icon me-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icons-lg" viewBox="0 0 24 24">
+                                                            <path fill="#623aa2"
+                                                                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mx-1">تعامل کار خودکار هدفمند</h4>
+                                                        <p class="text-muted mb-3 mx-1">تعامل کار خودکار با پیج شما به صورت کاملا هدفمند وارد تعاملات انسانی
+                                                            با کاربران انتخاب شده شما میشود …</p>
+                                                        <a class="mx-1" href="/blog/blog-details/10">ادامه مطلب <i class="fe fe-chevron-left"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4 p-2">
+                                                <div class="d-flex item-features-shadow">
+                                                    <div class="features-icon me-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icons-lg" viewBox="0 0 24 24">
+                                                            <path fill="#623aa2"
+                                                                d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mx-1">دایرکت هوشمند</h4>
+                                                        <p class="text-muted mb-3 mx-1">
+                                                            <span>پاسخ به مشتریان و کاربران شما توسط دایرکت هوشمند:</span>
+                                                        <ul>
+                                                            <li class="text-muted" style="list-style-type: disc;">پاسخ هوشمند دایرکت</li>
+                                                            <li class="text-muted" style="list-style-type: disc;">پاسخ هوشمند ریپلای استوری</li>
+                                                        </ul>
+                                                        </p>
+                                                        <a class="mx-1" href="/landing/blog">ادامه مطلب <i class="fe fe-chevron-left"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-3 CLOSED -->
+                    <!-- ROW-9 OPEN -->
+                    <div class="testimonial-owl-landing clients-section section">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="text-center fw-semibold text-white landing-card-header">آشنایی با</h4>
+                                <div class="text-center">
+                                    <span class="landing-title"></span>
+                                </div>
+                                <h2 class="text-center fw-semibold text-white mb-5">
+                                    تیم آیکال
+                                </h2>
+                                <div class="swiper pb-4">
+                                    <div class="swiper-wrapper">
+                                        
+                                        <div class="swiper-slide">
+                                            <div class="card text-center custom-card-style">
+                                                <div class="mb-3 text-center about-team ">
+                                                    <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/karbasi.jpg" alt="image">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title mb-3">مهندس علیرضا کرباسی</h4>
+                                                    <div class="tx-13 text-center text-muted mb-3">
+                                                        مدیرعامل شرکت و ایده پرداز آیکال
+                                                    </div>
+                                                <div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                        <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+
+                                        <div class="swiper-slide">                    
+                                            <div class="card text-center custom-card-style">
+                                                    <div class="mb-3 text-center about-team ">
+                                                        <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/seraj.jpg" alt="image">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">خانم مهندس سولماز سراج</h4>
+                                                    <div class="tx-13 text-center text-muted mb-3">
+                                                        مدیر فروش و سرتیم بازاریابان شرکت                                                    
+                                                    </div>
+                                                <div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                        <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+
+                                        <div class="swiper-slide">                    
+                                            <div class="card text-center custom-card-style">
+                                                    <div class="mb-3 text-center about-team ">
+                                                        <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/nemati.jpg" alt="image">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">دکتر محمود نعمتی زاده</h4>
+                                                        <div class="tx-13 text-center text-muted mb-3">
+                                                            مدیر ارشد پروژه هوش مصنوعی آیکال
+                                                        </div>
+                                                    <div class="text-center social-icons">
+                                                        <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                            <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                        </a>
+                                                        <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                            <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="swiper-slide">
+                                            <div class="card text-center custom-card-style">
+                                                    <div class="mb-3 text-center about-team ">
+                                                        <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/rahimi.jpg" alt="image">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">خانم مهندس سمیه رحیمی</h4>
+                                                        <div class="tx-13 text-center text-muted mb-3">
+                                                            مدیر فروش پروژه هوش مصنوعی آیکال
+                                                        </div>
+                                                    <div class="text-center social-icons">
+                                                        <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                            <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                        </a>
+                                                        <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                            <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="card text-center custom-card-style">
+                                                    <div class="mb-3 text-center about-team  ">
+                                                        <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/gahremani.jpg" alt="image" >
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">مهندس عرفان قهرمانی</h4>
+                                                        <div class="tx-13 text-center text-muted mb-3">
+                                                            واحد فنی تیم هوش مصنوعی آیکال
+                                                        </div>
+                                                    <div class="text-center social-icons">
+                                                        <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                            <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                        </a>
+                                                        <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                            <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="card text-center custom-card-style">
+                                                    <div class="mb-3 text-center about-team ">
+                                                        <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/adel.jpg" alt="image">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">خانم سهیلا عادل</h4>
+                                                        <div class="tx-13 text-center text-muted mb-3">
+                                                            مجری محتوایی پروژه هوش مصنوعی آیکال
+                                                        </div>
+                                                    <div class="text-center social-icons">
+                                                        <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                            <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                        </a>
+                                                        <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                            <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="card text-center custom-card-style">
+                                                    <div class="mb-3 text-center about-team ">
+                                                        <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/alizade.jpg" alt="image">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">مهندس عرفان علیزاده</h4>
+                                                        <div class="tx-13 text-center text-muted mb-3">
+                                                            سر تیم بخش فنی هوش مصنوعی آیکال
+                                                        </div>
+                                                    <div class="text-center social-icons">
+                                                        <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                            <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                        </a>
+                                                        <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                            <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="swiper-slide">
+                                            <div class="card text-center custom-card-style">
+                                                    <div class="mb-3 text-center about-team ">
+                                                        <img class="rounded-circle img-fluid img_team" src="../static/assets/img/users/mohammadiyan.jpg" alt="image">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title mb-3">مهندس نازنین محمدیان </h4>
+                                                        <div class="tx-13 text-center text-muted mb-3">
+                                                            سرتیم تولید محتوای پروژه هوش مصنوعی آیکال
+                                                        </div>
+                                                    <div class="text-center social-icons">
+                                                        <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                            <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                        </a>
+                                                        <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+                                                            <i class="fe fe-globe text-info mx-2 tx-18"></i>
+                                                        </a>
+                                                    </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- ROW-9 CLOSED -->
+                    <!-- ROW-6 OPEN -->
+                    <div class="bg-landing section  bg-white-2" id="pricinng">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="text-center fw-semibold landing-card-header">تعرفه‌های آیکال</h4>
+                                <span class="landing-title"></span>
+                                <h2 class="text-center fw-semibold">
+                                    تمامی اشتراک ها دارای ۲۴ ساعت تست رایگان میباشند .
+                                </h2>
+                                {%include 'pack.html'%}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-6 CLOSED -->
+                    <!-- ROW-9 OPEN -->
+                    <div class="testimonial-owl-landing clients-section section" id="blog">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="text-center fw-semibold text-white landing-card-header">وبلاگ و مقالات</h4>
+                                <div class="text-center">
+                                    <span class="landing-title"></span>
+                                </div>
+                                <h2 class="text-center fw-semibold text-white mb-5">
+                                    جدیدترین مقالات و مطالب آموزشی در زمینه خدمات ما
+                                </h2>
+                                <div class="swiper pb-4">
+                                    <div class="swiper-wrapper">
+                                        {% for blog in blogs %}
+                                        {% if blog.title and blog.content and blog.media_url and blog.category and blog.created_at %}
+                                        <div class="swiper-slide">
+                                            <div class="card blog-card card-img-top-1 border-0 h-100">
+                                                <a href="/blog/blog-details/{{ blog.id }}">
+                                                    <img
+                                                        class="card-img-top w-100 border-0"
+                                                        src="{{ blog.media_url }}"
+                                                        alt="{{ blog.title }}"
+                                                        style="height: 220px; object-fit: cover;"
+                                                    />
+                                                </a>
+                                                <div class="card-body pb-0">
+                                                    <a href="/blog/blog-details/{{ blog.id }}">
+                                                        <h4 class="card-title">{{ blog.title }}</h4>
+                                                    </a>
+                                                    <p class="my-2 text-muted line-clamp-2">
+                                                        {{ blog.content|striptags|truncate(180, True, '...') }}
+                                                    </p>
+                                                    <a class="btn btn-primary mt-3" href="/blog/blog-details/{{ blog.id }}">ادامه مطلب</a>
+                                                </div>
+                                                <div class="item7-card-desc d-flex p-3 pt-0 align-items-center justify-content-center border-top">
+                                                    <div class="ms-auto">
+                                                        <span class="phone text-muted d-flex tx-12">
+                                                            <span class="fe fe-calendar text-muted me-2 tx-14"></span>
+                                                            {{ blog.created_at.day }} {{ blog.created_at.strftime('%B %Y') }}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-9 CLOSED -->
+                    <!-- ROW-7 OPEN -->
+                    <div class="section" id="sectionfaq">
+                        <div class="container">
+                            <div class="row">
+                                <h4 class="text-center fw-semibold landing-card-header">سوالات متداول</h4>
+                                <span class="landing-title"></span>
+                                <h2 class="text-center fw-semibold mb-4">ما اینجا هستیم تا به شما کمک کنیم</h2>
+                                <section class="sptb demo-screen-demo faqs">
+                                    <div class="row align-items-center" id="grid">
+                                        <div class="col-md-12 col-lg-6 reveal revealright">
+                                            <img src="../static/assets/landing/images/FAQs-rafiki.svg" alt=""
+                                                class="mx-auto d-block">
+                                        </div>
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="card overflow-hidden mb-0 p-0">
+                                                <div class="card-body p-0">
+                                                    <div class="panel-group1" id="accordion11">
+                                                        <div class="panel panel-primary mb-3">
+                                                            <div class="panel-heading1 rounded-5">
+                                                                <h4 class="panel-title1">
+                                                                    <a class="accordion-toggle collapsed"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-parent="#accordion11" href="#collapse1"
+                                                                        aria-expanded="false">
+                                                                        آیا میتوانیم قبل از خرید یک اکانت تست بگیریم؟
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse1" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-expanded="false">
+                                                                <div class="panel-body border-top">
+                                                                    <p class="mb-0">
+                                                                        بله شما میتوانید به مدت۲۴ساعت از خدمات هوش مصنوعی آیکال بهره منده شوید.تعداد تست ها در ۲۴ساعت محدود می‌باشد .جهت تست رایگان و دیدن سایر اشتراک ها کلیک کنید.
+                                                                    </p>
+                                                                    <span><a href="/landing/faq">بیشتر بدانید </a></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-primary mb-3">
+                                                            <div class="panel-heading1 rounded-5">
+                                                                <h4 class="panel-title1">
+                                                                    <a class="accordion-toggle collapsed"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-parent="#accordion11" href="#collapse2"
+                                                                        aria-expanded="false">
+                                                                        آیا نیاز به نصب اپلیکشن خاص برای کار با آیکال دارم؟
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse2" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-expanded="false">
+                                                                <div class="panel-body border-top">
+                                                                    <p class="mb-0">
+                                                                        تمامی خدمات آیکال از طریق یک پول تحت وب ارائه می‌شود و نیازی به نرم افزار یا اپلیکیشن مجزا نیست.
+                                                                    </p>
+                                                                    <span><a href="/landing/faq">بیشتر بدانید </a></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-primary mb-3">
+                                                            <div class="panel-heading1 rounded-5">
+                                                                <h4 class="panel-title1">
+                                                                    <a class="accordion-toggle collapsed"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-parent="#accordion11" href="#collapse3"
+                                                                        aria-expanded="false">
+                                                                        تفاوت آیکال با ربات های معمولی اینستگرام چیست؟
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse3" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-expanded="false">
+                                                                <div class="panel-body border-top">
+                                                                    <p class="mb-0">
+                                                                        آیکال یک ابزار هوشمند مبتنی بر هوش مصنوعی است که عملکرد آن بسیار دقیق‌تر و هدفمند تر از ربات های قدیمی است.برخلاف ربات ها آیکال رفتار انسانی را شبیه سازی میکندو نتایج بسیار بهتری در جذب مشتری دارد.
+                                                                    </p>
+                                                                    <span><a href="/landing/faq">بیشتر بدانید </a></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-primary mb-3">
+                                                            <div class="panel-heading1 rounded-5">
+                                                                <h4 class="panel-title1">
+                                                                    <a class="accordion-toggle collapsed"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-parent="#accordion11" href="#collapse4"
+                                                                        aria-expanded="false">
+                                                                        اطلاعات پیج من در آیکال چقدر امن است؟
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse4" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-expanded="false">
+                                                                <div class="panel-body border-top">
+                                                                    <p class="mb-0">
+                                                                        امنیت اطلاعات شما در آیکال بسیار جدی گرفته می‌شود و تمام داده ها رمزگذاری شده و هیچ گونه دسترسی غیر مجاز به اطلاعات شما وجود نخواهد داشت.
+                                                                    </p>
+                                                                    <span><a href="/landing/faq">بیشتر بدانید </a></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-primary">
+                                                            <div class="panel-heading1 rounded-5">
+                                                                <h4 class="panel-title1">
+                                                                    <a class="accordion-toggle collapsed"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-parent="#accordion11" href="#collapse5"
+                                                                        aria-expanded="false">
+                                                                        آیا پشتیبانی فنی آیکال فعال است و چگونه می‌توان با آن تماس گرفت ؟
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse5" class="panel-collapse collapse"
+                                                                role="tabpanel" aria-expanded="false">
+                                                                <div class="panel-body border-top">
+                                                                    <p class="mb-0">
+                                                                        تیم پشتیبانی آیکال به صورت آنلاین و تلفنی در دسترس شماست.از طریق پنل کاربری یا صفحه تماس با ما در سایت میتوانید در هر زمان ارتباط برقرار کنید.
+                                                                    </p>
+                                                                    <span><a href="/landing/faq">بیشتر بدانید </a></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-7 CLOSED -->
+                    <!-- ROW-10 OPEN -->
+                    <div class="section" id="Contact">
+                        <div class="container">
+                            <h4 class="text-center fw-semi-bold">ارتباط با ما</h4>
+                            <span class="landing-title"></span>
+                            <h2 class="text-center fw-semibold mb-4 px-2">با ما در تماس باشید.</h2>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-6">
+                                    <div class="card bg-white">
+                                        <div class="card-body p-4">
+                                            <!-- فرم -->
+                                            <form class="reveal" id="contactForm">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group ">
+                                                            <label for="cusName" class="form-label">
+                                                                نام <span class="text-danger">*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="cusName" placeholder="نام و نام خانوادگی">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="cusEmail" class="form-label">
+                                                                پست الکترونیک <span class="text-danger">*</span>
+                                                            </label>
+                                                            <input type="text" class="form-control" id="cusEmail" placeholder="ایمیل خود را وارد کنید">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="cusSubject" class="form-label">موضوع</label>
+                                                    <input type="text" class="form-control" id="cusSubject" placeholder="موضوع خود را وارد کنید">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="cusMessage" class="form-label">
+                                                        متن پیام <span class="text-danger">*</span>
+                                                    </label>
+                                                    <textarea rows="7" class="form-control" id="cusMessage" placeholder="پیام خود را اینجا تایپ کنید..."></textarea>
+                                                </div>
+                                                <div class="form-group mb-0">
+                                                    <button type="submit" class="btn btn-secondary btn-block btn-orange-hover w-100">ارسال پیام</button>
+                                                </div>
+                                            </form>
+
+                                            <!-- اعلان -->
+                                            <div id="formAlert" class="alert alert-success mt-3 d-none" role="alert">
+                                                پیام شما با موفقیت ارسال شد!
+                                            </div>
+
+                                            <!-- اسکریپت -->
+                                            <script>
+                                                document.addEventListener("DOMContentLoaded", function () {
+                                                    document.getElementById("contactForm").addEventListener("submit", function (e) {
+                                                        e.preventDefault(); // جلوگیری از رفرش
+                                                        document.getElementById("formAlert").classList.remove("d-none"); // نمایش اعلان
+                                                        this.reset(); // پاک‌کردن فرم
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-10 CLOSED -->
+
+                </div>
+            </div>
+            <!--app-content closed-->
+
+            <!-- Footer code -->
+	        {%include 'landing/landing_footer.html'%}
+             
+            <!-- End Footer -->
+
+
+        </div>
+    </div>
+    <!-- End Page -->
+    <!-- scripts code -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- COUNTERS JS-->
+    <script src="../static/assets/plugins/counters/counterup.min.js"></script>
+    <script src="../static/assets/plugins/counters/waypoints.min.js"></script>
+    <script src="../static/assets/plugins/counters/counters-1.js"></script>
+
+    <!-- Perfect SCROLLBAR JS-->
+    <script src="../static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="../static/assets/landing/lib/company-slider/slider.js"></script>
+
+    <!--- TABS JS -->
+    <script src="../static/assets/plugins/tabs/jquery.multipurpose_tabcontent.js"></script>
+    <script src="../static/assets/plugins/tabs/tab-content.js"></script>
+
+    <!-- Star Rating Js-->
+    <script src="../static/assets/plugins/rating/jquery-rate-picker.js"></script>
+    <script src="../static/assets/plugins/rating/rating-picker.js"></script>
+
+    <!-- Star Rating-1 Js-->
+    <script src="../static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+    <script src="../static/assets/plugins/ratings-2/star-rating.js"></script>
+
+    <!--- Perfect-scrollbar js -->
+    <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <!-- SIDE-MENU JS -->
+    <script src="../static/assets/landing/js/sidemenu.js"></script>
+
+    <!-- Sticky js -->
+    <script src="../static/assets/js/sticky.js"></script>
+
+
+    <!--themecolor js-->
+    <script src="../static/assets/js/themecolor.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="../static/assets/landing/js/landing.js"></script>
+
+    <!-- Switcher js -->
+    <script src="../static/assets/switcher/js/switcher.js"></script>
+    <!-- Swiper JS -->
+    <script src="../static/assets/js/swiper-bundle-min.js"></script>
+    <!-- End scripts -->
+
+</body>
+
+
+</html>

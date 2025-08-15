@@ -1,0 +1,55 @@
+  <div class="card-body">
+                    <!-- row -->
+                    <div class="row">
+                      {% for blog in blogs %} {% if blog.title and blog.content
+                      and blog.media_url and blog.category and blog.created_at
+                      %}
+                      <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+                        <div class="card custom-card card-img-top-1 border-0">
+                          <a href="/blog/blog-details/{{ blog.id }}">
+                            <img
+                              class="card-img-top w-100 border-0"
+                              src="{{ blog.media_url }}"
+                              alt="{{ blog.title }}"
+                            />
+                          </a>
+                          <div class="card-body pb-0">
+                            <a href="/blog/blog-details/{{ blog.id }}">
+                              <h4 class="card-title">{{ blog.title }}</h4>
+                            </a>
+                            <p class="my-2 text-muted">
+                              {{ blog.content|striptags|truncate(180, True,
+                              '...') }}
+                            </p>
+                          </div>
+                          <div
+                            class="item7-card-desc d-flex p-3 pt-0 align-items-center justify-content-center border-top"
+                          >
+                            <!-- <div class="main-img-user online">
+														<img alt="avatar" src="/static/assets/img/users/default-user.jpg">
+													</div> -->
+                            <!-- <div class="main-contact-body">
+														<h6 class="mt-1">نویسنده</h6>
+													</div> -->
+                            <div class="ms-auto">
+                              <a
+                                class="me-0 d-flex align-items-center"
+                                href="javascript:void(0);"
+                              >
+                                <span class="phone text-muted d-flex tx-12">
+                                  <span
+                                    class="fe fe-calendar text-muted me-2 tx-14"
+                                  ></span>
+                                  {{ blog.created_at.day }} {{
+                                  blog.created_at.strftime('%B %Y') }}
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% endif %} {% endfor %}
+                    </div>
+
+                    <!-- /row -->
+                  </div>

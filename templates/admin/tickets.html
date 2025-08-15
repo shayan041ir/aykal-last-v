@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="ادیمین داشبورد">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>ادیمین داشبورد</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+    
+    <!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+         {%include 'all_user_headr.html'%}
+         {%include 'admin/admin_base.html'%}
+        <!-- End app sidebar Code -->
+
+
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<!-- <h4 class="content-title mb-2 mb-xl-0">داشبورد ادمین</h4> -->
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">خانه</a></li>
+								<li class="breadcrumb-item active " aria-current="page"> داشبورد ادمین</li> -->
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- main-content-body -->
+				<div class="main-content-body">
+				<!-- row -->
+				<div class="row row-sm main-content-mail">
+					<div class="col-xl-3 col-lg-4 col-md-12">
+						<!--نوع پیام -->
+						<div class="card">
+							<div class="card-body">
+								<div class="main-content-left main-content-left-mail">
+									<span class="btn btn-primary  btn-compose" href="#" >پیام ها</span>
+									<div class="main-mail-menu">
+										<nav class="nav main-nav-column mg-b-20">
+											<a class="nav-link active" href="#"><i class="ri-mail-download-line"></i> صندوق ورودی <span class="badge bg-primary me-2">20</span></a> <!--برای این اسپن دوم که عدد هست باید تعداد پیام ها باشد -->
+											<!-- <a class="nav-link" href="#"><i class="ri-star-line"></i> ستاره دار <span class="badge bg-secondary me-2">3</span></a> -->
+											<!-- <a class="nav-link" href="#"><i class="ri-bookmark-2-line"></i> مهم <span class="badge bg-warning me-2">10</span></a> -->
+											<a class="nav-link" href="#"><i class="ri-share-forward-line"></i> پیام  ارسال شد <span class="badge bg-info me-2">8</span></a> 
+											<!-- <a class="nav-link" href="#"><i class="ri-edit-line"></i> پیش نویس <span class="badge bg-primary me-2">15</span></a> -->
+											<!-- <a class="nav-link" href="#"><i class="ri-spam-line"></i> هرزنامه ها <span class="badge bg-danger me-2">128</span></a> -->
+											<a class="nav-link" href="#"><i class="ri-delete-bin-5-line"></i> زباله ها <span class="badge bg-success me-2">6</span></a>
+										</nav>
+									</div><!-- main-mail-menu -->
+								</div>
+							</div>
+						</div>
+						<!--نوع پیام -->
+						
+					</div>
+
+					<div class="col-xl-9 col-lg-8 col-md-12">
+    <div class="card">
+        <div class="main-content-body main-content-body-mail card-body">
+            <div class="main-mail-header">
+                <div>
+                    <h4 class="main-content-title mg-b-5">صندوق ورودی</h4>
+                    <p class="text-muted">شما {{ tickets|length }} پیام دارید</p>
+                </div>
+                <div>
+                    <span>1-{{ tickets|length }} از {{ tickets|length }}</span>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-outline-light disabled" type="button"><i class="icon ion-ios-arrow-back"></i></button>
+                        <button class="btn btn-outline-light disabled" type="button"><i class="icon ion-ios-arrow-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-mail-options">
+                <label class="ckbox"><input id="checkAll" type="checkbox"> <span class="tx-muted tx-13">انتخاب همه</span></label>
+                <div class="btn-group">
+                    <button class="btn btn-light"><i class="ri-refresh-line"></i></button>
+                    <button class="btn btn-light disabled"><i class="ri-error-warning-line"></i></button>
+                    <button class="btn btn-light disabled"><i class="ri-delete-bin-6-line"></i></button>
+                </div>
+            </div>
+
+            <div class="main-mail-list">
+                {% for ticket in tickets %}
+                <div class="main-mail-item {% if ticket.role.name != 'done' %}unread{% endif %}">
+                    <div class="main-mail-checkbox">
+                        <label class="ckbox"><input type="checkbox"> <span></span></label>
+                    </div>
+                    <div class="main-img-user"><img alt="" src="{{ ticket.pic_url or '/static/assets/img/default.png' }}"></div>
+
+                    <div class="main-mail-body">
+                        <a href="{{ url_for('admin.ticket_view', ticket_id=ticket.id) }}">
+                            <div class="main-mail-from">
+                                کاربر #{{ ticket.user_id }}
+                            </div>
+                            <div class="main-mail-subject">
+                                <strong>{{ ticket.problem.splitlines()[0][:50] }}</strong>
+                                <span class="text-muted">{{ ticket.problem.splitlines()[4][:60] if ticket.problem.splitlines()|length > 4 else '' }}</span>
+                            </div>
+                        </a>
+
+                        {% if ticket.replies.count() > 0 %}
+                        <div class="mt-2 ms-3">
+                            <small class="text-muted">⬇ پاسخ‌ها:</small>
+                            {% for reply in ticket.replies %}
+                                <div class="border rounded p-2 mt-1 {% if reply.is_admin_reply %}bg-light{% else %}bg-white{% endif %}">
+                                    <strong>{% if reply.is_admin_reply %}ادمین{% else %}کاربر{% endif %}:</strong>
+                                    {{ reply.problem }}
+                                    <div class="text-end"><small class="text-muted">{{ reply.updated_at.strftime('%Y/%m/%d %H:%M') }}</small></div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="main-mail-date d-flex align-items-center gap-2">
+                        {{ ticket.created_at.strftime('%H:%M') }}
+                        {% if ticket.role.name != 'done' %}
+                        <form method="post" action="{{ url_for('admin.close_ticket', ticket_id=ticket.id) }}">
+                            <button class="btn btn-danger btn-sm ms-2" type="submit">بستن تیکت</button>
+                        </form>
+                        {% else %}
+                        <span class="badge bg-success">بسته شده</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+				<!-- /row -->
+                
+			</div>
+			<!-- /container -->
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+
+        <!-- Footer code -->
+
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--- Chart bundle min js -->
+	<script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!--- Internal Sampledata js -->
+	<script src="../static/assets/js/chart.flot.sampledata.js"></script>
+
+	<!-- ApexChart -->
+	<script src="../static/assets/js/apexcharts.min.js"></script>
+
+	<!--- Internal Vector-maps js -->
+	<script src="../static/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../static/assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/index5.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>     
+   <!-- End scripts -->
+
+</body>
+
+</html>

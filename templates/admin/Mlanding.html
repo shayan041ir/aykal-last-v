@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="ادیمین داشبورد">
+	<meta name="Author" content="برنامه نویسان مارس">
+	<meta name="Keywords" content="آیکال">
+
+	<!-- Title -->
+	<title>ادیمین داشبورد</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/custommlanding.css">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+    <!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+         {%include 'all_user_headr.html'%}
+       {%include 'admin/admin_base.html'%}
+        <!-- End app sidebar Code -->
+
+
+
+<!-- main-content -->
+<div class="main-content app-content">
+    <div class="main-container container-fluid">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="content-title mb-0">پنل مدیریت لندینگ پیج</h4>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-primary me-2" id="preview-btn">پیش‌نمایش</button>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <!-- <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">داشبورد ادمین</li> -->
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row g-4">
+            <!-- Hero Section -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white d-flex align-items-center">
+                        <i class="bi bi-image me-2"></i> مدیریت هیرو
+                    </div>
+                    <div class="card-body">
+                        <form id="hero-form">
+                            <div class="mb-3">
+                                <label for="heroImageInput" class="form-label">تصویر اصلی</label>
+                                <input type="file" class="form-control" id="heroImageInput" name="heroImage" accept="image/*">
+                                <img id="heroImagePreview" src="../static/assets/img/brand/logo.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="heroCaption" class="form-label">کپشن هیرو</label>
+                                <textarea id="heroCaption" name="heroCaption" class="form-control" maxlength="200" placeholder="کپشن هیرو را وارد کنید"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">ذخیره تغییرات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-success text-white d-flex align-items-center">
+                        <i class="bi bi-list-check me-2"></i> مدیریت ویژگی‌ها
+                    </div>
+                    <div class="card-body">
+                        <form id="features-form">
+                            <div class="mb-3">
+                                <label for="featureIconInput" class="form-label">آیکون ویژگی</label>
+                                <input type="file" class="form-control" id="featureIconInput" name="featureIcon" accept="image/*">
+                                <img id="featureIconPreview" src="../static/assets/img/brand/logo.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="featureTitle" class="form-label">عنوان ویژگی</label>
+                                <input type="text" id="featureTitle" name="featureTitle" class="form-control" placeholder="عنوان ویژگی را وارد کنید">
+                            </div>
+                            <div class="mb-3">
+                                <label for="featureDescription" class="form-label">توضیحات ویژگی</label>
+                                <textarea id="featureDescription" name="featureDescription" class="form-control" maxlength="200" placeholder="توضیحات ویژگی را وارد کنید"></textarea>
+                            </div>
+                            <button type="button" id="add-feature-btn" class="btn btn-outline-secondary mb-2">+ افزودن ویژگی</button>
+                            <button type="submit" class="btn btn-success w-100">ذخیره تغییرات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Missions -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-info text-white d-flex align-items-center">
+                        <i class="bi bi-rocket-takeoff me-2"></i> مدیریت ماموریت‌ها
+                    </div>
+                    <div class="card-body">
+                        <form id="missions-form">
+                            <div class="mb-3">
+                                <label for="missionIconInput" class="form-label">آیکون ماموریت</label>
+                                <input type="file" class="form-control" id="missionIconInput" name="missionIcon" accept="image/*">
+                                <img id="missionIconPreview" src="../static/assets/img/brand/logo.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="missionTitle" class="form-label">عنوان ماموریت</label>
+                                <input type="text" id="missionTitle" name="missionTitle" class="form-control" placeholder="عنوان ماموریت را وارد کنید">
+                            </div>
+                            <div class="mb-3">
+                                <label for="missionDescription" class="form-label">توضیح کوتاه</label>
+                                <textarea id="missionDescription" name="missionDescription" class="form-control" maxlength="200" placeholder="توضیح کوتاه ماموریت"></textarea>
+                            </div>
+                            <button type="button" id="add-mission-btn" class="btn btn-outline-secondary mb-2">+ افزودن ماموریت</button>
+                            <button type="submit" class="btn btn-info w-100">ذخیره تغییرات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Features -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-warning text-white d-flex align-items-center">
+                        <i class="bi bi-layout-sidebar me-2"></i> مدیریت اسلایدر ویژگی‌ها
+                    </div>
+                    <div class="card-body">
+                        <form id="sidebar-features-form">
+                            <div class="mb-3">
+                                <label for="sidebarFeatureIconInput" class="form-label">آیکون ویژگی</label>
+                                <input type="file" class="form-control" id="sidebarFeatureIconInput" name="sidebarFeatureIcon" accept="image/*">
+                                <img id="sidebarFeatureIconPreview" src="../static/assets/img/brand/logo.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sidebarFeatureTitle" class="form-label">عنوان ویژگی</label>
+                                <input type="text" id="sidebarFeatureTitle" name="sidebarFeatureTitle" class="form-control" placeholder="عنوان ویژگی را وارد کنید">
+                            </div>
+                            <button type="button" id="add-sidebar-feature-btn" class="btn btn-outline-secondary mb-2">+ افزودن ویژگی</button>
+                            <button type="submit" class="btn btn-warning w-100">ذخیره تغییرات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-danger text-white d-flex align-items-center">
+                        <i class="bi bi-chat-quote me-2"></i> مدیریت نظرات کاربران
+                    </div>
+                    <div class="card-body">
+                        <form id="testimonials-form">
+                            <div class="mb-3">
+                                <label for="testimonialImageInput" class="form-label">عکس پروفایل</label>
+                                <input type="file" class="form-control" id="testimonialImageInput" name="testimonialImage" accept="image/*">
+                                <img id="testimonialImagePreview" src="../static/assets/img/brand/logo.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="testimonialName" class="form-label">اسم مشتری</label>
+                                <input type="text" id="testimonialName" name="testimonialName" class="form-control" placeholder="نام مشتری را وارد کنید">
+                            </div>
+                            <div class="mb-3">
+                                <label for="testimonialText" class="form-label">متن نظرات</label>
+                                <textarea id="testimonialText" name="testimonialText" class="form-control" maxlength="200" placeholder="متن نظر مشتری را وارد کنید"></textarea>
+                            </div>
+                            <button type="button" id="add-testimonial-btn" class="btn btn-outline-secondary mb-2">+ افزودن نظر</button>
+                            <button type="submit" class="btn btn-danger w-100">ذخیره تغییرات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-secondary text-white d-flex align-items-center">
+                        <i class="bi bi-box-arrow-down me-2"></i> مدیریت فوتر
+                    </div>
+                    <div class="card-body">
+                        <form id="footer-form">
+                            <div class="mb-3">
+                                <label for="footerLogoInput" class="form-label">لوگو فوتر</label>
+                                <input type="file" class="form-control" id="footerLogoInput" name="footerLogo" accept="image/*">
+                                <img id="footerLogoPreview" src="../static/assets/img/brand/logo.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="footerFeaturesLinks" class="form-label">لینک‌های ستون ویژگی‌ها</label>
+                                <input type="text" id="footerFeaturesLinks" name="footerFeaturesLinks" class="form-control" placeholder="لینک‌ها را وارد کنید (با کاما جدا کنید)">
+                            </div>
+                            <div class="mb-3">
+                                <label for="footerAboutLinks" class="form-label">لینک‌های ستون آشنایی با ما</label>
+                                <input type="text" id="footerAboutLinks" name="footerAboutLinks" class="form-control" placeholder="لینک‌ها را وارد کنید (با کاما جدا کنید)">
+                            </div>
+                            <div class="mb-3">
+                                <label for="footerAboutText" class="form-label">متن درباره ما</label>
+                                <textarea id="footerAboutText" name="footerAboutText" class="form-control" maxlength="200" placeholder="متن کوتاه درباره ما در فوتر"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary w-100">ذخیره تغییرات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Footer code -->
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--- Chart bundle min js -->
+	<script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!--- Internal Sampledata js -->
+	<script src="../static/assets/js/chart.flot.sampledata.js"></script>
+
+	<!-- ApexChart -->
+	<script src="../static/assets/js/apexcharts.min.js"></script>
+
+	<!--- Internal Vector-maps js -->
+	<script src="../static/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../static/assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/index5.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>     
+    <script src="../static/assets/js/custommlanding.js"></script>
+   <!-- End scripts -->
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="قالب ادمینِتو - بهینه شده با بوت استرپ">
+    <meta name="Author" content="برنامه نویسان ادمینتو">
+    <meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+    <!-- Title -->
+    <title>داشبورد نماینده</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+    <!-- styles code -->
+    <!-- Bootstrap css -->
+    <link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+    <!-- Style css -->
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+    <link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+    <!-- Icons css -->
+    <link href="../static/assets/css/icons.css" rel="stylesheet">
+
+    <!-- Animations css -->
+    <link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+    <!-- Switcher css -->
+    <link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+    <link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+    <!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+
+
+    <!-- page -->
+    <div class="page custom-index">
+
+        <!-- app header code -->
+        {% include "all_user_headr.html" %}
+        <!-- End app header Code -->
+        
+
+        
+        <!-- app sidebar Code -->
+        {% include "sidebar_all_user.html" %}
+        <!-- End app sidebar Code -->
+
+
+
+
+
+        <!-- main-content -->
+        <div class="main-content app-content">
+
+            <!-- container -->
+            <div class="main-container container-fluid">
+
+
+                <!-- breadcrumb -->
+                <div class="breadcrumb-header justify-content-between">
+                    <div>
+                        <h4 class="content-title mb-2 mb-xl-0">داشبورد نماینده</h4>
+                    </div>
+                    <div class="d-flex my-auto">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">صفحه اصلی</a></li>
+                                <li class="breadcrumb-item active " aria-current="page">داشبورد نماینده</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /breadcrumb -->
+
+                <!-- main-content-body -->
+                <div class="main-content-body">
+                    <div class="row row-cards">
+                        <div class=" col-lg-12">
+                            <!-- بخش هایی که فروش اینارو نشان میده -->
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="float-end bg-primary shadow-primary stamp stamp-lg"><i class="bx bx-user tx-24"></i></div>
+                                            <div class="text-muted"><h5>کل فروش </h5></div>
+                                            <span class="mb-1 tx-26 font-weight-semibold">{{all_sales}} تومان</span>
+                                            <span class="ms-2 badge rounded-pill bg-success-transparent tx-success fs-10">این ماه</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6  col-xl-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="float-end bg-success shadow-success stamp stamp-lg"><i class="bx bx-briefcase tx-24"></i></div>
+                                            <div class="text-muted"><h5>سود شما (15% از کل فروش)</h5></div>
+                                            <span class="mb-1 tx-26 font-weight-semibold">{{profit}} تومان</span> <!-- جایی که سود فروش قرار میگیره -->
+                                            <span class="ms-2 badge rounded-pill bg-success-transparent tx-danger fs-10">این ماه</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-md-6 col-lg-6  col-xl-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="float-end stamp stamp-lg bg-secondary shadow-secondary "><i class="bx bx-cart tx-24"></i></div>
+                                            <div class="text-muted"><h5>کد تخفیف </h5></div>
+                                            <span id="marketr_code" class="mb-1 tx-26 font-weight-semibold">{{user.discount_token}}</span>  <!-- جایی که کد تخفیف قرار میگیره -->
+                   
+                                                <span class="ms-2 badge rounded-pill bg-success-transparent tx-danger fs-10" onclick="copyDiscountCode()">کپی کردن کد</span>
+                                                <span id="copyStatus" class="ms-2 badge rounded-pill bg-success-transparent tx-danger fs-10"style="display:none;">کپی شد!</span>
+                                            </div>
+                                            <script>
+                                            function copyDiscountCode() {
+                                                var discountCode = 'ksdyhv62dh';
+                                                var tempInput = document.createElement('input');
+                                                tempInput.value = discountCode;
+                                                document.body.appendChild(tempInput);
+                                                tempInput.select();
+                                                document.execCommand('copy');
+                                                document.body.removeChild(tempInput);
+                                                var status = document.getElementById('copyStatus');
+                                                status.style.display = 'inline';
+                                                setTimeout(() => { status.style.display = 'none'; }, 2000);
+                                            }
+                                            </script>
+                                            <!-- <span class="ms-2 badge rounded-pill bg-success-transparent tx-success fs-10">این ماه</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- اضافی -->
+                                <!-- <div class="d-none col-sm-6 col-md-6 col-lg-6  col-xl-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="float-end stamp stamp-lg bg-info shadow-info"><i class="bx bx-money tx-24"></i></div>
+                                            <div class="text-muted"><h5>در انتظار</h5></div>
+                                            <span class="mb-1 tx-26 font-weight-semibold">7335</span>
+                                            <span class="ms-2 badge rounded-pill bg-success-transparent tx-success fs-10">این ماه</span>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <!-- بخش هایی که فروش اینارو نشان میده -->
+
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <div class="row row-sm ">
+                        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+                            <div class="card ">
+                                <div class="card-header"><h5 class="card-title">اسامی خریداران </h5></div>
+                                <!-- نمونه ای از قرار گرفتن اسامی خریداران -->
+                                {% for t in buyers %}
+                                <div class="card-body h-100">
+                                    <div class="media mb-4">
+                                        <div class="d-flex me-3">
+                                            <a href="javascript:void(0)">
+                                                <img class="media-object rounded-circle thumb-sm" alt="image" src="../static/../static/assets/img/{{ t.img }}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="mb-0 text-dark">{{ t.name }}</h5>
+                                            <span class="text-muted tx-14 me-2">{{ t.amount }}</span>
+                                            <span class="text-muted tx-14 me-2">{{ t.package }}</span>
+                                            <span class="text-muted tx-14 me-2">{{ t.date }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /row -->
+                </div>
+                <!-- /row -->
+
+
+            </div>
+            <!-- Container closed -->
+        </div>
+        <!-- main-content closed -->
+      
+    <!-- Footer code -->
+
+    <div class="main-footer ht-45">
+        <div class="container-fluid pd-t-0 ht-100p">
+            <span> <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span
+                    class="fa fa-heart text-danger"></span> توسط <a href="https://instagram.com/marsagencyir"> برنامه
+                    نویسان </a> mars agency</span>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    </div>
+    <!-- End Page -->
+    <!-- scripts code -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="../static/assets/plugins/moment/moment.js"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- P-scroll js -->
+    <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+    <!-- Switcher js -->
+    <script src="../static/assets/switcher/js/switcher.js"></script>
+
+    <!-- Eva-icons js -->
+    <script src="../static/assets/js/eva-icons.min.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+    <!-- sticky js -->
+    <script src="../static/assets/js/sticky.js"></script>
+
+    <!--- Index js -->
+    <script src="../static/assets/js/script.js"></script>
+
+
+
+
+
+    <!--themecolor js-->
+    <script src="../static/assets/js/themecolor.js"></script>
+
+    <!--swither-styles js-->
+    <script src="../static/assets/js/swither-styles.js"></script>
+
+    <!-- Custom js -->
+    <script src="../static/assets/js/custom.js"></script>
+    <!-- End scripts -->
+
+</body>
+
+
+</html>

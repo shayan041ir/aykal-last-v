@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="خرید های اخیر">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>خرید های اخیر</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+
+        {% include "admin_hedar.html" %}
+        <!-- End app header Code -->
+
+
+
+		<!-- app sidebar Code -->
+                		{% include "sidebar_all_user.html" %}
+
+        <!-- End app sidebar Code -->
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<h4 class="content-title mb-2 mb-xl-0">صورتحساب</h4>
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="javascript:void(0);">صفحات</a></li>
+								<li class="breadcrumb-item active " aria-current="page">صورتحساب</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- row -->
+				<div class="row row-sm">
+					<div class="col-md-12 col-xl-4">
+						<div class=" main-content-body-invoice">
+							<div class="card">
+								<div class="card-header bd-b-0">
+									<h2 class="card-title">خرید های اخیر</h2>
+								</div>
+								<div class="p-0">
+									<div class="main-invoice-list" id="mainInvoiceList">
+										<div class="media">
+											<div class="media-icon">
+												<i class="far fa-file-alt"></i>
+											</div>
+											<div class="media-body">
+												<h6><span>خرید اشتراک ماهانه</span>
+												<span>175,000 ريال</span></h6>
+												<div>
+													<p><span>تاریخ:</span>1404/3/2</p>
+													<p><span class="bg-success-transparent badge">ممنون بابت  همکاریتون</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- main-invoice-list -->
+					<!-- COL-END -->
+				</div>
+				<!-- row closed -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+	
+
+
+	</div>
+	        <!-- Footer code -->
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="https://www.instagram.com/marsagencyir/" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--- Internal Chart.bundle js -->
+	<script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>        <!-- End scripts -->
+
+</body>
+
+
+</html>

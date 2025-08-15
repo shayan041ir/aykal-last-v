@@ -1,0 +1,185 @@
+<doctype html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="UTF-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="Description" content="بلاگ ها" />
+      <meta name="Author" content="برنامه نویسان ادمینتو" />
+      <meta
+        name="Keywords"
+        content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین"
+      />
+
+      <!-- Title -->
+      <title>بلاگ ها</title>
+
+      <!-- Favicon -->
+      <link
+        rel="icon"
+        href="../static/assets/img/brand/favicon.png"
+        type="image/x-icon"
+      />
+
+      <!-- styles code -->
+      <!-- Bootstrap css -->
+      <link
+        href="../static/assets/plugins/bootstrap/css/bootstrap.rtl.min.css"
+        rel="stylesheet"
+        id="style"
+      />
+
+      <!-- Icons css -->
+      <link href="../static/assets/css/icons.css" rel="stylesheet" />
+
+      <!-- Font css -->
+      <link
+        href="../static/assets/font/Morabba/fontiran.css"
+        rel="stylesheet"
+      />
+
+      <!-- Style css -->
+      <link href="../static/assets/css/style.css" rel="stylesheet" />
+      <link href="../static/assets/css/blog.css" rel="stylesheet" />
+
+      <!-- Switcher css -->
+      <link
+        href="../static/assets/switcher/css/switcher.css"
+        rel="stylesheet"
+      />
+      <link href="../static/assets/switcher/demo.css" rel="stylesheet" />
+
+      <!-- Swiper CSS  -->
+      <link
+        rel="stylesheet"
+        href="../static/assets/plugins/swiper/swiper-bundle.min.css"
+      />
+
+	<!-- End styles -->
+	<!-- بارگذاری CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.rtl.min.css') }}">
+
+	<!-- بارگذاری JS -->
+	<script src="{{ url_for('static', filename='js/ionicons.suuqn5vt.js') }}"></script>
+
+</head>
+
+    <body
+      class="main-body app sidebar-mini rtl landing-page horizontalmenu"
+      dir="rtl"
+    >
+      <!-- Loader -->
+      <div id="global-loader">
+        <img
+          src="../static/assets/img/loaders/loader-4.svg"
+          class="loader-img"
+          alt="Loader"
+        />
+      </div>
+      <!-- /Loader -->
+      <!-- page -->
+      <div class="page">
+        <div class="page-main">
+          <!-- app header code -->
+
+          <!-- app sidebar Code -->
+
+          {%include 'landing/landing_header.html'%}
+
+          <!-- End app sidebar Code -->
+
+          <!-- main-content -->
+          <div class="main-content mt-4 ms-0">
+            <div class="side-app">
+              <div class="container">
+                <div class="card">
+                  <div class="row justify-content-center mt-5 mb-4">
+                    <div class="col-lg-8">
+                      <div
+                        class="blog-header d-flex flex-column align-items-center"
+                      >
+                        <div class="blog-header-icon">
+                          <i class="fe fe-edit-3"></i>
+                        </div>
+                        <h1 class="blog-header-title mt-3 mb-2">وبلاگ</h1>
+                        <p class="blog-header-desc text-muted mb-4">
+                          در این بخش می‌توانید جدیدترین مقالات، آموزش‌ها و اخبار
+                          مرتبط
+                          <br />
+                          با مدیریت و کسب‌وکار را مطالعه کنید. با ما همراه
+                          باشید!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                {%include 'landing/blog_loader.html' %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- main-content closed -->
+        </div>
+      </div>
+      <!-- Footer code -->
+      {%include 'landing/landing_footer.html'%}
+
+      <!-- End Footer -->
+      <!-- End Page -->
+      <!-- scripts code -->
+      <!-- Back-to-top -->
+      <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+      <!-- JQuery min js -->
+      <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+      <!-- Bootstrap Bundle js -->
+      <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+      <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+      <!-- COUNTERS JS-->
+      <script src="../static/assets/plugins/counters/counterup.min.js"></script>
+      <script src="../static/assets/plugins/counters/waypoints.min.js"></script>
+      <script src="../static/assets/plugins/counters/counters-1.js"></script>
+
+      <!-- Perfect SCROLLBAR JS-->
+      <script src="../static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+      <script src="../static/assets/landing/lib/company-slider/slider.js"></script>
+
+      <!--- TABS JS -->
+      <script src="../static/assets/plugins/tabs/jquery.multipurpose_tabcontent.js"></script>
+      <script src="../static/assets/plugins/tabs/tab-content.js"></script>
+
+      <!-- Star Rating Js-->
+      <script src="../static/assets/plugins/rating/jquery-rate-picker.js"></script>
+      <script src="../static/assets/plugins/rating/rating-picker.js"></script>
+
+      <!-- Star Rating-1 Js-->
+      <script src="../static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+      <script src="../static/assets/plugins/ratings-2/star-rating.js"></script>
+
+      <!--- Perfect-scrollbar js -->
+      <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+      <!-- SIDE-MENU JS -->
+      <script src="../static/assets/landing/js/sidemenu.js"></script>
+
+      <!-- Sticky js -->
+      <script src="../static/assets/js/sticky.js"></script>
+
+      <!--themecolor js-->
+      <script src="../static/assets/js/themecolor.js"></script>
+
+      <!-- CUSTOM JS -->
+      <script src="../static/assets/landing/js/landing.js"></script>
+
+      <!-- Switcher js -->
+      <script src="../static/assets/switcher/js/switcher.js"></script>
+      <!-- Swiper JS -->
+      <script src="../static/assets/plugins/swiper/swiper-bundle.min.js"></script>
+      <!-- End scripts -->
+    </body>
+  </html>
+</doctype>

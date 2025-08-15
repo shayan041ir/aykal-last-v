@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="همکاری با ما">
+    <meta name="Author" content="همکاری با ما">
+    <meta name="Keywords" content="همکاری با ما">
+
+    <!-- Title -->
+    <title>همکاری با ما</title>
+
+<!-- Favicon -->
+<link rel="icon" href="{{ url_for('static', filename='assets/img/brand/favicon.png') }}" type="image/x-icon">
+
+<!-- styles code -->
+<!-- Bootstrap css -->
+<link href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet" id="style">
+
+<!-- Icons css -->
+<link href="{{ url_for('static', filename='assets/css/icons.css') }}" rel="stylesheet">
+
+<!-- Font css -->
+<link href="{{ url_for('static', filename='assets/font/Morabba/fontiran.css') }}" rel="stylesheet">
+
+<!-- Style css -->
+<link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+
+<!-- Hamkaribama Custom CSS -->
+<link href="{{ url_for('static', filename='assets/css/hamkaribama.css') }}" rel="stylesheet">
+
+<!-- Switcher css -->
+<link href="{{ url_for('static', filename='assets/switcher/css/switcher.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='assets/switcher/demo.css') }}" rel="stylesheet">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/plugins/swiper/swiper-bundle.min.css') }}">
+
+</head>
+
+<body class="main-body app sidebar-mini rtl landing-page horizontalmenu" dir="rtl">
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+
+    <!-- PAGE -->
+    <div class="page">
+        <div class="page-main">
+
+            <!-- app header code -->
+
+
+            <!-- app sidebar Code -->
+            {%include 'landing/landing_header.html'%}
+
+
+            <!-- Main Content -->
+            <div class="main-content mt-0 ms-0">
+                <div class="container mt-4">
+                    <!-- Hero Section -->
+                    <section class="hero-section text-center">
+                        <div class="container">
+                            <h1 class="display-4 mb-4">با ما همکاری کنید و درآمد کسب کنید!</h1>
+                            <p class="lead">آیا به دنبال کسب درآمد از اینترنت هستید؟ با معرفی محصولات ما به دوستان و
+                                آشنایان، به ازای هر فروش موفق، پورسانت عالی دریافت کنید!</p>
+                            <a href="#contact-form" class="btn btn-light btn-lg cta-button">همین حالا ثبت‌نام کنید</a>
+                        </div>
+                    </section>
+
+                    <!-- Video Tutorial Section -->
+                    <section class="video-section">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 text-center mb-4">
+                                    <h2 class="section-title">آموزش نحوه همکاری با ما</h2>
+                                    <p class="text-muted">در این ویدیو، مراحل همکاری و کسب درآمد را به صورت کامل توضیح
+                                        داده‌ایم</p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <div class="video-container">
+                                        <!-- Replace YOUR_VIDEO_ID with your Aparat video ID -->
+                                        <iframe
+                                            src="https://www.aparat.com/video/video/embed/videohash/YOUR_VIDEO_ID/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true"
+                                            mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Steps Section -->
+                    <section class="container mb-5">
+                        <h2 class="section-title text-center">مراحل اخذ نمایندگی از آیکال</h2>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card step-card">
+                                    <div class="card-body text-center">
+                                        <h3 class="h5">1</h3>
+                                        <p style="font-weight: bold; font-size: 1.25rem;">ثبت‌نام در سایت</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card step-card">
+                                    <div class="card-body text-center">
+                                        <h3 class="h5">2</h3>
+                                        <p style="font-weight: bold; font-size: 1.25rem;">دریافت کد اختصاصی</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card step-card">
+                                    <div class="card-body text-center">
+                                        <h3 class="h5">3</h3>
+                                        <p style="font-weight: bold; font-size: 1.25rem;">شروع معرفی محصولات</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card step-card">
+                                    <div class="card-body text-center">
+                                        <h3 class="h5">4</h3>
+                                        <p style="font-weight: bold; font-size: 1.25rem;">دریافت پورسانت</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Benefits Section -->
+                    <section class="container mb-5">
+                        <h2 class="section-title text-center">مزایای همکاری با ما</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="benefits-list">
+                                    <li style="font-weight: bold; font-size: 1.25rem;">درآمد بدون سقف</li>
+                                    <li style="font-weight: bold; font-size: 1.25rem;">بدون نیاز به سرمایه‌گذاری</li>
+                                    <li style="font-weight: bold; font-size: 1.25rem;">پشتیبانی و آموزش رایگان</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="benefits-list">
+                                    <li style="font-weight: bold; font-size: 1.25rem;">پرداخت منظم پورسانت</li>
+                                    <li style="font-weight: bold; font-size: 1.25rem;">ابزارهای پیشرفته پیگیری</li>
+                                    <li style="font-weight: bold; font-size: 1.25rem;">پنل مدیریت اختصاصی</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Rules Section -->
+                    <section class="container mb-5">
+                        <h2 class="section-title text-center">قوانین همکاری</h2>
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="rules-card">
+                                    <ul>
+                                        <li style="font-weight: bold; font-size: 1.25rem;">پاسخ گویی و نظم ارتباطی </li>
+                                        <li style="font-weight: bold; font-size: 1.25rem;">رعایت اخلاق حرفه ای</li>
+                                        <li style="font-weight: bold; font-size: 1.25rem;">تعهدات متقابل طرفین</li>
+                                        <li style="font-weight: bold; font-size: 1.25rem;">تعهد به محرمانگی اطلاعات</li>
+                                        <li style="font-weight: bold; font-size: 1.25rem;">ممنوعیت همکاری همزمان با رقبا</li>
+                                        <li style="font-weight: bold; font-size: 1.25rem;">شرکت در جلسات تیمی یا فنی</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact Form -->
+                    <section id="contact-form" class="container mb-5">
+                        <h2 class="section-title text-center">فرم درخواست همکاری</h2>
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <form class="contact-form">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">نام و نام خانوادگی</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">شماره تماس</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">ایمیل</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="about" class="form-label">توضیح کوتاه درباره خودتان</label>
+                                        <textarea class="form-control" id="about" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="how" class="form-label">چطور با ما آشنا شدید؟</label>
+                                        <select class="form-select" id="how">
+                                            <option value="social">شبکه‌های اجتماعی</option>
+                                            <option value="friend">معرفی دوستان</option>
+                                            <option value="search">موتورهای جستجو</option>
+                                            <option value="other">سایر</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn cta-button w-100">ارسال درخواست</button>
+                                </form>
+                                <div id="form-success-message" style="display: none; color: green; margin-top: 1rem;">
+                                    درخواست شما با موفقیت ارسال شد!
+                                </div>
+
+                                <script>
+                                    document.querySelector('.contact-form').addEventListener('submit', function (e) {
+                                        e.preventDefault();
+                                        document.getElementById('form-success-message').style.display = 'block';
+                                    });
+                                </script>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+		</div>
+
+			<!-- Footer code -->
+	        {%include 'landing/landing_footer.html'%}
+            <!-- End Footer -->
+
+            <!-- scripts code -->
+            <!-- Back-to-top -->
+            <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+            <!-- JQuery min js -->
+            <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+            <!-- Bootstrap Bundle js -->
+            <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+            <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+            <!-- COUNTERS JS-->
+            <script src="../static/assets/plugins/counters/counterup.min.js"></script>
+            <script src="../static/assets/plugins/counters/waypoints.min.js"></script>
+            <script src="../static/assets/plugins/counters/counters-1.js"></script>
+
+            <!-- Perfect SCROLLBAR JS-->
+            <script src="../static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+            <script src="../static/assets/landing/lib/company-slider/slider.js"></script>
+
+            <!--- TABS JS -->
+            <script src="../static/assets/plugins/tabs/jquery.multipurpose_tabcontent.js"></script>
+            <script src="../static/assets/plugins/tabs/tab-content.js"></script>
+
+            <!-- Star Rating Js-->
+            <script src="../static/assets/plugins/rating/jquery-rate-picker.js"></script>
+            <script src="../static/assets/plugins/rating/rating-picker.js"></script>
+
+            <!-- Star Rating-1 Js-->
+            <script src="../static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+            <script src="../static/assets/plugins/ratings-2/star-rating.js"></script>
+
+            <!--- Perfect-scrollbar js -->
+            <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+            <!-- SIDE-MENU JS -->
+            <script src="../static/assets/landing/js/sidemenu.js"></script>
+
+            <!-- Sticky js -->
+            <script src="../static/assets/js/sticky.js"></script>
+
+            <!--themecolor js-->
+            <script src="../static/assets/js/themecolor.js"></script>
+
+            <!-- CUSTOM JS -->
+            <script src="../static/assets/landing/js/landing.js"></script>
+
+            <!-- Switcher js -->
+            <script src="../static/assets/switcher/js/switcher.js"></script>
+            <!-- Swiper JS -->
+            <script src="../static/assets/plugins/swiper/swiper-bundle.min.js"></script>
+            <!-- End scripts -->
+
+</body>
+
+</html>

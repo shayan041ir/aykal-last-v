@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Description" content="ادیمین داشبورد" />
+    <meta name="Author" content="برنامه نویسان ادمینتو" />
+    <meta
+      name="Keywords"
+      content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین"
+    />
+
+    <!-- Title -->
+    <title>ادیمین داشبورد</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon" />
+
+    <!-- styles code -->
+    <!-- Bootstrap css -->
+    <link
+      href="../static/assets/plugins/bootstrap/css/bootstrap.css"
+      rel="stylesheet"
+      id="style"
+    />
+
+    <!-- Style css -->
+    <link href="../static/assets/css/style.css" rel="stylesheet" />
+    <link href="../static/assets/css/plugins.css" rel="stylesheet" />
+
+    <!-- Icons css -->
+    <link href="../static/assets/css/icons.css" rel="stylesheet" />
+    <!-- Font css -->
+		<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+    <!-- Animations css -->
+    <link href="../static/assets/css/animate.css" rel="stylesheet" />
+
+    <!-- Switcher css -->
+    <link href="../static/assets/switcher/css/switcher.css" rel="stylesheet" />
+    <link href="../static/assets/switcher/demo.css" rel="stylesheet" />
+
+    <!-- End styles -->
+  </head>
+
+  <body class="main-body app sidebar-mini ltr">
+    <!-- Loader -->
+    <div id="global-loader">
+      <img
+        src="../static/assets/img/loaders/loader-4.svg"
+        class="loader-img"
+        alt="Loader"
+      />
+    </div>
+    <!-- /Loader -->
+    <!-- page -->
+    <div class="page custom-index">
+      <!-- app header code -->
+      {%include 'all_user_headr.html'%}
+       {%include 'admin/admin_base.html'%}
+        <!-- End app sidebar Code -->
+
+      <!-- main-content -->
+      <div class="main-content app-content">
+        <!-- container -->
+        <div class="main-container container-fluid">
+          <!-- breadcrumb -->
+          <div class="breadcrumb-header justify-content-between">
+            <div>
+              <h4 class="content-title mb-2 mb-xl-0">داشبورد ادمین</h4>
+            </div>
+            <div class="d-flex my-auto">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <!-- <a href="javascript:void(0);">خانه</a> -->
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <!-- داشبورد ادمین -->
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <!-- /breadcrumb -->
+          <!-- main-content-body -->
+          <div class="main-content-body">
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12">
+                <div class="card mb-4">
+                  <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">مدیریت سوالات متداول مشتریان</h5>
+                  </div>
+                  <div class="card-body">
+                    <form id="faqCustomerForm" class="mb-4">
+                      <div class="form-group mb-3">
+                        <label class="form-label">سوال</label>
+                        <input type="text" class="form-control" id="faqCustomerQuestion" placeholder="سوال مشتری را وارد کنید" required />
+                      </div>
+                      <div class="form-group mb-3">
+                        <label class="form-label">پاسخ</label>
+                        <textarea class="form-control content5" id="faqCustomerAnswer" rows="4"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-success">افزودن سوال</button>
+                    </form>
+                    <div>
+                      <h6 class="mb-2">لیست سوالات مشتریان</h6>
+                      <ul id="faqCustomerList" class="list-group"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-4">
+                  <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">مدیریت سوالات متداول بازاریابان</h5>
+                  </div>
+                  <div class="card-body">
+                    <form id="faqMarketerForm" class="mb-4">
+                      <div class="form-group mb-3">
+                        <label class="form-label">سوال</label>
+                        <input type="text" class="form-control" id="faqMarketerQuestion" placeholder="سوال بازاریاب را وارد کنید" required />
+                      </div>
+                      <div class="form-group mb-3">
+                        <label class="form-label">پاسخ</label>
+                        <textarea class="form-control content5" id="faqMarketerAnswer" rows="4"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-success">افزودن سوال</button>
+                    </form>
+                    <div>
+                      <h6 class="mb-2">لیست سوالات بازاریابان</h6>
+                      <ul id="faqMarketerList" class="list-group"></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /container -->
+        </div>
+        <!-- Container closed -->
+      </div>
+      <!-- main-content closed -->
+
+      <!-- Footer code -->
+
+      <div class="main-footer ht-45">
+        <div class="container-fluid pd-t-0 ht-100p">
+          <span>
+            <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی
+            شده با عشق <span class="fa fa-heart text-danger"></span> توسط
+            <a href="https://instagram.com/marsagencyir"> برنامه نویسان </a>
+            mars agency</span
+          >
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <!-- End Page -->
+    <!-- scripts code -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="../static/assets/plugins/moment/moment.js"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- P-scroll js -->
+    <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+    <!-- Switcher js -->
+    <script src="../static/assets/switcher/js/switcher.js"></script>
+
+    <!-- Eva-icons js -->
+    <script src="../static/assets/js/eva-icons.min.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+    <!-- sticky js -->
+    <script src="../static/assets/js/sticky.js"></script>
+
+    <!--- Index js -->
+    <script src="../static/assets/js/script.js"></script>
+
+    <!--- Chart bundle min js -->
+    <script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!--- Internal Sampledata js -->
+    <script src="../static/assets/js/chart.flot.sampledata.js"></script>
+
+    <!-- ApexChart -->
+    <script src="../static/assets/js/apexcharts.min.js"></script>
+
+    <!--- Internal Vector-maps js -->
+    <script src="../static/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../static/assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+
+    <!--- Index js -->
+    <script src="../static/assets/js/index5.js"></script>
+
+    <!--themecolor js-->
+    <script src="../static/assets/js/themecolor.js"></script>
+
+    <!--swither-styles js-->
+    <script src="../static/assets/js/swither-styles.js"></script>
+
+    <!-- Custom js -->
+    <script src="../static/assets/js/custom.js"></script>
+    <script src="../static/assets/plugins/wysiwyag/jquery.richtext.js"></script>
+    <script>
+      $(function() {
+        $('#faqCustomerAnswer').richText();
+        $('#faqMarketerAnswer').richText();
+
+        let customerFaqs = [];
+        let marketerFaqs = [];
+
+        function renderFaqList(list, elementId, type) {
+          const ul = $(elementId);
+          ul.empty();
+          list.forEach((faq, idx) => {
+            ul.append(`
+              <li class="list-group-item d-flex justify-content-between align-items-start flex-column flex-md-row">
+                <div>
+                  <strong>${faq.question}</strong>
+                  <div class="mt-2">${faq.answer}</div>
+                </div>
+                <div class="mt-2 mt-md-0">
+                  <button class="btn btn-sm btn-danger ms-2" onclick="removeFaq('${type}', ${idx})">حذف</button>
+                </div>
+              </li>
+            `);
+          });
+        }
+
+        window.removeFaq = function(type, idx) {
+          if(type === 'customer') {
+            customerFaqs.splice(idx, 1);
+            renderFaqList(customerFaqs, '#faqCustomerList', 'customer');
+          } else {
+            marketerFaqs.splice(idx, 1);
+            renderFaqList(marketerFaqs, '#faqMarketerList', 'marketer');
+          }
+        };
+
+        $('#faqCustomerForm').on('submit', function(e) {
+          e.preventDefault();
+          const question = $('#faqCustomerQuestion').val();
+          const answer = $('#faqCustomerAnswer').val();
+          if(question && answer) {
+            customerFaqs.push({question, answer});
+            renderFaqList(customerFaqs, '#faqCustomerList', 'customer');
+            this.reset();
+            $('#faqCustomerAnswer').next('.richText').find('.richText-editor').html('');
+          }
+        });
+
+        $('#faqMarketerForm').on('submit', function(e) {
+          e.preventDefault();
+          const question = $('#faqMarketerQuestion').val();
+          const answer = $('#faqMarketerAnswer').val();
+          if(question && answer) {
+            marketerFaqs.push({question, answer});
+            renderFaqList(marketerFaqs, '#faqMarketerList', 'marketer');
+            this.reset();
+            $('#faqMarketerAnswer').next('.richText').find('.richText-editor').html('');
+          }
+        });
+      });
+    </script>
+    <!-- End scripts -->
+  </body>
+</html>

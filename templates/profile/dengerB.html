@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="هشدار ها">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords"
+		content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>هشدار ها</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+		<!-- app header code -->
+		{%include 'all_user_headr.html'%}
+		<!-- End app header Code -->
+
+
+
+		<!-- app sidebar Code -->
+		{%include 'sidebar_all_user.html'%}
+		<!-- End app sidebar Code -->
+
+
+
+
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+			<div class="main-container container-fluid">
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<h4 class="content-title mb-2 mb-xl-0">هشدارها</h4>
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-2 mb-md-0">
+								<li class="breadcrumb-item"><a href="javascript:void(0);">صفحات</a></li>
+								<li class="breadcrumb-item active " aria-current="page">هشدارهای لازم</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- row -->
+				<div class="container">
+					<!-- ROW-1 OPEN -->
+					{%if notif%}
+					{%for i in notif%}
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="card mt-1">
+								<div class="card-body p-0 p-lg-5 text-dark">
+									<div class="statistics-info p-4">
+										<div class="row">
+											<div class="col-xl-6">
+												<div class="">
+													<h2 class="fw-bold mb-4 danger-user">هشدارهای لازم</h2>
+													<p>{{i+'\n'}}</p>
+													<p>
+														قوانین ویژه مشتریان آیکال:
+
+														شرایط و قوانین استفاده از سایت Aykalapp.com
+
+														۱-استفاده منصفانه از خدمات:
+														۱-مشتری موظف است از سیستم فقط در چارچوب مجاز و اخلاقی استفاده
+														کند.
+														۲-استفاده از آیکال برای مقاصد غیر قانونی یا مغایر با قوانین کشور
+														ممنوع است.
+														۳-هرگونه سو استفاده از سرویس و داده های تولید شده توسط آیکال
+														موجب قطع سرویس خواهد شد.
+
+														۲-پرداخت و اشتراک:
+														۱-پرداخت ها طبق پلن های مشخص شده انجام می‌شود.تاخیر یا عدم
+														پرداخت منجر به تعلیق دسترسی خواهد شد.
+
+														۳-پشتیبانی و ارتباط با تیم آیکال:
+														۱-هرگونه مشکل یا پیشنهاد باید از طریق کانال های
+														رسمی(ایمیل،پشتیبانی سایت یا پنل کاربری)مطرح شود.
+														۲-توهین،تهدید یا برخورد نادرست با تیم پشتیبانی منجر به قطع
+														همکاری خواهد شد.
+
+														۴-قوانین کلی:
+														سایت Aykalapp.com خدمات تخصصی در حوزه دیجیتال مارکتینگ ارائه
+														می‌دهد. استفاده از سایت به منزله‌ی پذیرش کامل تمامی شرایط و
+														مقررات ذکر شده در این صفحه است. کاربران موظف به رعایت قوانین
+														جمهوری اسلامی ایران و قوانین جاری اینترنت هستند.
+
+														۵-استفاده مجاز:
+														کاربران تنها مجاز به استفاده از خدمات سایت به شیوه‌ای قانونی و
+														مجاز می‌باشند. هرگونه فعالیت غیرمجاز از جمله هک، سوءاستفاده از
+														اطلاعات دیگران، کپی‌برداری غیرقانونی، ارسال محتوای غیرشرعی یا
+														غیرقانونی ممنوع می‌باشد.
+
+														۶-حفظ اطلاعات و حریم خصوصی:
+														اطلاعات شخصی کاربران نزد سایت محفوظ است و تنها برای اهداف مربوط
+														به ارائه خدمات مانند ارسال پیام‌های سفارش یا پشتیبانی استفاده
+														می‌شود. استفاده از سایت به معنای پذیرش سیاست حفظ حریم خصوصی
+														ماست.
+
+														۷-اطلاعات ثبت‌نام:
+														کاربران موظفند اطلاعات صحیح و کامل هنگام ثبت‌نام وارد نمایند.
+														مسئولیت صحت اطلاعات ارائه شده بر عهده کاربر است و سایت هیچ
+														مسئولیتی در قبال اطلاعات نادرست ندارد.
+
+														۸-امنیت حساب کاربری:
+														مسئولیت حفظ امنیت حساب کاربری به عهده کاربران است. سایت هیچ گونه
+														مسئولیتی در قبال سوءاستفاده یا دسترسی غیرمجاز به حساب‌های کاربری
+														ندارد.
+
+														۹-حقوق مالکیت معنوی:
+														تمامی محتوای سایت شامل متن‌ها، تصاویر، طراحی‌ها، لوگوها و
+														نرم‌افزارها متعلق به Aykalapp.com بوده و هرگونه کپی، بازنشر یا
+														استفاده تجاری بدون مجوز کتبی ممنوع می‌باشد.
+
+														۱۰-مسئولیت محدود:
+														سایت Aykalapp.com تحت هیچ شرایطی مسئول خسارت‌های مستقیم،
+														غیرمستقیم یا تبعی ناشی از استفاده یا عدم امکان استفاده از خدمات
+														سایت نخواهد بود.
+
+														۱۱-مسئولیت محدود در برابر محدودیت‌های اینستاگرام:
+														کاربران آگاه هستند که استفاده از خدمات افزایش تعامل، ممکن است
+														منجر به اعمال محدودیت، بلاک، ریست پسورد یا دی‌اکتیو شدن اکانت از
+														سوی اینستاگرام شود. Aykalapp.com هیچ مسئولیتی در قبال تصمیمات و
+														محدودیت‌های اعمال شده توسط اینستاگرام ندارد و تمامی ریسک‌های
+														احتمالی بر عهده کاربر می‌باشد.
+
+														۱۲-استفاده از سرویس ارسال انبوه:
+														کاربران می‌توانند روزانه تا سقف ۲۰۰ عدد و ماهانه تا سقف ۶۰۰۰ عدد
+														متن و پست را از طریق پنل کاربری خود به صورت همزمان ارسال نمایند.
+														تمامی ارسال‌ها از طریق بسترهای داخلی و بدون نیاز به دریافت رمز
+														عبور اینستاگرام انجام می‌شود.
+
+														۱۳-محدودیت تعاملات هنگام استفاده از سرویس تعامل خودکار و آنتی
+														روح:
+														در زمان اجرای تعاملات خودکار و آنتی روح، کاربران اکیداً مجاز به
+														انجام فعالیت‌هایی نظیر لایک، کامنت، سیو، شیر، ویو یا ورود به
+														اکانت از دستگاه‌های دیگر نمی‌باشند.
+														عدم رعایت این موارد می‌تواند منجر به بلاک یا دی‌اکتیو شدن اکانت
+														گردد و سایت هیچ مسئولیتی در قبال این آسیب‌ها نخواهد داشت.
+
+														۱۴-رعایت زمان‌بندی تعاملات:
+														کاربران موظفند در بازه‌های زمانی مشخص‌شده توسط تیم فنی هیچگونه
+														دخالت دستی در حساب نداشته باشند. مسئولیت تخلفات احتمالی و
+														آسیب‌های ناشی از آن مستقیماً بر عهده کاربر خواهد بود.
+														
+														۱۵-محتوای غیرقانونی و غیراخلاقی:
+														ارسال هرگونه عکس، ویدئو یا متن با محتوای مستهجن، غیراخلاقی، ضد
+														ارزش‌های اسلامی یا مخالف قوانین جمهوری اسلامی ایران ممنوع است.
+														در صورت مشاهده، حساب کاربری بلافاصله مسدود شده و مراتب به مراجع
+														ذیصلاح گزارش داده خواهد شد.
+
+														۱۶-محتوای ضد امنیت ملی:
+														ارسال هرگونه پست یا محتوایی با مضامین ضد امنیت ملی، مخالف
+														سیاست‌های کشور یا تهدیدکننده منافع ملی ایران به شدت ممنوع است و
+														در صورت تخلف، حساب کاربر بدون اطلاع قبلی حذف و موضوع به مراجع
+														قضایی اعلام خواهد شد.
+
+														۱۷-تعلیق یا قطع خدمات:
+														سایت حق دارد در صورت مشاهده تخلف از قوانین، بدون اطلاع قبلی
+														ارائه خدمات به کاربر را متوقف یا حساب وی را تعلیق کند.
+
+														۱۸-تغییر قوانین:
+														سایت Aykalapp.com این حق را برای خود محفوظ می‌دارد که در هر زمان
+														شرایط و قوانین را تغییر دهد. کاربران موظف به بررسی دوره‌ای این
+														صفحه برای اطلاع از تغییرات می‌باشند.
+
+														۱۹-حل اختلاف:
+														در صورت بروز هرگونه اختلاف، ابتدا تلاش خواهد شد موضوع از طریق
+														مذاکره دوستانه حل شود. در صورت عدم توافق، موضوع به مراجع قضایی
+														ذیصلاح ارجاع داده خواهد شد. بند محدودیت در ارائه خدمات:
+														اگر به هر دلیلی مثل تغییرات اینستاگرام، محدودیت‌های فنی یا
+														تحریم‌ها، خدمات قطع یا محدود بشه، سایت مسئولیتی در قبال خسارات
+														احتمالی کاربر نداره.
+
+														۲۰-بند Force Majeure (شرایط قهریه):
+														حوادث غیرقابل پیش‌بینی مثل قطعی اینترنت، فیلترینگ، تحریم، جنگ،
+														یا بلایای طبیعی باعث لغو یا تعلیق خدمات میشه و مسئولیتی بر عهده
+														سایت نیست.
+
+														۲۱-بند عدم بازگشت وجه:
+														در صورتی که کاربر قوانین سایت را نقض کند و حسابش مسدود شود،
+														هیچگونه وجهی برگشت داده نخواهد شد.
+													</p>
+												</div>
+											</div>
+											<div class="col-xl-6">
+												<div class="text-end">
+													<img src="../static/assets/landing/images/8.png" alt=""
+														class="img-fluid w-60">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+					{%endif%}
+					<!-- ROW-1 CLOSED -->
+				</div>
+			</div>
+
+		</div>
+		<!-- main-content closed -->
+
+
+
+
+
+
+
+
+        <!-- Footer code -->
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="https://www.instagram.com/marsagencyir/" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+
+
+
+
+
+
+
+
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>
+	<!-- End scripts -->
+
+</body>
+
+
+</html>

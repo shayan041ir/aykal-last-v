@@ -1,0 +1,179 @@
+ 	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+	    <!-- Font css -->
+		<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.rtl.min.css') }}">
+
+  <!-- بارگذاری JS -->
+  <script src="{{ url_for('static', filename='js/ionicons.suuqn5vt.js') }}"></script>
+
+
+  <!-- بارگذاری CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.rtl.min.css') }}">
+
+  <!-- بارگذاری JS -->
+  <script src="{{ url_for('static', filename='js/ionicons.suuqn5vt.js') }}"></script>
+
+  <!-- End styles -->
+
+ 
+ 
+ <div class="main-header side-header sticky nav nav-item">
+        <div class="container-fluid main-container">
+          <div class="main-header-left">
+            <div
+              class="app-sidebar__toggle mobile-toggle"
+              data-bs-toggle="sidebar"
+            >
+            <a class="open-toggle" href="javascript:void(0);"
+            ><i class="header-icons" data-eva="menu-outline"></i
+              ></a>
+              <a class="close-toggle" href="javascript:void(0);"
+                ><i class="header-icons" data-eva="close-outline"></i
+              ></a>
+            </div>
+            
+            <!-- logo -->
+            <div class="responsive-logo">
+              <a href="/" class="header-logo"
+              ><img
+              src="../static/assets/img/brand/logo.png"
+              class="logo-11"
+              alt="logo"
+              /></a>
+              <a href="/" class="header-logo"
+              ><img
+              src="../static/assets/img/brand/logo-white.png"
+              class="logo-1"
+              alt="logo"  
+              /></a>
+              <button
+                class="navbar-toggler nav-link icon navresponsive-toggler vertical-icon ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+              </button>
+            </div>
+            <!-- logo -->
+          </div>
+          <div
+          class="mb-0 navbar navbar-expand-lg navbar-nav-right responsive-navbar navbar-dark p-0 mg-lg-s-auto"
+          >
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+              <div class="main-header-right">
+
+               
+                <div class="nav nav-item navbar-nav-right mg-lg-s-auto">
+                  <div class="nav-item full-screen fullscreen-button">
+                    <a
+                      class="new nav-link full-screen-link"
+                      href="javascript:void(0);"
+                      ><i class="fe fe-maximize"></i
+                    ></a>
+                  </div>
+
+
+                  <!-- notifs -->
+                  <div class="dropdown nav-item main-header-notification">
+                    <a class="new nav-link" href="javascript:void(0);"
+                      ><i class="fe fe-bell"></i><span class="pulse"></span
+                    ></a>
+                    <div class="dropdown-menu">
+                      <div
+                        class="menu-header-content bg-primary text-start d-flex rounded-top-5"
+                      >
+                        <div class="">
+                          <h6 class="menu-header-title text-white mb-0">
+                             اعلان های جدید
+                          </h6>
+                        </div>
+                        <!-- <div class="d-none my-auto ms-auto">
+                          <a
+                            class="badge bg-pill bg-success float-end"
+                            href="javascript:void(0);"
+                            >علامت زدن بعنوان خوانده شده</a
+                          >
+                        </div> -->
+                      </div>
+                      <a class="d-flex p-3 border-bottom" href="/mail/index">
+                        <div class="notifyimg bg-warning-transparent">
+                          <i class="fe fe-mail text-warning"></i>
+                        </div>
+                        <div class="ms-3">
+                          <h5 class="notification-label mb-1">پیام جدید</h5>
+                          <div class="notification-subtext">1 ساعت قبل</div>
+                        </div>
+                      </a>
+                      <div class="main-notification-list Notification-scroll">
+                        <a class="d-flex p-3" href="//blog">
+                          <div class="notifyimg bg-pink-transparent">
+                            <i class="fe fe-file-text text-pink"></i>
+                          </div>
+                          <div class="ms-3">
+                            <h5 class="notification-label mb-1">
+                              بلاگ های جدید
+                            </h5>
+                            <div class="notification-subtext">12 ساعت قبل</div>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- <div class="dropdown-footer text-center">
+                          <a href="blog.html" class="btn  btn-primary w-md tx-13">مشاهده همه<i class="fe fe-arrow-right tx-12 ms-2 lh-1"></i></a>
+                      </div> -->
+                    </div>
+                  </div>
+                  <!-- notifs -->
+
+                  <div class="dropdown main-profile-menu nav nav-item nav-link">
+                    <a class="profile-user d-flex" href="javascript:void(0)"
+                      ><img
+                        src="{{user.pic_path}}"
+                        alt="user-img"
+                        class="rounded-circle mCS_img_loaded" /><span></span
+                    ></a>
+
+                    <div class="dropdown-menu">
+                      <div
+                        class="main-header-profile header-img bg-primary rounded-top-5 p-3"
+                      >
+                        <h6>نماینده</h6>
+                        <span> نماینده</span>
+                      </div>
+                      <a class="dropdown-item" href="/prof/profile"
+                        ><i class="fe fe-user"></i> پروفایل من</a
+                      >
+                      
+                      <a class="dropdown-item" href="/prof/edit"
+                        ><i class="fe fe-edit"></i> ویرایش پروفایل</a
+                      >
+                      <a class="dropdown-item" href="/api/logout"
+                        ><i class="fe fe-log-out"></i> خروج</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

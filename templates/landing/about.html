@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="درباره ما">
+	<meta name="Author" content="درباره ما">
+	<meta name="Keywords" content="درباره ما">
+
+	<!-- Title -->
+	<title>درباره ما</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" id="style">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+	<!-- End styles -->
+	<!-- Swiper CSS  -->
+	<link rel="stylesheet" href="../static/assets/plugins/swiper/swiper-bundle.min.css">
+	<style>
+		/* استایل کاستوم برای کارت‌های تیم با کلاس aazadarbare */
+.aazadarbare {
+    width: 230px !important; /* عرض ثابت برای کارت */
+    height: 330px !important; /* ارتفاع ثابت برای کارت */
+    margin: 0 auto; /* وسط‌چین کردن کارت */
+    border-radius: 10px; /* گوشه‌های گرد */
+    overflow: hidden; /* جلوگیری از سرریز محتوا */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+}
+
+.aazadarbare .card-body {
+    padding: 15px !important; /* پدینگ داخلی */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* استفاده کامل از ارتفاع کارت */
+}
+
+.aazadarbare .about-team img {
+    width: 120px !important; /* عرض ثابت برای تصویر */
+    height: 120px !important; /* ارتفاع ثابت برای تصویر */
+    object-fit: cover; /* تنظیم تصویر برای پر کردن فضا */
+    margin: 0 auto; /* وسط‌چین کردن تصویر */
+    border-radius: 50%; /* حفظ حالت دایره‌ای */
+}
+
+.aazadarbare .tx-16.font-weight-semibold {
+    font-size: 1.1rem; /* اندازه فونت عنوان */
+    font-weight: 600;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* نمایش سه‌نقطه برای سرریز */
+    white-space: nowrap; /* محدود کردن عنوان به یک خط */
+}
+
+.aazadarbare .tx-13.text-muted {
+    font-size: 0.85rem; /* اندازه فونت توضیحات */
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* محدود کردن توضیحات به دو خط */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* نمایش سه‌نقطه برای سرریز */
+}
+
+.aazadarbare .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* فاصله بین آیکون‌ها */
+}
+
+.aazadarbare .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* اندازه ثابت برای آیکون‌ها */
+    height: 30px;
+}
+
+.aazadarbare .social-icons i {
+    font-size: 1.1rem; /* اندازه آیکون‌ها */
+}
+
+	</style>
+</head>
+
+<body class="main-body app sidebar-mini rtl landing-page horizontalmenu" dir="rtl">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+
+	<!-- PAGE -->
+	<div class="page">
+		<div class="page-main">
+
+			<!-- app header code -->
+	        {%include 'landing/landing_header.html'%}
+			
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<h4 class="content-title mb-2 mb-xl-0">درباره ما</h4>
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-2 mb-md-0">
+								<li class="breadcrumb-item"><a href="landing-page.html">صفحات</a></li>
+								<li class="breadcrumb-item active " aria-current="page">درباره ما</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- row -->
+				<div class="container">
+					<div class="row about-main mb-3 align-items-center">
+						<div class="col-lg-6 col-md-6 col-sm-12 mt-3 text-center ">
+							<h2 class="text-white-md-downs">درباره آیکال</h2>
+							<p class="leading-normal tx-16">
+								آیکال یک سیستم هوش مصنوعی نو آورانه با هدف ارتقای تصمیم گیری هوشمند بهینه سازی فرایند ها و توسعه راهکارهای مبتنی بر داده طراحی شده است ما در آیکال با تکیه بر دانش روز و الگوریتم های پیشرفته و شناخت عمیق از نیاز های بازار بستری هوشمند و قابل اعتماد برای تحلیل ، یادگیری و تعامل با داده ها فراهم کردیم 
+							</p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+							<img src="../static/assets/img/photos/28.jpg" class="img-fluid rounded-5 shadow-lg" alt="image">
+						</div>
+					</div>
+
+
+					<!-- ROW-3 OPEN -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="card mt-1">
+								<div class="card-body p-0 p-lg-5 text-dark">
+									<div class="statistics-info p-4">
+										<div class="row">
+											<div class="col-xl-6">
+												<div class="">
+													<h2 class="fw-bold mb-4 text-dark">ما به <span
+															class="text-primary">ساخت</span> پروژه رویایی شما کمک می
+														کنیم.</h2>
+													<p>
+														در دنیای امروز جایی که مرز بین تخیل و واقعیت را فناوری ترسیم میکند آیکال همراه شماست تا رویاهایتان را به پروژه های ملموس ، هوشمند و موفق تبدیل کند 
+													</p>
+													<p>
+														ما در آیکال با تکیه بر تخصص در حوزه هوش مصنوعی به شما کمک میکنیم ایده هایتان را از مرحله تصور تا پیاده سازی ، موفقیت های باور نکردنی پیش ببرید فرقی نمیکند استارتاپ نوپا باشید یا سازمانی بزرگ با چالش های پیچیده آیکال کنار شماست تا راه حل های هوشمند ، دقیق و قابل آشکار ارائه دهد . در آیکال ما معتقدیم که هر پروژه بزرگ با یک رویا آغاز میشود بیایید آن را باهم بسازیم.
+													</p>
+												</div>
+											</div>
+											<div class="col-xl-6">
+												<div class="text-center">
+													<img src="../static/assets/img/media/16.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ROW-3 CLOSED -->
+					<!-- Row -->
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="card custom-card">
+								<div class="card-header custom-card-header">
+									<h6 class="card-title mb-0">تاریخچه شرکت</h6>
+								</div>
+								<div class="card-body">
+									<div class="vtimeline">
+										<div class="timeline-wrapper timeline-wrapper-primary">
+											<div class="timeline-badge"></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h6 class="timeline-title mb-3">
+														چگونه و به چه دلیل پروژه آیکال شکل گرفت؟
+														<span class="badge shadow bg-primary mx-1">چهار سال پیش</span>
+													</h6>
+												</div>
+												<div class="timeline-body">
+													<div class="row">
+														<div class="col">
+															<p>
+																شکل گیری پروژه آیکال برمیگردد به اواخر سال 1400 که یک رویای بزرگ با قدم های ریز ولی جسورانه از مشکلات و پیجیدگی های کاری شکل گرفته بلکه یک آنلاین شاپ بود با چالش هایی چون چگونه و چه کسی تعامل کند داشتیم و ایده آیکال ظهور کرد که این کار به وسیله هوشمصنوعی به صورت 24 ساعته و هر روز هفته انجام شود .
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+										<div class="timeline-wrapper timeline-inverted timeline-wrapper-secondary">
+											<div class="timeline-badge"></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h6 class="timeline-title">گام های اولیه پروژه آیکال<span class="badge bg-orange shadow mx-1">سه سال پیش</span></h6>
+												</div>
+												<div class="timeline-body mt-3">
+													<div class="row">
+														<div class="col">
+															<p>
+																برای شکل گیری پروژه با چندین برنامه نویس تحقیقاتی صورت گرفت تا پروژه را به وافیعت تبدیل کند و بعد آن رسیدیم به مرحله ثبت رساندن پروژه که در های پارک علم و فناوری برایمان باز شد تا پروژه آیکال را طرحی نو آورانه معرفی بکنیم و بعد از صرف زمان زیاد و چالش های پیچیده به هدفمون رسیدیم 
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="timeline-wrapper timeline-wrapper-info">
+											<div class="timeline-badge"></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h6 class="timeline-title"> 
+														رشد و توسعه پروژه آیکال
+														<span class="badge shadow bg-info mx-1">اکنون</span>
+													</h6>
+												</div>
+												<div class="timeline-body">
+													<p>
+														رشد و توسعه پروژه آیکال از وقتی شروع شد که ایده قابل قبول علم و فناوری قرار گرفت پس از رد کردن مراحل مربوطه علم و فناوری امروزه میتوان آیکال را به عنوان بک هسته نو آور در حوزه هوش مصنوعی معرفی کرد که با مراکز تحقیقاتی همکاری میکند و به ساختن آینده ای هوشمند کمک و تلاش میکند .
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="timeline-wrapper timeline-inverted timeline-wrapper-danger">
+											<div class="timeline-badge"></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h6 class="timeline-title">ارول مکسونی ۴ عکس جدید در آلبومسفر
+														تابستانی بارگذاری کرد <span
+															class="badge shadow bg-danger mx-1">4 sec ago</span></h6>
+												</div>
+												<div class="timeline-body">
+													<p>اصول پیانوفورت که ما در سفرهای شگفت‌انگیز بی‌تأثیر نیستند، خاص
+														هستند.</p>
+													<img src="../static/assets/img/photos/6.jpg" class="mb-3 rounded-5" alt="img">
+												</div>
+											</div>
+										</div>
+										<div class="timeline-wrapper timeline-wrapper-success">
+											<div class="timeline-badge"></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h6 class="timeline-title">تیم پشتیبانی برای شما ایمیل ارسال کرد
+														<span class="badge shadow bg-success mx-1">5 ثانیه قبل</span>
+													</h6>
+												</div>
+												<div class="timeline-body">
+													<img src="../static/assets/img/photos/11.jpg" class="mb-3 rounded-5"
+														alt="img">
+													<p>اصول پیانو فورته ما برای سفرهای شگفت‌انگیز بی‌تأثیر نیستند.</p>
+												</div>
+											</div>
+										</div>
+										<div class="timeline-wrapper timeline-inverted timeline-wrapper-warning">
+											<div class="timeline-badge"></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h6 class="timeline-title">آقای دوی ویدیویی را به اشتراک گذاشت<span
+															class="badge shadow bg-warning mx-1">7 ثانیه پیش</span></h6>
+												</div>
+												<div class="timeline-body">
+													<div class="embed-responsive embed-responsive-16by9 mb-3">
+														<iframe class="embed-responsive-item"
+															src="https://www.youtube.com/embed/XZmGGAbHqa0?rel=0&amp;controls=0&amp;showinfo=0"
+															allowfullscreen></iframe>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="timeline-wrapper timeline-wrapper-dark">
+											<div class="timeline-badge"></div>
+											<div class="timeline-panel">
+												<div class="timeline-heading">
+													<h6 class="timeline-title">سارا یانگ درخواست دوستی شما را پذیرفت
+														<span class="badge shadow bg-pink mx-1">9 ثانیه پیش</span></h6>
+												</div>
+												<div class="timeline-body">
+													<p>درد به خودی خود مهم است، آدیپیسینگ دنبال خواهد شد. دوست داشتنی از
+														آرزو، منتخب دردهای خود را ترک می کند، من این پرواز بزرگترین
+														را توضیح خواهم داد
+													</p>
+												</div>
+											</div>
+										</div> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Row -->
+
+					<div class="row">
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="counter-status md-mb-0">
+										<div class="text-center mb-2">
+											<svg class="about-icons" xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 24 24">
+												<path fill="#623AA2"
+													d="M10.3125,16.09375a.99676.99676,0,0,1-.707-.293L6.793,12.98828A.99989.99989,0,0,1,8.207,11.57422l2.10547,2.10547L15.793,8.19922A.99989.99989,0,0,1,17.207,9.61328l-6.1875,6.1875A.99676.99676,0,0,1,10.3125,16.09375Z"
+													opacity=".99" />
+												<path fill="#e1d4f7"
+													d="M12,2A10,10,0,1,0,22,12,10.01146,10.01146,0,0,0,12,2Zm5.207,7.61328-6.1875,6.1875a.99963.99963,0,0,1-1.41406,0L6.793,12.98828A.99989.99989,0,0,1,8.207,11.57422l2.10547,2.10547L15.793,8.19922A.99989.99989,0,0,1,17.207,9.61328Z" />
+											</svg>
+										</div>
+										<div class="text-center">
+											<h2 class="counter mb-2 text-primary">77</h2>
+											<h6 class="mb-0  text-primary">پروژه های موفق</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="counter-status md-mb-0">
+										<div class="text-center mb-1">
+											<svg class="about-icons" xmlns="http://www.w3.org/2000/svg"
+												enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+												<circle cx="10" cy="8.5" r="5" fill="#e99887" />
+												<path fill="#fdb9ab"
+													d="M13.30884,12.22253C12.42566,13.00806,11.27496,13.5,10,13.5s-2.42566-0.49194-3.30884-1.27747C3.92603,13.48206,2,16.26324,2,19.5c0,0.00018,0,0.00037,0,0.00055C2.00012,20.05267,2.44788,20.50012,3,20.5h14c0.00018,0,0.00037,0,0.00055,0c0.55212-0.00012,0.99957-0.44788,0.99945-1C18,16.26324,16.07397,13.48206,13.30884,12.22253z" />
+												<path fill="#f66b4e"
+													d="M18.3335,13.5c-0.26526,0.0003-0.51971-0.10515-0.707-0.293l-1.3335-1.333c-0.38694-0.39399-0.38123-1.02706,0.01275-1.414c0.38897-0.38202,1.01228-0.38202,1.40125,0l0.62647,0.626l1.95953-1.96c0.39399-0.38694,1.02706-0.38123,1.414,0.01275c0.38202,0.38897,0.38202,1.01227,0,1.40125l-2.6665,2.667C18.85321,13.39485,18.59877,13.5003,18.3335,13.5z" />
+											</svg>
+										</div>
+										<div class="text-center text-secondary mb-1">
+											<h2 class="counter mb-2">2,677</h2>
+											<h6 class="mb-0">کل مشتریان</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="counter-status md-mb-0">
+										<div class="text-center mb-1">
+											<svg class="about-icons" xmlns="http://www.w3.org/2000/svg"
+												enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+												<path fill="#ffd79c"
+													d="M12,14.5c-3.26461,0.00094-6.4876-0.73267-9.43018-2.14648C2.22156,12.18802,1.99974,11.83676,2,11.45117V9.5c0.00181-1.65611,1.34389-2.99819,3-3h14c1.65611,0.00181,2.99819,1.34389,3,3v1.95215c0.00003,0.3859-0.22189,0.73741-0.57031,0.90332C18.48677,13.76762,15.26418,14.50051,12,14.5z M21,11.45215L21,11.45215z" />
+												<path fill="#ffbd5a"
+													d="M10,6.5v-1c0.00055-0.55206,0.44794-0.99945,1-1h2c0.55206,0.00055,0.99945,0.44794,1,1v1h2v-1c-0.00183-1.65613-1.34387-2.99817-3-3h-2c-1.65613,0.00183-2.99817,1.34387-3,3v1H10z" />
+												<path fill="#ffe4bd"
+													d="M21.42969,12.35547C18.48676,13.76764,15.26416,14.50049,12,14.5c-3.26459,0.00092-6.48761-0.73267-9.43018-2.14648C2.22156,12.18805,1.99976,11.83673,2,11.45117V18.5c0.00183,1.65613,1.34387,2.99817,3,3h14c1.65613-0.00183,2.99817-1.34387,3-3v-7.04785C22.00006,11.83807,21.77814,12.18958,21.42969,12.35547z" />
+												<path fill="#ffbd5a"
+													d="M8,15.5c-0.55214,0.00014-0.99986-0.44734-1-0.99948C7,14.50035,7,14.50017,7,14.5v-2c0-0.55229,0.44772-1,1-1s1,0.44771,1,1v2c0.00014,0.55214-0.44734,0.99986-0.99948,1C8.00035,15.5,8.00017,15.5,8,15.5z M16,15.5c-0.55214,0.00014-0.99986-0.44734-1-0.99948c0-0.00017,0-0.00035,0-0.00052v-2c0-0.55229,0.44771-1,1-1c0.55228,0,1,0.44771,1,1v2c0.00014,0.55214-0.44734,0.99986-0.99948,1C16.00035,15.5,16.00017,15.5,16,15.5z" />
+											</svg>
+										</div>
+										<div class="text-center text-warning mb-1">
+											<h2 class="counter mb-2">267</h2>
+											<h6 class="mb-0">نمایندگان فروش</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="counter-status md-mb-0">
+										<div class="text-center mb-1">
+											<svg class="about-icons" xmlns="http://www.w3.org/2000/svg"
+												enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+												<circle cx="12" cy="9.25" r="6" fill="#b8e6f9" />
+												<path fill="#94daf6"
+													d="M19.57391,17.01288L17.00854,12.56l-0.00873,0.00433C15.92511,14.18231,14.08795,15.25,12,15.25c-0.1286,0-0.25439-0.01123-0.38098-0.01923l0.38953,0.66925l2.37408,4.11218c0.13806,0.23914,0.44385,0.32111,0.68304,0.18304c0.07391-0.04266,0.13562-0.10358,0.17938-0.17682l1.32349-2.21844l2.57941-0.0376c0.27612-0.00397,0.4967-0.23108,0.49268-0.5072C19.6394,17.17004,19.61646,17.08667,19.57391,17.01288z" />
+												<path fill="#17a2b8"
+													d="M11.61896,15.23071c-1.92963-0.12152-3.61176-1.14911-4.62012-2.66864l-2.56421,4.45081c-0.04248,0.07379-0.06549,0.15717-0.06671,0.24231c-0.00397,0.27612,0.21661,0.50323,0.49274,0.5072L7.44,17.79999l1.32355,2.21844c0.0437,0.07324,0.10547,0.13416,0.17938,0.17682c0.23914,0.13806,0.54492,0.05609,0.68298-0.18304L12,15.90002l0.00427-0.00732l-0.38525-0.66193L11.61896,15.23071z" />
+											</svg>
+										</div>
+										<div class="text-center text-info mb-1">
+											<h2 class="counter mb-2">16</h2>
+											<h6 class="mb-0">سرویس های فعال</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/karbasi.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										مهندس علیرضا کرباسی 
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										مدیرعامل شرکت و ایده پرداز آیکال
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/adel.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										خانم سهیلا عادل
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										مجری محتوایی پروژه هوش مصنوعی آیکال
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/gahremani.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										مهندس عرفان قهرمانی
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										واحد فنی هوش مصنوعی آیکال
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/mohammadiyan.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										مهندس نازنین محمدیان 
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										سرتیم تولید محتوای پروژه هوش مصنوعی آیکال
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/alizade.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										مهندس عرفان علیزاده
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										سر تیم بخش فنی هوش مصنوعی آیکال
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/seraj.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										خانم مهندس سولماز سراج
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										مدیر فروش و سرتیم بازاریابان شرکت
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/nemati.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										دکتر محمود نعمتی زاده
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										مدیر ارشد پروژه هوش مصنوعی آیکال
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="card h-100 aazadarbare">
+								<div class="card-body">
+									<div class="mb-3 text-center about-team">
+										<img class="rounded-circle img-fluid" src="../static/assets/img/users/rahimi.jpg" alt="image">
+									</div>
+									<div class="tx-16 text-center font-weight-semibold mb-2">
+										خانم مهندس سمیه رحیمی 
+									</div>
+									<div class="tx-13 text-center text-muted mb-3">
+										مدیر فروش پروژه هوش مصنوعی آیکال
+									</div>
+									<div class="text-center social-icons">
+                                                    <a href="https://www.instagram.com/aykalapp?igsh=a2pwMWh1Y3ZxNWg5" target="_blank" class="mb-0">
+                                                        <i class="fe fe-instagram text-success mx-2 tx-18"></i>
+                                                    </a>
+                                                    <a href="https://aykalapp.com/" target="_blank" class="mb-0">
+														<i class="fe fe-globe text-info mx-2 tx-18"></i>
+													</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+		<!-- Footer code -->
+
+	        {%include 'landing/landing_footer.html'%}
+		
+		<!-- End Footer -->
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- COUNTERS JS-->
+	<script src="../static/assets/plugins/counters/counterup.min.js"></script>
+	<script src="../static/assets/plugins/counters/waypoints.min.js"></script>
+	<script src="../static/assets/plugins/counters/counters-1.js"></script>
+
+	<!-- Perfect SCROLLBAR JS-->
+	<script src="../static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+	<script src="../static/assets/landing/lib/company-slider/slider.js"></script>
+
+	<!--- TABS JS -->
+	<script src="../static/assets/plugins/tabs/jquery.multipurpose_tabcontent.js"></script>
+	<script src="../static/assets/plugins/tabs/tab-content.js"></script>
+
+	<!-- Star Rating Js-->
+	<script src="../static/assets/plugins/rating/jquery-rate-picker.js"></script>
+	<script src="../static/assets/plugins/rating/rating-picker.js"></script>
+
+	<!-- Star Rating-1 Js-->
+	<script src="../static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+	<script src="../static/assets/plugins/ratings-2/star-rating.js"></script>
+
+	<!--- Perfect-scrollbar js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+	<!-- SIDE-MENU JS -->
+	<script src="../static/assets/landing/js/sidemenu.js"></script>
+
+	<!-- Sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!-- CUSTOM JS -->
+	<script src="../static/assets/landing/js/landing.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+	<!-- Swiper JS -->
+	<script src="../static/assets/plugins/swiper/swiper-bundle.min.js"></script>
+	<!-- End scripts -->
+
+</body>
+
+</html>

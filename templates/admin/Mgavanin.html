@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="مدیریت قوانین و مقررات سایت">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قوانین سایت, مدیریت قوانین, ویرایش قوانین, قالب مدیریت">
+
+	<!-- Title -->
+	<title>مدیریت قوانین و مقررات سایت</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+    <!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+	<link href="../static/assets/plugins/quill/quill.snow.css" rel="stylesheet">
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+
+        <!-- End app header Code -->
+{%include 'all_user_headr.html'%}
+       {%include 'admin/admin_base.html'%}
+
+
+        <!-- app sidebar Code -->
+               <!-- End app sidebar Code -->
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+				<!-- row -->
+				<div class="row justify-content-center">
+					<div class="col-lg-10 col-md-12">
+						<div class="card">
+							<div class="card-header bg-primary text-white ">
+								<div class="card-title">متن قوانین و مقررات سایت</div>
+							</div>
+							<div class="card-body">
+								<form id="rulesForm">
+									<div class="form-group mb-4">
+										<label class="form-label">متن کامل قوانین و مقررات</label>
+										<div id="rulesTextEditor" style="height: 320px;"></div>
+									</div>
+									<button type="submit" class="btn btn-success" id="saveRulesBtn">ذخیره قوانین</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+		<!-- Footer code -->
+
+        <!-- Footer code -->
+
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--Internal quill js -->
+	<script src="../static/assets/plugins/quill/quill.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!--- Select2 js -->
+	<script src="../static/assets/plugins/select2/js/select2.min.js"></script>
+
+	<!-- Internal Select2.min js -->
+	<script src="../static/assets/plugins/select2/js/select2.min.js"></script>
+	<script src="../static/assets/js/select2.js"></script>
+
+	<!--Internal Fileuploads js-->
+	<script src="../static/assets/plugins/fileuploads/js/fileupload.js"></script>
+	<script src="../static/assets/plugins/fileuploads/js/file-upload.js"></script>
+
+	<!--Internal Fancy uploader js-->
+	<script src="../static/assets/plugins/fancyuploder/jquery.ui.widget.js"></script>
+	<script src="../static/assets/plugins/fancyuploder/jquery.fileupload.js"></script>
+	<script src="../static/assets/plugins/fancyuploder/jquery.iframe-transport.js"></script>
+	<script src="../static/assets/plugins/fancyuploder/jquery.fancy-fileupload.js"></script>
+	<script src="../static/assets/plugins/fancyuploder/fancy-uploader.js"></script>
+
+	<!-- Internal Form-editor js -->
+	<script src="../static/assets/js/form-editor-2.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>        <!-- End scripts -->
+
+	<script>
+	// ویرایشگر متنی Quill برای قوانین
+	let rulesQuill;
+	if (window.Quill) {
+		rulesQuill = new Quill('#rulesTextEditor', { theme: 'snow', placeholder: 'متن کامل قوانین و مقررات سایت را وارد کنید...' });
+	}
+	// بارگذاری متن ذخیره شده (در localStorage)
+	window.addEventListener('DOMContentLoaded', function() {
+		const savedRules = localStorage.getItem('siteRules');
+		if (savedRules && rulesQuill) {
+			rulesQuill.root.innerHTML = savedRules;
+		}
+	});
+	// ذخیره قوانین
+	document.getElementById('rulesForm').addEventListener('submit', function(e) {
+		e.preventDefault();
+		const rulesText = rulesQuill ? rulesQuill.root.innerHTML : '';
+		localStorage.setItem('siteRules', rulesText);
+		// پیام موفقیت
+		const btn = document.getElementById('saveRulesBtn');
+		btn.textContent = 'ذخیره شد!';
+		btn.classList.remove('btn-success');
+		btn.classList.add('btn-primary');
+		setTimeout(() => {
+			btn.textContent = 'ذخیره قوانین';
+			btn.classList.remove('btn-primary');
+			btn.classList.add('btn-success');
+		}, 2000);
+	});
+	</script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="پروفایل ">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>پروفایل </title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+    <!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../static/assets/css/profile.css">
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+
+        <!-- app header code -->
+        <!-- End app header Code -->
+
+
+        {% include "all_user_headr.html" %}
+
+        <!-- app sidebar Code -->
+               		{% include "sidebar_all_user.html" %}
+
+        <!-- End app sidebar Code -->
+
+		 
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<!-- <h4 class="content-title mb-2 mb-xl-0">پروفایل</h4> -->
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">صفحات</a></li>
+								<li class="breadcrumb-item active " aria-current="page">پروفایل</li> -->
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- row -->
+				<div class="row row-sm">
+                    <div class="profile-container">
+                        <!-- Header Section -->
+                        <!-- Info Cards -->
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-card-header">
+                                    <div class="info-card-icon bg-success-transparent text-success"><i class="icon bx bx-user"></i></div>
+                                    <h3 class="info-card-title">اطلاعات شخصی</h3>
+                                </div>
+                                <div class="info-item">
+                                    <label>نام</label>
+                                    <span>{{user.first_name}}</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>نام خانوادگی</label>
+                                    <span>{{user.last_name}}</span>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-header">
+                                    <div class="info-card-icon"><i class="fas fa-phone"></i></div>
+                                    <h3 class="info-card-title">اطلاعات تماس</h3>
+                                </div>
+                                <div class="info-item">
+                                    <label>شماره تماس</label>
+                                    <span>{{user.phone_number}}</span>
+                                </div>
+                                {%if user.role.value==1%}
+                                <div class="info-item">
+                                    <label>ایمیل</label>
+                                    <span>{{detail.email}}</span>
+                                </div>
+                                {%endif%}
+                            </div>
+                            {%if user.role.value==1%}
+                                <div class="info-card">
+                                    <div class="info-card-header">
+                                        <div class="info-card-icon bg-primary-transparent text-primary"><i class="fas fa-credit-card"></i></div>
+                                        <h3 class="info-card-title">اطلاعات بانکی</h3>
+                                    </div>
+                                    <div class="info-item">
+                                        <label>شماره حساب</label>
+                                        <span>{{ detail.bank_card if detail.bank_card  else 'xxx-xxx-xxx-xxx'}}</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <label>شماره شبا</label>
+                                        <span>{{ detail.sheba_number if detail.sheba_number  else 'xxx-xxx-xxx-xxx'}}</span>
+                                        
+                                    </div>
+                            </div>
+                            {%endif%}
+
+                        </div>
+                    </div>				</div>
+				<!-- row closed -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+      
+
+	</div>
+	        <!-- Footer code -->
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="https://www.instagram.com/marsagencyir/" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>        <!-- End scripts -->
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="تماس با ما ">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords"
+		content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>تماس با ما</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" id="style">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+	<!-- Swiper CSS  -->
+	<link rel="stylesheet" href="../static/assets/plugins/swiper/swiper-bundle.min.css">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini rtl landing-page horizontalmenu" dir="rtl">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+
+	<!-- PAGE -->
+	<div class="page">
+		<div class="page-main">
+
+			<!-- app header code -->
+			{%include 'landing/landing_header.html'%}
+
+			<!-- End app header Code -->
+
+			<!-- app sidebar Code -->
+
+			<!-- End app sidebar Code -->
+
+			<!-- main-content -->
+			<div class="main-content app-content" style="margin-inline-start:0;">
+
+				<!-- container -->
+				<div class="main-container container-fluid">
+
+
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div class="d-flex my-auto">
+							<nav aria-label="breadcrumb">
+							</nav>
+						</div>
+					</div>
+					<!-- /breadcrumb -->
+					<!-- Contact Us Section Start -->
+					<div class="row justify-content-center mt-5 mb-4">
+						<div class="col-lg-8">
+							<div class="text-center mb-4">
+								<div class="contact-icon mb-3">
+									<i class="fe fe-mail text-primary"
+										style="font-size: 3rem;color: #083b9b !important;"></i>
+								</div>
+								<h2 class="fw-bold text-primary mb-2">تماس با ما</h2>
+								<p class="text-muted" style="color: #083b9b !important; ">ما اینجا هستیم تا به سوالات
+									شما پاسخ دهیم</p>
+							</div>
+
+							<div class="card shadow-lg border-0 contact-card">
+								<div
+									class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-3">
+									<h4 class="mb-0 fw-bold">فرم تماس با ما</h4>
+									<a href="/landing/faq" class="btn btn-light btn-sm fw-bold">پرسش‌های متداول</a>
+								</div>
+								<div class="card-body p-4">
+									<p class="mb-4 text-muted text-center">در صورت داشتن هرگونه سوال، انتقاد یا پیشنهاد،
+										لطفاً فرم زیر را تکمیل کنید. کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.
+									</p>
+									<form class="contact-form">
+										<div class="row">
+											<div class="col-md-6 mb-3">
+												<label for="name" class="form-label fw-bold">نام</label>
+												<div class="input-group">
+													<span class="input-group-text bg-light border-end-0">
+														<i class="fe fe-user text-primary"></i>
+													</span>
+													<input type="text" class="form-control border-start-0" id="name"
+														placeholder="نام خود را وارد کنید">
+												</div>
+											</div>
+											<div class="col-md-6 mb-3">
+												<label for="email" class="form-label fw-bold">ایمیل</label>
+												<div class="input-group">
+													<span class="input-group-text bg-light border-end-0">
+														<i class="fe fe-mail text-primary"></i>
+													</span>
+													<input type="email" class="form-control border-start-0" id="email"
+														placeholder="ایمیل خود را وارد کنید">
+												</div>
+											</div>
+										</div>
+										<div class="mb-3">
+											<label for="subject" class="form-label fw-bold">موضوع</label>
+											<div class="input-group">
+												<span class="input-group-text bg-light border-end-0">
+													<i class="fe fe-tag text-primary"></i>
+												</span>
+												<input type="text" class="form-control border-start-0" id="subject"
+													placeholder="موضوع پیام">
+											</div>
+										</div>
+										<div class="mb-4">
+											<label for="message" class="form-label fw-bold">پیام</label>
+											<div class="input-group">
+												<span
+													class="input-group-text bg-light border-end-0 align-items-start pt-3">
+													<i class="fe fe-message-square text-primary"></i>
+												</span>
+												<textarea class="form-control border-start-0" id="message" rows="5"
+													placeholder="متن پیام خود را بنویسید"></textarea>
+											</div>
+										</div>
+										<div class="d-grid">
+											<button type="submit" class="btn btn-primary btn-lg fw-bold">
+												<i class="fe fe-send me-2"></i>ارسال پیام
+											</button>
+										</div>
+									</form>
+									<div id="form-success-message"
+										style="display: none; color: green; margin-top: 1rem;">
+										درخواست شما با موفقیت ارسال شد!
+									</div>
+
+									<script>
+										document.querySelector('.contact-form').addEventListener('submit', function (e) {
+											e.preventDefault();
+											document.getElementById('form-success-message').style.display = 'block';
+										});
+									</script>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Brand Info and Map Section Start -->
+					<div class="row justify-content-center align-items-stretch mb-5">
+						<div class="col-lg-4 mb-4 mb-lg-0">
+							<div class="card h-100 border-0 shadow-sm contact-info-card">
+								<div class="card-body p-4">
+									<h5 class="card-title text-primary mb-4 fw-bold">
+										<i class="fe fe-info me-2"></i>اطلاعات تماس شرکت
+									</h5>
+									<p class="text-muted mb-4">برای ارتباط مستقیم با ما می‌توانید از اطلاعات زیر استفاده
+										کنید:</p>
+									<ul class="list-unstyled mb-0 contact-info-list">
+										<li class="mb-3">
+											<i class="fe fe-briefcase text-primary me-2"></i>
+											<strong>نام برند:</strong>هوش مصنوعی آیکال
+										</li>
+										<li class="mb-3">
+											<i class="fe fe-phone text-primary me-2"></i>
+											<strong>تماس:</strong> 09372105008 - 09372108005
+										</li>
+										<li class="mb-3">
+											<i class="fe fe-mail text-primary me-2"></i>
+											<strong>ایمیل:</strong> aykalapp@gmail.com
+										</li>
+										<li>
+											<i class="fe fe-map-pin text-primary me-2"></i>
+											<strong>آدرس:</strong> تبریز ، آزاد راه تبریز سهند پارک علم و فناوری (مجتمع
+											عصر انقلاب)
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body p-4">
+									<h5 class="card-title text-primary mb-4 fw-bold">
+										<i class="fe fe-map text-primary me-2"></i>موقعیت ما روی نقشه
+									</h5>
+									<p class="text-muted mb-4">شما می‌توانید با مراجعه حضوری به آدرس زیر یا مشاهده
+										موقعیت ما روی نقشه، به راحتی ما را پیدا کنید.</p>
+									<div class="map-container rounded-3 overflow-hidden">
+										<iframe
+											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.2893927585756!2d46.22198592402175!3d38.01703237192533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x401a11edb8965657%3A0x6efe3ceb49f1cd18!2z2b7Yp9ix2qkg2LnZhNmFINmIINmB2YbYp9mI2LHbjCDYp9iz2KrYp9mGINii2LDYsdio2KfbjNis2KfZhiDYtNix2YLbjC0g2YXYrNiq2YXYuSDYudi12LEg2KfZhtmC2YTYp9io!5e0!3m2!1sfa!2s!4v1753628761079!5m2!1sfa!2s"
+											width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+											referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- Container closed -->
+			</div>
+			<!-- main-content closed -->
+			
+		</div>
+	</div>
+	<!-- Footer code -->
+	{%include 'landing/landing_footer.html'%}
+
+	<!-- End Footer -->
+	<!-- End Page -->
+
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- COUNTERS JS-->
+	<script src="../static/assets/plugins/counters/counterup.min.js"></script>
+	<script src="../static/assets/plugins/counters/waypoints.min.js"></script>
+	<script src="../static/assets/plugins/counters/counters-1.js"></script>
+
+	<!-- Perfect SCROLLBAR JS-->
+	<script src="../static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+	<script src="../static/assets/landing/lib/company-slider/slider.js"></script>
+
+	<!--- TABS JS -->
+	<script src="../static/assets/plugins/tabs/jquery.multipurpose_tabcontent.js"></script>
+	<script src="../static/assets/plugins/tabs/tab-content.js"></script>
+
+	<!-- Star Rating Js-->
+	<script src="../static/assets/plugins/rating/jquery-rate-picker.js"></script>
+	<script src="../static/assets/plugins/rating/rating-picker.js"></script>
+
+	<!-- Star Rating-1 Js-->
+	<script src="../static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+	<script src="../static/assets/plugins/ratings-2/star-rating.js"></script>
+
+	<!--- Perfect-scrollbar js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+	<!-- SIDE-MENU JS -->
+	<script src="../static/assets/landing/js/sidemenu.js"></script>
+
+	<!-- Sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!-- CUSTOM JS -->
+	<script src="../static/assets/landing/js/landing.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+	<!-- Swiper JS -->
+	<script src="../static/assets/plugins/swiper/swiper-bundle.min.js"></script>
+	<!-- End scripts -->
+
+	<style>
+		.contact-card {
+			border-radius: 15px;
+			transition: all 0.3s ease;
+		}
+
+		.contact-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		.contact-form .form-control {
+			border-radius: 8px;
+			padding: 12px;
+			transition: all 0.3s ease;
+		}
+
+		.contact-form .form-control:focus {
+			box-shadow: 0 0 0 0.2rem rgba(61, 75, 183, 0.25);
+			border-color: #3d4bb7;
+		}
+
+		.contact-info-card {
+			border-radius: 15px;
+			background: linear-gradient(145deg, #ffffff, #f8f9fa);
+		}
+
+		.contact-info-list li {
+			padding: 10px 15px;
+			border-radius: 8px;
+			transition: all 0.3s ease;
+		}
+
+		.contact-info-list li:hover {
+			background-color: rgba(61, 75, 183, 0.05);
+		}
+
+		.map-container {
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			transition: all 0.3s ease;
+		}
+
+		.map-container:hover {
+			transform: scale(1.02);
+		}
+
+		.input-group-text {
+			border-radius: 8px 0 0 8px;
+		}
+
+		.form-control {
+			border-radius: 0 8px 8px 0;
+		}
+
+		.btn-primary {
+			background-color: #3d4bb7;
+			border-color: #3d4bb7;
+			padding: 12px 24px;
+			border-radius: 8px;
+			transition: all 0.3s ease;
+		}
+
+		.btn-primary:hover {
+			background-color: #2f3a8c;
+			border-color: #2f3a8c;
+			transform: translateY(-2px);
+		}
+
+		.contact-icon {
+			width: 80px;
+			height: 80px;
+			background: rgba(61, 75, 183, 0.1);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+		}
+
+		@media (max-width: 768px) {
+			.contact-card {
+				margin: 0 15px;
+			}
+
+			.contact-info-list li {
+				padding: 8px 12px;
+			}
+		}
+	</style>
+
+</body>
+
+</html>

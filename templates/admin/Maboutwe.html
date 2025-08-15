@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="ادیمین داشبورد">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>ادیمین داشبورد</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+		 {%include 'all_user_headr.html'%}
+       {%include 'admin/admin_base.html'%}
+        <!-- End app sidebar Code -->
+
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<!-- <h4 class="content-title mb-2 mb-xl-0">داشبورد ادمین</h4> -->
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">خانه</a></li>
+								<li class="breadcrumb-item active " aria-current="page"> داشبورد ادمین</li> -->
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- main-content-body -->
+				<div class="main-content-body">
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title mb-4">مدیریت بخش درباره ما</h4>
+
+							<!-- متن اصلی درباره ما -->
+							<div class="form-group mb-3">
+                                <div class="col-md-6">
+                                    <label>متن اصلی درباره ما</label>
+                                    <div id="aboutMainEditor"></div>
+                                </div>
+							</div>
+
+							<!-- تصویر اصلی و کپشن -->
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label>تصویر اصلی</label>
+									<input type="file" class="form-control" id="mainImageInput">
+									<img id="mainImagePreview" src="../static/assets/img/brand/logo.png" alt="پیش‌نمایش تصویر اصلی" class="img-fluid rounded mt-2" style="max-width: 200px;">
+								</div>
+								<div class="col-md-6">
+									<label>توضیح تصویر (کپشن)</label>
+									<div id="mainImageCaptionEditor" style="height: 100px;"></div>
+								</div>
+							</div>
+
+							<!-- آمارها -->
+							<div class="row mb-3">
+								<div class="col-md-3">
+									<label>تعداد پروژه‌ها</label>
+									<input type="number" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label>تعداد مشتریان</label>
+									<input type="number" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label>رضایت مشتری (%)</label>
+									<input type="number" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label>سابقه فعالیت (سال)</label>
+									<input type="number" class="form-control">
+								</div>
+							</div>
+
+							<!-- توضیحات ویژه درباره ما -->
+							<div class="border rounded p-3 mb-3 bg-light">
+								<h5 class="mb-3">توضیحات ویژه درباره ما</h5>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group mb-2">
+											<label>تیتر اصلی</label>
+											<input type="text" class="form-control" placeholder="مثال: ما به ساخت پروژه رویایی شما کمک می‌کنیم">
+										</div>
+										<div class="form-group mb-2">
+											<label>زیرتیتر</label>
+											<input type="text" class="form-control" placeholder="مثال: اکثریت به شکلی از طریق طنز تزریقی دچار تغییر شده اند">
+										</div>
+                                        <div class="form-group mb-2">
+                                            <label>متن توضیحات</label>
+                                            <div id="aboutSpecialEditor" style="height: 180px;"></div>
+                                        </div>
+                                    </div>
+									<div class="col-md-6">
+										<div class="form-group mb-2">
+											<label>تصویر بخش</label>
+											<input type="file" class="form-control">
+											<img src="../static/assets/img/media/16.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2" style="max-width: 200px;">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- اعضای تیم -->
+							<h5 class="mt-4">اعضای تیم</h5>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>تصویر</th>
+										<th>نام</th>
+										<th>سمت</th>
+										<th>عملیات</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="../static/assets/img/users/default.png" width="50"></td>
+										<td>نام نمونه</td>
+										<td>سمت نمونه</td>
+										<td>
+											<button class="btn btn-sm btn-primary btn-edit-team-member">ویرایش</button>
+											<button class="btn btn-sm btn-danger">حذف</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addTeamMemberModal">افزودن عضو جدید</button>
+
+							<!-- تاریخچه شرکت -->
+							<h5 class="mt-4">تاریخچه شرکت</h5>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>عنوان رویداد</th>
+										<th>تاریخ</th>
+										<th>توضیح</th>
+										<th>تصویر</th>
+										<th>برچسب/رنگ</th>
+										<th>عملیات</th>
+									</tr>
+								</thead>
+								<tbody id="historyTableBody">
+									<tr>
+										<td>نمونه رویداد</td>
+										<td>1400/01/05</td>
+										<td>توضیح نمونه برای رویداد</td>
+										<td><img src="../static/assets/img/photos/1.jpg" width="50"></td>
+										<td><span class="badge bg-primary">اکنون</span></td>
+										<td>
+											<button class="btn btn-sm btn-primary btn-edit-history">ویرایش</button>
+											<button class="btn btn-sm btn-danger">حذف</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addHistoryModal">افزودن رویداد جدید</button>
+							<!-- /تاریخچه شرکت -->
+
+							<!-- دکمه ذخیره کلی -->
+							<div class="mt-4">
+								<button class="btn btn-primary btn-lg w-100">ذخیره همه تغییرات</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /container -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+
+        <!-- Footer code -->
+
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--- Chart bundle min js -->
+	<script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!--- Internal Sampledata js -->
+	<script src="../static/assets/js/chart.flot.sampledata.js"></script>
+
+	<!-- ApexChart -->
+	<script src="../static/assets/js/apexcharts.min.js"></script>
+
+	<!--- Internal Vector-maps js -->
+	<script src="../static/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../static/assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/index5.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>        <!-- End scripts -->
+
+	<!-- اسکریپت Quill برای این بخش -->
+	<script src="../static/assets/plugins/quill/quill.min.js"></script>
+	<link href="../static/assets/plugins/quill/quill.snow.css" rel="stylesheet">
+	<script>
+	  document.addEventListener('DOMContentLoaded', function() {
+	    if (window.Quill) {
+	      new Quill('#aboutMainEditor', { theme: 'snow', placeholder: 'متن درباره ما را وارد کنید...' });
+	      new Quill('#aboutSpecialEditor', { theme: 'snow', placeholder: 'متن توضیحات ویژه درباره ما را وارد کنید...' });
+	    }
+	  });
+	</script>
+
+	<script>
+	  document.addEventListener('DOMContentLoaded', function() {
+	    // پیش‌نمایش تصویر اصلی
+	    const input = document.getElementById('mainImageInput');
+	    const preview = document.getElementById('mainImagePreview');
+	    if(input && preview) {
+	      input.addEventListener('change', function(e) {
+	        if (e.target.files && e.target.files[0]) {
+	          const reader = new FileReader();
+	          reader.onload = function(ev) {
+	            preview.src = ev.target.result;
+	          }
+	          reader.readAsDataURL(e.target.files[0]);
+	        }
+	      });
+	    }
+	    // Quill برای کپشن تصویر
+	    if (window.Quill) {
+	      new Quill('#mainImageCaptionEditor', { theme: 'snow', placeholder: 'توضیح کوتاه برای تصویر وارد کنید...' });
+	    }
+	  });
+	</script>
+
+	<!-- مودال افزودن عضو جدید -->
+	<div class="modal fade" id="addTeamMemberModal" tabindex="-1" aria-labelledby="addTeamMemberModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="addTeamMemberModalLabel">افزودن عضو جدید تیم</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <label class="form-label">تصویر عضو</label>
+	            <input type="file" class="form-control" id="teamMemberImageInput">
+	            <img id="teamMemberImagePreview" src="../static/assets/img/users/default.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2" style="max-width: 100px;">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">نام عضو</label>
+	            <input type="text" class="form-control" placeholder="نام عضو تیم را وارد کنید">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">سمت عضو</label>
+	            <input type="text" class="form-control" placeholder="سمت عضو تیم را وارد کنید">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">توضیح کوتاه</label>
+	            <textarea class="form-control" rows="2" placeholder="توضیح کوتاه درباره عضو (اختیاری)"></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+	        <button type="button" class="btn btn-primary">ثبت عضو</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script>
+	  document.addEventListener('DOMContentLoaded', function() {
+	    // پیش‌نمایش تصویر عضو جدید
+	    const input = document.getElementById('teamMemberImageInput');
+	    const preview = document.getElementById('teamMemberImagePreview');
+	    if(input && preview) {
+	      input.addEventListener('change', function(e) {
+	        if (e.target.files && e.target.files[0]) {
+	          const reader = new FileReader();
+	          reader.onload = function(ev) {
+	            preview.src = ev.target.result;
+	          }
+	          reader.readAsDataURL(e.target.files[0]);
+	        }
+	      });
+	    }
+	  });
+	</script>
+
+	<!-- مودال ویرایش عضو تیم -->
+	<div class="modal fade" id="editTeamMemberModal" tabindex="-1" aria-labelledby="editTeamMemberModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="editTeamMemberModalLabel">ویرایش عضو تیم</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <label class="form-label">تصویر عضو</label>
+	            <input type="file" class="form-control" id="editTeamMemberImageInput">
+	            <img id="editTeamMemberImagePreview" src="../static/assets/img/users/default.png" alt="پیش‌نمایش" class="img-fluid rounded mt-2" style="max-width: 100px;">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">نام عضو</label>
+	            <input type="text" class="form-control" id="editTeamMemberName" placeholder="نام عضو تیم را وارد کنید">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">سمت عضو</label>
+	            <input type="text" class="form-control" id="editTeamMemberRole" placeholder="سمت عضو تیم را وارد کنید">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">توضیح کوتاه</label>
+	            <textarea class="form-control" id="editTeamMemberDesc" rows="2" placeholder="توضیح کوتاه درباره عضو (اختیاری)"></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+	        <button type="button" class="btn btn-primary">ذخیره تغییرات</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script>
+	  document.addEventListener('DOMContentLoaded', function() {
+	    // پیش‌نمایش تصویر ویرایش عضو
+	    const input = document.getElementById('editTeamMemberImageInput');
+	    const preview = document.getElementById('editTeamMemberImagePreview');
+	    if(input && preview) {
+	      input.addEventListener('change', function(e) {
+	        if (e.target.files && e.target.files[0]) {
+	          const reader = new FileReader();
+	          reader.onload = function(ev) {
+	            preview.src = ev.target.result;
+	          }
+	          reader.readAsDataURL(e.target.files[0]);
+	        }
+	      });
+	    }
+	    // باز شدن مودال ویرایش با مقداردهی اولیه (نمونه)
+	    document.querySelectorAll('.btn-edit-team-member').forEach(function(btn) {
+	      btn.addEventListener('click', function() {
+	        // مقداردهی اولیه نمونه (در پروژه واقعی اینجا مقداردهی با داده واقعی انجام می‌شود)
+	        document.getElementById('editTeamMemberName').value = 'نام نمونه';
+	        document.getElementById('editTeamMemberRole').value = 'سمت نمونه';
+	        document.getElementById('editTeamMemberDesc').value = 'توضیح نمونه';
+	        document.getElementById('editTeamMemberImagePreview').src = '../static/assets/img/users/default.png';
+	        var modal = new bootstrap.Modal(document.getElementById('editTeamMemberModal'));
+	        modal.show();
+	      });
+	    });
+	  });
+	</script>
+
+	<!-- مودال افزودن رویداد جدید -->
+	<div class="modal fade" id="addHistoryModal" tabindex="-1" aria-labelledby="addHistoryModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="addHistoryModalLabel">افزودن رویداد جدید تاریخچه</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <label class="form-label">عنوان رویداد</label>
+	            <input type="text" class="form-control" id="historyTitleInput" placeholder="عنوان رویداد را وارد کنید">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">تاریخ</label>
+	            <input type="text" class="form-control" id="historyDateInput" placeholder="مثال: 1400/01/05">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">توضیح</label>
+	            <textarea class="form-control" id="historyDescInput" rows="2" placeholder="توضیح رویداد را وارد کنید"></textarea>
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">تصویر رویداد</label>
+	            <input type="file" class="form-control" id="historyImageInput">
+	            <img id="historyImagePreview" src="../static/assets/img/photos/1.jpg" alt="پیش‌نمایش" class="img-fluid rounded mt-2" style="max-width: 100px;">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">برچسب/رنگ</label>
+	            <select class="form-control" id="historyBadgeInput">
+	              <option value="bg-primary">اکنون</option>
+	              <option value="bg-success">موفقیت</option>
+	              <option value="bg-danger">هشدار</option>
+	              <option value="bg-info">اطلاعات</option>
+	              <option value="bg-warning">هشدار</option>
+	              <option value="bg-secondary">دیگر</option>
+	            </select>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+	        <button type="button" class="btn btn-primary">ثبت رویداد</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- /مودال افزودن رویداد جدید -->
+
+	<!-- مودال ویرایش رویداد تاریخچه (نمونه) -->
+	<div class="modal fade" id="editHistoryModal" tabindex="-1" aria-labelledby="editHistoryModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="editHistoryModalLabel">ویرایش رویداد تاریخچه</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <label class="form-label">عنوان رویداد</label>
+	            <input type="text" class="form-control" id="editHistoryTitleInput" value="نمونه رویداد">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">تاریخ</label>
+	            <input type="text" class="form-control" id="editHistoryDateInput" value="1400/01/05">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">توضیح</label>
+	            <textarea class="form-control" id="editHistoryDescInput" rows="2">توضیح نمونه برای رویداد</textarea>
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">تصویر رویداد</label>
+	            <input type="file" class="form-control" id="editHistoryImageInput">
+	            <img id="editHistoryImagePreview" src="../static/assets/img/photos/1.jpg" alt="پیش‌نمایش" class="img-fluid rounded mt-2" style="max-width: 100px;">
+	          </div>
+	          <div class="mb-3">
+	            <label class="form-label">برچسب/رنگ</label>
+	            <select class="form-control" id="editHistoryBadgeInput">
+	              <option value="bg-primary" selected>اکنون</option>
+	              <option value="bg-success">موفقیت</option>
+	              <option value="bg-danger">هشدار</option>
+	              <option value="bg-info">اطلاعات</option>
+	              <option value="bg-warning">هشدار</option>
+	              <option value="bg-secondary">دیگر</option>
+	            </select>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+	        <button type="button" class="btn btn-primary">ذخیره تغییرات</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- /مودال ویرایش رویداد تاریخچه -->
+
+	<!-- اسکریپت پیش‌نمایش تصویر رویداد تاریخچه -->
+	<script>
+	  document.addEventListener('DOMContentLoaded', function() {
+	    // پیش‌نمایش تصویر رویداد جدید
+	    const input = document.getElementById('historyImageInput');
+	    const preview = document.getElementById('historyImagePreview');
+	    if(input && preview) {
+	      input.addEventListener('change', function(e) {
+	        if (e.target.files && e.target.files[0]) {
+	          const reader = new FileReader();
+	          reader.onload = function(ev) {
+	            preview.src = ev.target.result;
+	          }
+	          reader.readAsDataURL(e.target.files[0]);
+	        }
+	      });
+	    }
+	    // پیش‌نمایش تصویر ویرایش رویداد
+	    const editInput = document.getElementById('editHistoryImageInput');
+	    const editPreview = document.getElementById('editHistoryImagePreview');
+	    if(editInput && editPreview) {
+	      editInput.addEventListener('change', function(e) {
+	        if (e.target.files && e.target.files[0]) {
+	          const reader = new FileReader();
+	          reader.onload = function(ev) {
+	            editPreview.src = ev.target.result;
+	          }
+	          reader.readAsDataURL(e.target.files[0]);
+	        }
+	      });
+	    }
+	    // باز شدن مودال ویرایش با مقداردهی اولیه (نمونه)
+	    document.querySelectorAll('.btn-edit-history').forEach(function(btn) {
+	      btn.addEventListener('click', function() {
+	        // مقداردهی اولیه نمونه (در پروژه واقعی اینجا مقداردهی با داده واقعی انجام می‌شود)
+	        document.getElementById('editHistoryTitleInput').value = 'نمونه رویداد';
+	        document.getElementById('editHistoryDateInput').value = '1400/01/05';
+	        document.getElementById('editHistoryDescInput').value = 'توضیح نمونه برای رویداد';
+	        document.getElementById('editHistoryImagePreview').src = '../static/assets/img/photos/1.jpg';
+	        document.getElementById('editHistoryBadgeInput').value = 'bg-primary';
+	        var modal = new bootstrap.Modal(document.getElementById('editHistoryModal'));
+	        modal.show();
+	      });
+	    });
+	  });
+	</script>
+	<!-- /اسکریپت پیش‌نمایش تصویر رویداد تاریخچه -->
+
+</body>
+
+</html>

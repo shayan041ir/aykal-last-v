@@ -1,0 +1,366 @@
+<doctype html>
+    <html lang="en" dir="ltr">
+    
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Description" content="تایید سفارش">
+        <meta name="Author" content="برنامه نویسان مارس">
+    
+        <!-- Title -->
+        <title>تایید سفارش</title>
+    
+<!-- Favicon -->
+<link rel="icon" href="{{ url_for('static', filename='../static/assets/img/brand/favicon.png') }}" type="image/x-icon">
+
+<!-- styles code -->
+<!-- Bootstrap css -->
+<link href="{{ url_for('static', filename='../static/assets/plugins/bootstrap/css/bootstrap.rtl.min.css') }}" rel="stylesheet" id="style">
+
+<!-- Icons css -->
+<link href="{{ url_for('static', filename='../static/assets/css/icons.css') }}" rel="stylesheet">
+
+<!-- Font css -->
+<link href="{{ url_for('static', filename='../static/assets/font/Morabba/fontiran.css') }}" rel="stylesheet">
+
+<!-- Style css -->
+<link href="{{ url_for('static', filename='../static/assets/css/style.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='../static/assets/css/blog.css') }}" rel="stylesheet">
+
+<!-- Switcher css -->
+<link href="{{ url_for('static', filename='../static/assets/switcher/css/switcher.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='../static/assets/switcher/demo.css') }}" rel="stylesheet">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='../static/assets/plugins/swiper/swiper-bundle.min.css') }}">
+
+<!-- End styles -->
+    
+    </head>
+    
+    <body class="main-body app sidebar-mini rtl landing-page horizontalmenu" dir="rtl">
+    
+        <!-- Loader -->
+        <div id="global-loader">
+            <img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+        </div>
+        <!-- /Loader -->
+        <!-- page -->
+        <div class="page">
+            <div class="page-main">
+                <!-- app header code -->
+                <div class="main-header side-header">
+                    <div class="main-container container-fluid">
+                        <div class="main-header-left">
+                            <a class="main-header-menu-icon" href="javascript:void(0)"
+                                id="mainSidebarToggle"><span></span></a>
+                            <div class="hor-logo">
+                                <a class="main-logo" href="landing-page.html">
+                                    <img src="../static/assets/img/brand/logo-white.png" class="header-brand-img desktop-logo"
+                                        alt="logo">
+                                    <img src="../static/assets/img/brand/logo.png" class="header-brand-img desktop-logo-dark"
+                                        alt="logo">
+                                    </a>
+                            </div>
+                        </div>
+                        <div class="main-header-center">
+                            <div class="responsive-logo">
+                                <a href="landing-page"><img src="../static/assets/img/brand/logo.png" class="mobile-logo"
+                                        alt="logo"></a>
+                                <a href="landing-page"><img src="../static/assets/img/brand/logo-white.png" class="mobile-logo-dark"
+                                        alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="main-header-right">
+                            <button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+                            </button>
+                            <!-- Navresponsive closed -->
+                            <div class="navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark  ">
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                                    <div class="d-flex order-lg-2 ms-auto">
+                                        <!-- SEARCH -->
+                                        <div class="header-nav-right p-3">
+                                            <a href="login" class="btn ripple btn-min w-sm btn-outline-primary me-2"
+                                                target="_blank">
+                                                خرید اشتراک
+                                            </a>
+                                            <a href="login.html" class="btn ripple btn-min w-sm btn-primary me-2"
+                                                target="_blank">
+                                                ورود و ثبت نام
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End app header Code -->
+                <!-- app sidebar Code -->
+    
+                <div class="landing-top-header overflow-hidden">
+                    <!-- navbar -->
+                    <div class="top sticky">
+    
+                        <!--APP-SIDEBAR-->
+                        <div class="landing-app-sidebar__overlay" data-bs-toggle="sidebar"></div>
+                        <div class="landing-app-sidebar bg-transparent">
+                            <div class="container">
+                                <div class="main-sidemenu navbar px-0">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <a class="main-logo" href="landing-page.html">
+                                            <div class="d-flex" style="max-width: 320px;">
+                                                <!-- <img src="../static/assets/img/brand/favicon-white.png"  style="width: 110px;" class="header-brand-img desktop-logo"alt="logo"> -->
+                                                <img src="../static/assets/img/brand/icon-text.png"  style="width: 140px;" class="header-brand-img desktop-logo"alt="logo">
+                                                <!-- <img src="../static/assets/img/brand/icon-text.png" alt=""> -->
+                                            </div>
+                                            <img src="../static/assets/img/brand/favicon.png" class="header-brand-img desktop-logo-dark"
+                                            alt="logo">
+                                        </a>
+                                        <div class="slide-left disabled" id="slide-left">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path
+                                                    d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                                            </svg>
+                                        </div>
+                                        <ul class="side-menu">
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="landing-page.html">صفحه اصلی</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="landing-page.html#Features">امکانات</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="landing-page.html#pricinng">تعرفه ها</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="blog.html">وبلاگ</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="hamkaribama.html">همکاری باما</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="faq.html">سوالات متداول</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item " data-bs-toggle="slide" href="rules.html">قوانین و مقررات</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="about.html">درباره ما</a>
+                                            </li>
+                                            <li class="slide">
+                                                <a class="side-menu__item" data-bs-toggle="slide" href="tamasbama.html">ارتباط باما</a>
+                                            </li>
+                                        </ul>
+                                        <div class="slide-right" id="slide-right">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path
+                                                    d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="header-nav-right d-none d-lg-flex">
+                                        <a href="login.html" class="btn ripple btn-min btn-secondary btn-block btn-orange-hover me-2" target="_blank">
+                                            ورود و ثبت نام
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/APP-SIDEBAR-->
+                    </div>
+                    <!-- navbar -->
+    
+                </div> 
+                <!-- End app sidebar Code -->
+                
+		<!-- main-content -->
+		<div class=" d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+				<!-- Row -->
+				<div class="row">
+					<div class="col-xl-6 col-lg-8 col-md-10 mx-auto">
+						<div class="card custom-card shadow-lg">
+							<div class="card-header border-bottom-0 bg-transparent">
+								<h3 class="card-title text-center">تایید سفارش</h3>
+							</div>
+							<div class="card-body p-4">
+								<div class="checkout-steps wrapper">
+									<div id="checkoutsteps" class="text-center">
+										<div class="success-animation mb-4">
+											<svg class="wd-100 ht-100 mx-auto" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+												<circle class="path circle" fill="none" stroke="#22c03c" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+												<polyline class="path check" fill="none" stroke="#22c03c" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+											</svg>
+										</div>
+										<h4 class="text-success mb-3">سفارش شما با موفقیت ثبت شد</h4>
+										<p class="text-muted mb-4">سفارش شما به زودی از بین می رود. در ضمن می توانید سفارش خود را در قسمت سفارش من پیگیری کنید.</p>
+										<div class="mt-4">
+											<a href="landing-page.html" class="btn btn-primary">بازگشت به صفحه اصلی</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Row -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+
+        <!-- Footer code -->
+                <div class="demo-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="card mb-0 bg-transparent">
+                                    <div class="card-body p-0">
+                                        <div class="top-footer">
+                                            <div class="row">
+                                                <div class="footer-logo">
+                                                    <img src="/../static/assets/img/brand/Logo N01.png" alt=""  >
+                                                </div>
+                                                <div class="col-lg-4 col-sm-12 col-md-12 reveal revealleft">
+                                                    <h6>درباره ما</h6>
+                                                    <p class="about-text-footer">
+                                                        اما تا ببینی این همه گمراهی از کجا نشات می گیرد خرسندی شاکیان
+                                                        و درد ستایش کنندگان را من همه چیز را باز می کنم و همین چیزها را از آن
+                                                        مخترع
+                                                        آنها را حقیقت و معمار یک زندگی شاد نامیدند
+                                                        توضیح خواهم داد.
+                                                    </p>
+                                                    <!-- <p class="about-text-footer mb-5 mb-lg-2">
+                                                        شک یا درد ناخوشایند در ملامت در لذت
+                                                        می خواهد یک موی درد باشد، بگذار فرار کند، هیچ کس به دنیا نمی آید، مگر
+                                                        اینکه کور شوند.
+                                                    </p> -->
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 col-md-3 reveal revealleft">
+                                                    <h6>ویژگی ها</h6>
+                                                    <ul class="mb-5 mb-lg-0 ps-0">
+                                                        <li><a href="index.html">داشبورد</a></li>
+                                                        <li><a href="alerts.html">عناصر</a></li>
+                                                        <li><a href="form-elements.html">تشکیل می دهد</a></li>
+                                                        <li><a href="chart-chartjs.html">نمودار</a></li>
+                                                        <li><a href="table-data.html">جداول</a></li>
+                                                        <li><a href="file-attachments.html">صفحات دیگر</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-lg-2 col-sm-6 col-md-3 reveal revealleft">
+                                                    <h6>آشنایی با ما</h6>
+                                                    <ul class="mb-5 mb-lg-0 ps-0">
+                                                        <li><a href="about.html">تیم ما</a></li>
+                                                        <li><a href="about.html">با ما تماس بگیرید</a></li>
+                                                        <li><a href="about.html">درباره ما</a></li>
+                                                        <li><a href="settings.html">تنظیمات</a></li>
+                                                        <li><a href="blog.html">وبلاگ</a></li>
+                                                        <li><a href="terms-conditions.html">شرایط و خدمات</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="enamad-logo">
+                                                    <a
+                                                    referrerPolicy="origin"
+                                                    target="_blank"
+                                                    href="https://trustseal.enamad.ir/?id=587366&Code=PNWUwnAbuGWBtqTSLDSkyJUaNA75pTfp"
+                                                    >
+                                                    <img
+                                                        referrerPolicy="origin"
+                                                        src="/../static/assets/img/enamad/enamad.png"
+                                                        alt=""
+                                                    />
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-4 col-sm-12 col-md-6 reveal revealleft">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="main-footer px-0 text-center border-top mt-3 py-3">
+                                            <div class="row ">
+                                                <div class="col-md-12 col-sm-12">
+                                                <span> <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span
+                                                        class="fa fa-heart text-danger"></span> توسط <a href="https://instagram.com/marsagencyir"> برنامه
+                                                        نویسان </a> mars agency</span>
+                                                </div>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div> 
+                <!-- End Footer -->
+            </div>
+    
+        </div>
+        <!-- End Page -->
+        <!-- scripts code -->
+        <!-- Back-to-top -->
+        <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+    
+        <!-- JQuery min js -->
+        <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+    
+        <!-- Bootstrap Bundle js -->
+        <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+        <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    
+        <!-- COUNTERS JS-->
+        <script src="../static/assets/plugins/counters/counterup.min.js"></script>
+        <script src="../static/assets/plugins/counters/waypoints.min.js"></script>
+        <script src="../static/assets/plugins/counters/counters-1.js"></script>
+    
+        <!-- Perfect SCROLLBAR JS-->
+        <script src="../static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+        <script src="../static/assets/landing/lib/company-slider/slider.js"></script>
+    
+        <!--- TABS JS -->
+        <script src="../static/assets/plugins/tabs/jquery.multipurpose_tabcontent.js"></script>
+        <script src="../static/assets/plugins/tabs/tab-content.js"></script>
+    
+        <!-- Star Rating Js-->
+        <script src="../static/assets/plugins/rating/jquery-rate-picker.js"></script>
+        <script src="../static/assets/plugins/rating/rating-picker.js"></script>
+    
+        <!-- Star Rating-1 Js-->
+        <script src="../static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+        <script src="../static/assets/plugins/ratings-2/star-rating.js"></script>
+    
+        <!--- Perfect-scrollbar js -->
+        <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    
+        <!-- SIDE-MENU JS -->
+        <script src="../static/assets/landing/js/sidemenu.js"></script>
+    
+        <!-- Sticky js -->
+        <script src="../static/assets/js/sticky.js"></script>
+    
+        <!--themecolor js-->
+        <script src="../static/assets/js/themecolor.js"></script>
+    
+        <!-- CUSTOM JS -->
+        <script src="../static/assets/landing/js/landing.js"></script>
+    
+        <!-- Switcher js -->
+        <script src="../static/assets/switcher/js/switcher.js"></script>
+        <!-- Swiper JS -->
+        <script src="../static/assets/plugins/swiper/swiper-bundle.min.js"></script>
+        <!-- End scripts -->
+    
+    </body>
+    
+    
+    </html>

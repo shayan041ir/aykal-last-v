@@ -1,0 +1,241 @@
+:root {
+    --primary-color: #bd9a7a; /* Coffee/Brown */
+    --secondary-color: #333333; /* Dark Gray/Black */
+    --light-coffee: #d4b99a;
+    --dark-coffee: #8b7355;
+    --text-color: #333333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/patterns/pattern-1.png') repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.step-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5rem;
+    background: var(--white);
+    border-top: 4px solid var(--primary-color);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.step-card .card-body {
+    padding: 2rem;
+}
+
+.step-card h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.benefits-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+    border-right: 4px solid var(--primary-color);
+}
+
+.benefits-list li:hover {
+    transform: translateX(10px);
+}
+
+.benefits-list li::before {
+    content: "✓";
+    color: var(--primary-color);
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: var(--dark-coffee);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary-color);
+}
+
+.contact-form .form-control {
+    border: 1px solid #ddd;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(189, 154, 122, 0.25);
+}
+
+.video-section {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+    margin: 4rem 0;
+    position: relative;
+}
+
+.video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-container .aparat-embed {
+    width: 100%;
+    height: 100%;
+}
+
+.section-title {
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.rules-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    border-top: 4px solid var(--primary-color);
+}
+
+.rules-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rules-card ul li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.rules-card ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .step-card {
+        margin-bottom: 1rem;
+    }
+    
+    .benefits-list li {
+        padding: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+} 

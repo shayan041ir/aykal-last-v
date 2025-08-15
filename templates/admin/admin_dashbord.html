@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="ادیمین داشبورد">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>ادیمین داشبورد</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+	    <!-- Font css -->
+		<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+		{% include "all_user_headr.html" %}
+
+        <!-- End app header Code -->
+
+        <!-- app sidebar Code -->
+		{% include "admin/admin_base.html" %}
+        <!-- End app sidebar Code -->
+
+
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<!-- <h4 class="content-title mb-2 mb-xl-0">داشبورد ادمین</h4> -->
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">خانه</a></li>
+								<li class="breadcrumb-item active " aria-current="page"> داشبورد ادمین</li> -->
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- main-content-body -->
+				<div class="main-content-body">
+					<div class="row row-sm">
+						<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+							<div class="card border-0 overflow-hidden">
+								<div class="">
+									<div class="d-flex">
+										<div class="my-auto square-icon bg-danger shadow-danger">
+											<i class='bx bx-cart-alt bx-icon tx-40 text-white text-center'></i>
+										</div>
+										<div class="project-content p-4">
+											<h3 class="mb-0 tx-18">فروش بازاریاب ها</h3>
+											<!-- <div class="">
+												<span class="tx-12 font-weight-semibold tx-danger"><i class="fe fe-arrow-up-right me-1"></i>+12.86%</span>
+											</div> -->
+										</div>
+										<h2 id='marketer_sale' class="ms-auto pe-4 mt-4">{{m_sale}}</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+							<div class="card border-0 overflow-hidden">
+								<div class="">
+									<div class="d-flex">
+										<div class="my-auto square-icon bg-secondary shadow-secondary">
+											<i class='bx bx-money bx-icon tx-40 text-white text-center'></i>
+										</div>
+										<div class="project-content p-4">
+											<h3 class="mb-0 tx-18">کل فروش</h3>
+											<!-- <div class="">
+												<span class="tx-12 font-weight-semibold tx-secondary"><i class="fe fe-arrow-up-right me-1"></i>+82.86%</span>
+											</div> -->
+										</div>
+										<h2 class="ms-auto pe-4 mt-4">{{total_sale}}</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+							<div class="card border-0 overflow-hidden">
+								<div class="">
+									<div class="d-flex">
+										<div class="my-auto square-icon bg-info shadow-info">
+											<i class='bx bx-user bx-icon tx-40 text-white text-center'></i>
+										</div>
+										<div class="project-content p-4">
+											<h3 class="mb-0 tx-18">فروش مشتریان</h3>
+											<!-- <div class="">
+												<span class="tx-12 font-weight-semibold text-info"><i class="fe fe-arrow-up-right me-1"></i>+55.21%</span>
+											</div> -->
+										</div>
+										<h2 class="ms-auto pe-4 mt-4">{{n_sale}}</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
+							<div class="card border-0 overflow-hidden">
+								<div class="">
+									<div class="d-flex">
+										<div class="my-auto square-icon bg-success shadow-success">
+											<i class='bx bx-line-chart bx-icon tx-40 text-white text-center'></i>
+										</div>
+										<div class="project-content p-4">
+											<h3 class="mb-0 tx-18">سود کل</h3>
+											<div class="">
+												<span class="tx-12 font-weight-semibold tx-success"><i class="fe fe-arrow-up-right me-1"></i>+95.21%</span>
+											</div>
+										</div>
+										<h2 class="ms-auto pe-4 mt-4">875ريال</h2>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+
+					<!-- row -->
+					<div class="row row-sm ">
+						<div class="col-xxl-3 col-lg-6 col-xl-6  col-md-6">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">
+										فروش بازاریاب ها 
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="table-responsive"  style="max-height: 300px; overflow-y: auto;">
+										<table class="table border-width border-0 mb-0">
+											<tbody> 
+												{% for i in code_buyer %}
+												<tr>
+													<td class="border-top-0">
+														<div class="d-flex">
+															<div class="me-2">
+																<span class="avatar rounded-5">
+																	<img src="{{ i.img_path }}" alt="img" class="rounded-5">
+																</span>
+															</div>
+															<div class="flex-1">
+																<h6 class="mb-1">{{ i.name }}</h6>
+																<span class="text-muted">{{ i.phone }}</span>
+															</div>
+														</div>
+													</td>
+													<td class="border-top-0">
+														<span class="text-muted">{{ i.date }}</span>
+														<div class="tx-18">{{ i.price }}</div>
+													</td>
+													<td>
+														<h6>وضعیت</h6>
+														<!-- ms-0 badge rounded-pill bg-danger-transparent tx-danger fs-12 --><!--satats 0-->
+														<!-- ms-0 badge rounded-pill bg-success-transparent tx-success fs-12 --><!--satats 1-->
+
+														<span class="ms-0 badge rounded-pill {{'bg-success-transparent tx-success' if i.satas == 1 else 'bg-danger-transparent tx-danger' }} fs-12">
+															{{ 'فعال' if i.satas == 1 else 'غیرفعال' }}
+														</span>
+													</td>
+												</tr>
+												{% endfor %}
+
+											
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-3 col-lg-6 col-xl-6  col-md-6">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">
+										فروش کاربران
+									</div>
+								</div>
+								<div class="card-body">
+									<div  class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+										<table class="table border-width border-0 mb-0 ">
+											<tbody>
+												{%for i in sale_log%}
+												<tr>
+													<td class="border-top-0">
+														<div class="d-flex">
+															<div class="me-2">
+																<span class="avatar rounded-5"><img src="{{i.img_path}}" alt="img" class="rounded-5"></span>
+															</div>
+															<div class="flex-1">
+																<h6 class="mb-1">{{i.name}}</h6>
+																<span class="text-muted">{{i.phone}}</span>
+															</div>
+														</div>
+													</td>
+													<td class="border-top-0">
+														<span class="text-muted">{{i.date}}</span>
+														<div class="tx-18">{{i.price}}</div>
+													</td>
+													<td>
+														<h6>وضعیت</h6>
+														<span class="ms-0 badge rounded-pill bg-success-transparent tx-success fs-12">فعال </span>
+													</td>
+												
+												</tr>
+												{%endfor%}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-9  col-xl-12 col-lg-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">لیست خریداران</div>
+								</div>
+								<div class="card-body mt-2">
+									<div class="table-responsive"  style="max-height: 300px; overflow-y: auto;">
+										<table class="table table-bordered text-nowrap mb-0" id="productSummary">
+											<thead>
+												<tr>
+													<th>تاریخ</th>
+													<th>نام خریدار</th>
+													<th>پکیج</th>
+													<th>قیمت</th>
+													<th>شناسه تراکنش</th>
+													<th>وضعیت</th>
+												</tr>
+											</thead>
+											<tbody>
+
+												{%for i in sale%}
+												<tr>
+													<td>{{i.date}}</td>
+													<td>
+														<div class="d-flex align-items-center">
+															<div class="avatar rounded-5 avatar-sm me-2">
+																<img src="{{i.pic_path}}" alt="avatar" class="rounded-5">
+															</div>
+															<a href="javascript:void(0)" class="text-dark">{{i.role}}</a>
+														</div>
+													</td>
+													<td>{{i.package}} </td>
+													<td>{{i.price}} ريال</td>
+													<td><a href="/invoice.html" class="text-dark">{{i.track_id}}</a></td>
+													<td>
+														<span class="badge badge-pill bg-success-transparent tx-success px-3 py-2 tx-11">
+															{{ 'فعال' if i.satas == 1 else 'غیرفعال' }}
+														</span>
+												</td>
+												</tr>
+												{%endfor%}
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+
+        <!-- Footer code -->
+
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--- Chart bundle min js -->
+	<script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!--- Internal Sampledata js -->
+	<script src="../static/assets/js/chart.flot.sampledata.js"></script>
+
+	<!-- ApexChart -->
+	<script src="../static/assets/js/apexcharts.min.js"></script>
+
+	<!--- Internal Vector-maps js -->
+	<script src="../static/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../static/assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/index5.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>     
+   <!-- End scripts -->
+
+
+	<script>
+		function get_marketer_salas(){
+			fetch('/api/marketer_sale',{})
+
+
+
+
+		}
+		const sale_marketer_h2=document.getElementById('marketer_sale')
+		
+
+
+
+
+
+	</script>
+
+
+
+</body>
+
+</html>

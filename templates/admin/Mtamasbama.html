@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="مدیریت تماس با ما">
+	<meta name="Author" content="برنامه نویسان مارس">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>مدیریت تماس با ما</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+    <!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+         {%include 'all_user_headr.html'%}
+       {%include 'admin/admin_base.html'%}
+        <!-- End app sidebar Code -->
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<!-- <h4 class="content-title mb-2 mb-xl-0">داشبورد ادمین</h4> -->
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">خانه</a></li>
+								<li class="breadcrumb-item active " aria-current="page"> داشبورد ادمین</li> -->
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- main-content-body -->
+				<div class="main-content-body">
+                    <div class="row justify-content-center mt-5 mb-4">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow-lg border-0">
+                                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0">ویرایش اطلاعات شرکت</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form id="company-info-form">
+                                        <div class="mb-3">
+                                            <label for="brandName" class="form-label">نام برند</label>
+                                            <input type="text" class="form-control" id="brandName" value="آیکال">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">تلفن</label>
+                                            <input type="text" class="form-control" id="phone" value="021-12345678">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">ایمیل</label>
+                                            <input type="email" class="form-control" id="email" value="info@aykal.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="address" class="form-label">آدرس</label>
+                                            <input type="text" class="form-control" id="address" value="تهران، خیابان مثال، پلاک ۱۲۳">
+                                        </div>
+                                        <div class="d-grid">
+                                            <button type="button" class="btn btn-primary btn-lg" onclick="saveCompanyInfo()">ذخیره اطلاعات</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow-lg border-0">
+                                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0">ویرایش موقعیت شرکت روی نقشه</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form id="map-info-form">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="latitude" class="form-label">عرض جغرافیایی (Latitude)</label>
+                                                <input type="text" class="form-control" id="latitude" value="35.6892">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="longitude" class="form-label">طول جغرافیایی (Longitude)</label>
+                                                <input type="text" class="form-control" id="longitude" value="51.3890">
+                                            </div>
+                                        </div>
+                                        <div class="d-grid mb-3">
+                                            <button type="button" class="btn btn-primary btn-lg" onclick="updateMap()">بروزرسانی نقشه</button>
+                                        </div>
+                                    </form>
+                                    <div style="width: 100%; height: 250px; border-radius: 10px; overflow: hidden;">
+                                        <iframe id="company-map" src="https://maps.google.com/maps?q=35.6892,51.3890&z=15&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow-lg border-0">
+                                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0">لیست کاربرانی که فرم را پر کرده‌اند</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>نام</th>
+                                                    <th>ایمیل</th>
+                                                    <th>موضوع</th>
+                                                    <th>پیام</th>
+                                                    <th>تاریخ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>علی احمدی</td>
+                                                    <td>ali@example.com</td>
+                                                    <td>همکاری</td>
+                                                    <td>میخوام برنامه نویس شما باشم</td>
+                                                    <td>۱۴۰۳/۰۷/۱۰</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>مریم محمدی</td>
+                                                    <td>maryam@example.com</td>
+                                                    <td>همکاری</td>
+                                                    <td>میخوام برنامه نویس شما باشم</td>
+                                                    <td>۱۴۰۳/۰۷/۱۱</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>حسن حسینی</td>
+                                                    <td>hasan@example.com</td>
+                                                    <td>همکاری</td>
+                                                    <td>میخوام برنامه نویس شما باشم</td>
+                                                    <td>۱۴۰۳/۰۷/۱۲</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<!-- /container -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+
+        <!-- Footer code -->
+
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!--- Chart bundle min js -->
+	<script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!--- Internal Sampledata js -->
+	<script src="../static/assets/js/chart.flot.sampledata.js"></script>
+
+	<!-- ApexChart -->
+	<script src="../static/assets/js/apexcharts.min.js"></script>
+
+	<!--- Internal Vector-maps js -->
+	<script src="../static/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../static/assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/index5.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>     
+   <!-- End scripts -->
+
+<script>
+function saveCompanyInfo() {
+    // فقط نمایش پیغام موفقیت، ذخیره‌سازی واقعی ندارد
+    alert('اطلاعات شرکت با موفقیت ذخیره شد!');
+}
+function updateMap() {
+    var lat = document.getElementById('latitude').value;
+    var lng = document.getElementById('longitude').value;
+    var mapFrame = document.getElementById('company-map');
+    mapFrame.src = `https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
+}
+</script>
+
+</body>
+
+</html>

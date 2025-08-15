@@ -1,0 +1,140 @@
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+	    <!-- Font css -->
+		<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+        <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
+        <div class="sticky">
+            <aside class="app-sidebar sidebar-scroll">
+                <div class="main-sidebar-header active">
+                    <a class="desktop-logo logo-light active" href="/"><img src="../static/assets/img/brand/logo.png" class="main-logo" alt="logo"></a>
+                    <a class="desktop-logo logo-dark active" href="/"><img src="../static/assets/img/brand/logo-white.png" class="main-logo" alt="logo"></a>
+                    <a class="logo-icon mobile-logo icon-light active" href="/"><img src="../static/assets/img/brand/favicon.png" alt="logo"></a>
+                    <a class="logo-icon mobile-logo icon-dark active" href="/"><img src="../static/assets/img/brand/favicon-white.png" alt="logo"></a>
+                </div>
+                <div class="main-sidemenu">
+                    <!-- بخش نام و پروفایل -->
+                    <div class="main-sidebar-loggedin">
+                        <div class="app-sidebar__user">
+                            <div class="dropdown user-pro-body text-center">
+                                <div class="user-pic">
+                                    <img src="{{user.pic_path}}" alt="user-img" class="rounded-circle mCS_img_loaded">
+                                </div>
+                                <div class="user-info mb-4">
+                                    <h6 class=" mb-0 text-dark">{{user.first_name}}</h6>
+                                    <span class="text-muted app-sidebar__user-name text-sm">{{user.last_name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- بخش نام و پروفایل -->
+
+
+                    <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" /></svg></div>
+                    <ul class="side-menu ">
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/admin_dashboard"><i class="side-menu__icon bx bx-home-alt"></i><span class="side-menu__label">داشبورد</span><i class="angle fe fe-chevron"></i></a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Mbazaryabha" >
+                                <i class="side-menu__icon bx bx-group"></i>
+                                <span class="side-menu__label">مدیریت بازاریاب ها</span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Mservises" >
+                            <i class="side-menu__icon bx bx-package"></i>
+                            <span class="side-menu__label">مدیریت سرویس ها </span></a>
+                        </li>
+						<li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Addblog" >
+                                <i class="side-menu__icon bx bx-news"></i>
+                                <span class="side-menu__label">مدیریت وبلاگ ها</span>
+                            </a>
+                        </li>
+						<!-- <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Mcomments" >
+                                <i class="side-menu__icon bx bx-news"></i>
+                                <span class="side-menu__label">مدیریت کامنت ها</span>
+                            </a>
+                        </li> -->
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/tickets" >
+                            <i class="side-menu__icon bx bx-message-square-dots" ></i>
+                            <span class="side-menu__label">مدیریت تیکت ها</span></a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/agent-denger" >
+                            <i class="side-menu__icon bx bx-error"></i>
+                            <span class="side-menu__label">مدریت هشدار ها</span></a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Mfaq" >
+                                <i class="side-menu__icon bx bx-help-circle"></i>
+                                <span class="side-menu__label">مدیریت سوالات متداول</span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Mgavanin" >
+                                <i class="side-menu__icon bx bx-book"></i>
+                                <span class="side-menu__label">مدیریت قوانین سایت </span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Mtamasbama" >
+                                <i class="side-menu__icon bx bx-phone"></i>
+                                <span class="side-menu__label">مدیریت تماس با ما</span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Maboutwe" >
+                                <i class="side-menu__icon bx bx-info-circle"></i>
+                                <span class="side-menu__label">مدیریت درباره ما</span>
+                            </a>
+                        </li>
+						<li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/biadabha" >
+                                <i class="side-menu__icon bx bx-block"></i>
+                                <span class="side-menu__label">لیست بی ادب ها</span>
+                            </a>
+                        </li>
+						<li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Mlanding" >
+                                <i class="side-menu__icon bx bx-news"></i>
+                                <span class="side-menu__label">محتوا های لندینگ پیج</span>
+                            </a>
+                        </li>
+						<!-- <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/admin/Add-MiniAdmin" >
+                                <i class="side-menu__icon bx bx-group"></i>
+                                <span class="side-menu__label">افزودن مینی ادمین</span>
+                            </a>
+                        </li> -->
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="/api/logout" >
+                                <i class="side-menu__icon bx bx-log-out"></i>
+                                <span class="side-menu__label">خروج</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" /></svg></div>
+                </div>
+            </aside>
+        </div>

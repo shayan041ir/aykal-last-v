@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="ویرایش پروفایل">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>ویرایش پروفایل</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+    	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+
+        <!-- app header code -->
+
+{%include 'all_user_headr.html'%}
+       {%include 'sidebar_all_user.html'%}
+        <!-- End app sidebar Code -->
+
+		 
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<!-- <h4 class="content-title mb-2 mb-xl-0">ویرایش پروفایل</h4> -->
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<!-- <li class="breadcrumb-item"><a href="javascript:void(0);">صفحه ها</a></li>
+								<li class="breadcrumb-item active " aria-current="page">ویرایش پروفایل</li> -->
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- row -->
+				<div class="row row-sm">
+				<!-- Col -->
+				<div class="col-xl-8">
+				<div class="card">
+					<div class="card-body">
+						<div class="mb-4 main-content-label">اطلاعات شخصی</div>
+						<form class="form-horizontal">
+							
+							<div class="form-group ">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="form-label">نام</label>
+									</div>
+									<div class="col-md-9">
+										<input id="first_name" type="text" class="form-control" placeholder={{user.first_name}}>
+									</div>
+								</div>
+							</div>
+							<div class="form-group ">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="form-label">نام خانوادگی</label>
+									</div>
+									<div class="col-md-9">
+										<input id="last_name" type="text" class="form-control" placeholder={{user.last_name}}>
+									</div>
+								</div>
+							</div>
+                            {% if  user.role.value==1  %}
+                                <div class="mb-4 main-content-label">اطلاعات کارت بانکی</div>
+                                <div class="form-group ">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-label">صاحب شماره کارت</label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="صاحب شماره کارت">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-label">شماره کارت</label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="شماره کارت" value="1234567890">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-label">شماره شبا</label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="شماره شبا" value="1234567890">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4 main-content-label">اطلاعات تماس</div>
+                                <div class="form-group ">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-label">پست الکترونیک<i>(ضروری)</i></label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" placeholder="ایمیل" value="info@redash.in">
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+							<div class="form-group ">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="form-label">شماره تماس</label>
+									</div>
+									<div class="col-md-9">
+										<span type="text" class="form-control" >{{user.phone_number}}</span>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="mb-4 main-content-label">اطلاعات اجتماعی</div>
+							<div class="form-group ">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="form-label">فیس بوک</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" class="form-control" placeholder="فیس بوک" value="https://www.facebook.com/Redash">
+									</div>
+								</div>
+							</div>
+							<div class="form-group ">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="form-label">اینستا</label>
+									</div>
+									<div class="col-md-9">
+										<input type="text" class="form-control" placeholder="وابسته به لینکدین" value="linkedin.com/in/hg">
+									</div>
+								</div>
+							</div> -->
+						</form>
+					</div>
+					<div class="card-footer">
+						<button id="change" type="submit" class="btn btn-primary waves-effect waves-light">بروزرسانی پروفایل</button>
+					</div>
+				</div>
+				</div>
+				<!-- /Col -->
+	
+				<!-- Col -->
+							<div class="col-xl-4">
+								<div class="card mg-b-20">
+									<div class="card-body">
+										<div class="ps-0">
+											<div class="main-profile-overview">
+												<div class="d-flex">
+													<div class="main-img-user profile-user">
+                                                        {% if user.pic_path %}
+                                                            <img src="{{user.pic_path}}" alt="Profile Picture">
+                                                        {% else %}
+                                                            <img src="../static/assets/img/users/base_porfile.png" alt="Default Picture">
+                                                        {% endif %}
+
+													</div>
+													<div class="d-flex justify-content-between mg-b-20 mt-5 ms-3">
+														<div>
+															<h5 class="main-profile-name">{{user.first_name}}</h5>
+															<p class="main-profile-name-text text-primary">
+                                                               
+                                                            {% if user.role.value==1 %}
+                                                                 نماینده 
+                                                            {% elif user.role.value==2 %}
+                                                                user
+                                                            {% elif user.role.value==0 %}
+                                                                Admin
+                                                            {% else %}
+                                                            
+                                                            no role found conecct to admin
+                                                            {% endif %}
+
+                                                            </p>
+														</div>
+													</div>
+		
+												</div>
+												<!-- <h6>بیوگرافی</h6>
+												<div class="main-profile-bio">
+													طراح وب ، شخصی است که وظیفه طراحی و توسعه صفحات وب را دارد. این شخص برای طراحی صفحات وب از زبان‌های برنامه‌نویسی مانند HTML، CSS، JavaScript و PHP استفاده می‌کند... <a href="#">  بیشتر... </a>
+												</div>main-profile-bio -->
+												<div class="main-profile-work-list">
+													<div class="media">
+														<div class="media-logo bg-success-transparent text-success">
+															<i class="icon bx bx-user"></i>
+														</div>
+														<div class="media-body">
+															<h5>اطلاعات شخصی</h5>
+															<h6>نام</h6><span>{{user.first_name}}</span>
+															<h6>نام خانوادگی</h6><span>{{user.last_name}}</span>
+														</div>
+													</div>
+													<div class="media">
+														<div class="media-logo bg-success-transparent text-success">
+															<i class="icon ion-md-phone-portrait"></i>
+														</div>
+														<div class="media-body">
+															<h5>اطلاعات تماس</h5>
+															<h6>شماره تماس</h6><span>{{user.phone_number}}</span>
+															{% if user.role.value == 1 %}
+                                                                <h6>ایمیل</h6><span>{{details.email}}</span>
+                                                            {% endif %}
+                                                            </div>
+													</div>
+                                                    {% if user.role.value == 1 %}
+                                                        <div class="media">
+                                                            <div class="media-logo bg-primary-transparent text-primary">
+                                                                <i class="icon bx bx-credit-card"></i>
+                                                            </div>
+
+                                                            <div class="media-body">
+                                                                <h5>اطلاعات بانکی</h5>
+                                                                <h6>شماره حساب</h6><span>{{details.bank_card}}</span>
+                                                                <h6>شماره شبا</h6><span>{{details.sheba_number}}</span>
+                                                            </div>
+                                                        </div>
+                                                    {% endif %}
+												</div>
+											</div><!-- main-profile-overview -->
+										</div>                                  
+									</div>
+								</div>
+							</div>
+						</div>					
+				<!-- /Col -->
+				</div>
+				<!-- row closed -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+		<!-- Footer code -->
+
+
+	</div>
+	        <!-- Footer code -->
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="https://www.instagram.com/marsagencyir/" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <button id="change">Click me</button>
+
+<script>
+    const button = document.getElementById('change');
+
+    button.addEventListener('click', () => {
+        // Example API endpoint
+        const apiUrl = '/api/change_prof_data';
+        console.log('send')
+        new_name=document.getElementById('first_name')
+        new_lastName=document.getElementById('last_name')
+        nam=new_name.value
+        lastNam=new_lastName.value
+        //  Send a request to the API
+        fetch(apiUrl, {
+            method: 'POST', // or 'GET' if needed
+           headers: {
+    'Content-Type': 'application/json'
+},
+            body: JSON.stringify({
+                'name':nam,
+                'last_name':lastNam,
+
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+         location.reload();
+           
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!-- Select2.min js -->
+	<script src="../static/assets/plugins/select2/js/select2.min.js"></script>
+	<script src="../static/assets/js/select2.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>        <!-- End scripts -->
+
+</body>
+
+
+</html>

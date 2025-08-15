@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="درخواست پرداخت ">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>درخواست پرداخت </title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+    	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+	<!-- Custom style for beautiful soft form -->
+	<style>
+		.pay-form-card {
+			border-radius: 20px !important;
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+			background: rgba(255,255,255,0.95);
+			padding: 2.5rem 2rem 2rem 2rem;
+			border: none;
+			transition: box-shadow 0.3s;
+		}
+		.pay-form-card:hover {
+			box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.18);
+		}
+		.pay-form-card .form-control {
+			border-radius: 12px;
+			border: 1px solid #e0e6ed;
+			background: #f8fafc;
+			transition: border-color 0.2s, box-shadow 0.2s;
+			font-size: 1.08rem;
+		}
+		.pay-form-card .form-control:focus {
+			border-color: #6c63ff;
+			box-shadow: 0 0 0 2px #6c63ff33;
+			background: #fff;
+		}
+		.pay-form-card label.form-label {
+			font-weight: 500;
+			color: #000000;
+			margin-bottom: 0.4rem;
+		}
+		.pay-form-card .btn-primary {
+			border-radius: 12px;
+			box-shadow: 0 2px 8px 0 #6c63ff22;
+			background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+			border: none;
+			font-size: 1.1rem;
+			font-weight: 600;
+			transition: background 0.2s, transform 0.15s;
+		}
+		.pay-form-card .btn-primary:hover {
+			background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+			transform: translateY(-2px) scale(1.03);
+		}
+		.pay-form-card .card-title {
+			font-weight: 700;
+			color: #6c63ff;
+			letter-spacing: 0.5px;
+		}
+		@media (max-width: 576px) {
+			.pay-form-card {
+				padding: 1.2rem 0.7rem 1.5rem 0.7rem;
+			}
+		}
+	</style>
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+{%if user%}
+			<!-- app header code -->
+	{%include 'all_user_headr.html'%}
+			<!-- End app header Code -->
+
+			<!-- app sidebar Code -->
+	{%include 'sidebar_all_user.html'%}
+			<!-- End app sidebar Code -->
+{%endif%}
+
+
+
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="float-end bg-primary shadow-primary stamp stamp-lg">
+                        <i class="bx bx-wallet tx-28 ms-1"></i>
+                    </div>
+                        <div class="card-title"><h5>موجودی شما: </h5></div>
+                        <span class="mb-1 tx-26 font-weight-semibold">{{profit}}</span> تومان 
+                    </div>
+                </div>
+            </div>
+
+            <!--فرم درخواست پرداخت -->
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm pay-form-card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center mb-4">درخواست پرداخت</h5>
+                                <form id="pay-request-form" novalidate>
+                                    <div class="form-group mb-3">
+                                        <label for="cardNumber" class="form-label">شماره کارت</label>
+                                        <input type="text" class="form-control" id="cardNumber" name="cardNumber" maxlength="16" pattern="[0-9]{16}" required placeholder="مثال: 6037991234567890">
+                                        <div class="invalid-feedback">شماره کارت معتبر وارد کنید.</div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="shebaNumber" class="form-label">شماره شبا</label>
+                                        <input type="text" class="form-control" id="shebaNumber" name="shebaNumber" maxlength="26" pattern="IR[0-9]{24}" required placeholder="مثال: IR820540102680020817909002">
+                                        <div class="invalid-feedback">شماره شبا معتبر وارد کنید.</div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="fullName" class="form-label">نام و نام خانوادگی</label>
+                                        <input type="text" class="form-control" id="fullName" name="fullName" required placeholder="نام و نام خانوادگی">
+                                        <div class="invalid-feedback">لطفا نام را وارد کنید.</div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="amount" class="form-label">مبلغ (تومان)</label>
+                                        <input type="number" class="form-control" id="amount" name="amount" min="1000000" required placeholder="حداقل 1,000,000">
+                                        <div class="invalid-feedback">حداقل مبلغ 1,000,000 تومان است.</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">ثبت درخواست</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--فرم درخواست پرداخت -->
+
+            <script>
+                // Simple client-side validation for Bootstrap
+                (function () {
+                    'use strict';
+                    var form = document.getElementById('pay-request-form');
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                })();
+            </script>
+        </div>
+		<!-- main-content closed -->
+
+
+
+
+
+
+	
+        <!-- Footer code -->
+
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+
+
+
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>
+	<!-- End scripts -->
+
+</body>
+
+
+</html>

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="قالب ادمینِتو - بهینه شده با بوت استرپ">
+    <meta name="Author" content="برنامه نویسان ادمینتو">
+    <meta name="Keywords"
+        content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+    <!-- Title -->
+    <title>بخش پیام ها</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='assets/img/brand/favicon.png') }}" type="image/x-icon">
+
+    <!-- Bootstrap css -->
+    <link href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet" id="style">
+
+    <!-- Style css -->
+    <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/css/plugins.css') }}" rel="stylesheet">
+
+    <!-- Icons css -->
+    <link href="{{ url_for('static', filename='assets/css/icons.css') }}" rel="stylesheet">
+
+    <!-- Font css -->
+    <link href="{{ url_for('static', filename='assets/font/Morabba/fontiran.css') }}" rel="stylesheet">
+
+    <!-- Animations css -->
+    <link href="{{ url_for('static', filename='assets/css/animate.css') }}" rel="stylesheet">
+
+    <!-- Switcher css -->
+    <link href="{{ url_for('static', filename='assets/switcher/css/switcher.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/switcher/demo.css') }}" rel="stylesheet">
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="{{ url_for('static', filename='assets/img/loaders/loader-4.svg') }}" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+    <!-- page -->
+    <div class="page custom-index">
+
+        <!-- app header code -->
+ <!-- app header code -->
+        {% include "all_user_headr.html" %}
+        <!-- End app header Code -->
+        
+
+        
+        <!-- app sidebar Code -->
+        {% include "sidebar_all_user.html" %}
+        
+        <!-- End app sidebar Code -->
+
+
+        <!-- main-content -->
+        <div class="main-content app-content">
+
+            <!-- container -->
+            <div class="main-container container-fluid">
+
+
+                <!-- breadcrumb -->
+                <div class="breadcrumb-header justify-content-between">
+                    <div>
+                        <h4 class="content-title mb-2 mb-xl-0">خواندن پیام ها </h4>
+                    </div>
+                    <div class="d-flex my-auto">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">پیام </a></li>
+                                <li class="breadcrumb-item active " aria-current="page">خواندن پیام </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /breadcrumb -->
+                <!-- row opened -->
+                <div class="row row-sm">
+                    <!-- Col -->
+                    <div class="col-lg-4 col-xl-3 col-md-12">
+                        <!--نوع پیام -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="main-content-left main-content-left-mail">
+                                    <span class="btn btn-primary  btn-compose" href="#">پیام ها</span>
+                                    <div class="main-mail-menu">
+                                        <nav class="nav main-nav-column mg-b-20">
+                                            <a class="nav-link active" href="#"><i class="ri-mail-download-line"></i>
+                                                صندوق ورودی <span class="badge bg-primary me-2">20</span></a>
+                                            <!--برای این اسپن دوم که عدد هست باید تعداد پیام ها باشد -->
+                                            <!-- <a class="nav-link" href="#"><i class="ri-star-line"></i> ستاره دار <span class="badge bg-secondary me-2">3</span></a> -->
+                                            <!-- <a class="nav-link" href="#"><i class="ri-bookmark-2-line"></i> مهم <span class="badge bg-warning me-2">10</span></a> -->
+                                            <a class="nav-link" href="#"><i class="ri-share-forward-line"></i> پیام
+                                                ارسال شد <span class="badge bg-info me-2">8</span></a>
+                                            <!-- <a class="nav-link" href="#"><i class="ri-edit-line"></i> پیش نویس <span class="badge bg-primary me-2">15</span></a> -->
+                                            <!-- <a class="nav-link" href="#"><i class="ri-spam-line"></i> هرزنامه ها <span class="badge bg-danger me-2">128</span></a> -->
+                                            <a class="nav-link" href="#"><i class="ri-delete-bin-5-line"></i> زباله ها
+                                                <span class="badge bg-success me-2">6</span></a>
+                                        </nav>
+                                    </div><!-- main-mail-menu -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--نوع پیام -->
+
+                    </div>
+                    <!-- /Col -->
+                    <div class="col-lg-8 col-xl-9 col-md-12">
+    <div class="card">
+        <div class="card-header border-bottom">
+            <h3 class="card-title mb-0">خواندن پیام </h3>
+        </div>
+        <div class="card-body">
+            <div class="email-media">
+                <div class="mt-0 d-sm-flex">
+                    <img class="me-3 rounded-circle avatar-xl" src="{{ ticket_user.pic_path or url_for('static', filename='../static/assets/img/users/6.jpg') }}" alt="avatar">
+                    <div class="media-body d-md-flex">
+                        <div>
+                            <div class="media-title text-dark font-weight-semiblod mt-3">
+                                {{ ticket_user.first_name }} {{ ticket_user.last_name }}
+                                <span class="text-muted">({{ ticket_user.phone_number }})</span>
+                            </div>
+                            <p class="mb-0 tx-12">ایمیل ندارد</p>
+                        </div>
+                        <div class="ms-auto mt-md-4">
+                            <small class="me-2 tx-13 mt-1"> {{ ticket.created_at.strftime('%H:%M %Y/%m/%d') }} </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eamil-body mt-4">
+                <p>{{ ticket.problem.replace('\n', '<br>') | safe }}</p>
+
+                {% if ticket.pic_url %}
+                <hr>
+                <div class="email-attch">
+                    <p class="text-muted">پیوست</p>
+                    <div class="emai-img">
+                        <img class="wd-150 mb-2" src="{{ ticket.pic_url }}" alt="attached image">
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            {% if ticket.replies.count() > 0 %}
+            <hr>
+            <div class="mt-3">
+                <h6 class="text-muted">پاسخ‌ها</h6>
+                {% for reply in ticket.replies %}
+
+
+                    <div class="p-3 border mb-2 rounded">
+                        <div class="d-flex justify-content-between">
+                            <strong>{{ 'ادمین' if reply.is_admin_reply else 'کاربر' }}</strong>
+                            <small>{{ reply.created_at.strftime('%Y/%m/%d %H:%M') }}</small>
+                        </div>
+                        <p>{{ reply.problem.replace('\n', '<br>') | safe }}</p>
+ 
+                    </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="card-footer">
+            <a class="btn btn-primary mt-1 mb-1" data-bs-toggle="modal" data-bs-target="#replyModal" href="#">
+                <i class="fa fa-reply"></i> پاسخ
+            </a>
+        </div>
+
+        <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true" data-bs-backdrop="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div id="replyForm" data-ticket-id="{{ ticket.id }}">
+    <div class="modal-header">
+        <h5 class="modal-title" id="replyModalLabel">ارسال پاسخ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+    </div>
+
+    <div class="modal-body">
+        <div class="mb-3">
+            <label for="replyTextarea" class="form-label">پیام</label>
+            <textarea class="form-control" name="message" id="replyTextarea" rows="4" placeholder="متن پاسخ شما"></textarea>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+        <button type="button" class="btn btn-primary" onclick="submitReply()">ارسال</button>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+                <!-- row closed -->
+
+
+            </div>
+            <!-- Container closed -->
+        </div>
+        <!-- main-content closed -->
+
+    </div>
+        <!-- Footer code -->
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span>   <a href="https://www.instagram.com/marsagencyir/" class="text-primary">آیکال</a>. طراحی شده با عشق <span class="fa fa-heart text-danger"></span> توسط  <a href="https://instagram.com/marsagencyir"> برنامه نویسان  </a> mars agency</span>
+            </div>
+        </div>            
+        <!-- End Footer -->
+
+
+        <script>
+function submitReply() {
+    const message = document.getElementById('replyTextarea').value.trim();
+    const ticketId = document.getElementById('replyForm').dataset.ticketId;
+
+    if (!message) {
+        alert("لطفاً متن پاسخ را وارد کنید.");
+        return;
+    }
+
+    fetch('/api/reply_ticket', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            ticket_id: ticketId,
+            reply: message
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("✅ پاسخ شما با موفقیت ارسال شد.");
+            // Optionally close the modal and clear the textarea
+            document.getElementById('replyTextarea').value = '';
+            const modal = bootstrap.Modal.getInstance(document.getElementById('replyModal'));
+            modal.hide();
+            // You could reload to show new reply, or append dynamically
+            location.reload();
+        } else {
+            alert("❌ " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("خطا در ارسال:", error);
+        alert("❌ خطایی در ارسال پاسخ رخ داد.");
+    });
+}
+</script>
+
+    <!-- End Page -->
+    <!-- scripts code -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="{{ url_for('static', filename='assets/plugins/jquery/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="{{ url_for('static', filename='assets/plugins/bootstrap/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <!-- Ionicons js -->
+    <script src="{{ url_for('static', filename='assets/plugins/ionicons/ionicons.js') }}"></script>
+
+    <!-- Moment js -->
+    <script src="{{ url_for('static', filename='assets/plugins/moment/moment.js') }}"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="{{ url_for('static', filename='assets/plugins/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+
+    <!-- P-scroll js -->
+    <script src="{{ url_for('static', filename='assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/plugins/perfect-scrollbar/p-scroll.js') }}"></script>
+
+    <!-- Switcher js -->
+    <script src="{{ url_for('static', filename='assets/switcher/js/switcher.js') }}"></script>
+
+    <!-- Eva-icons js -->
+    <script src="{{ url_for('static', filename='assets/js/eva-icons.min.js') }}"></script>
+
+    <!-- Sidebar js -->
+    <script src="{{ url_for('static', filename='assets/plugins/side-menu/sidemenu.js') }}"></script>
+
+    <!-- sticky js -->
+    <script src="{{ url_for('static', filename='assets/js/sticky.js') }}"></script>
+
+    <!-- Index js -->
+    <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+
+    <!-- Moment js -->
+    <script src="{{ url_for('static', filename='assets/plugins/raphael/raphael.min.js') }}"></script>
+
+    <!-- Select2.min js -->
+    <script src="{{ url_for('static', filename='assets/plugins/select2/js/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/select2.js') }}"></script>
+
+    <!-- themecolor js -->
+    <script src="{{ url_for('static', filename='assets/js/themecolor.js') }}"></script>
+
+    <!-- swither-styles js -->
+    <script src="{{ url_for('static', filename='assets/js/swither-styles.js') }}"></script>
+
+    <!-- Custom js -->
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <!-- End scripts -->
+
+</body>
+
+
+
+</html>

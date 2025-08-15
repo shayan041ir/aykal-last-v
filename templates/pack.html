@@ -1,0 +1,208 @@
+
+
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+    <!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+
+
+
+
+
+
+<div class="pricing-tabs text-center">
+    <div class="pri-tabs-heading text-center my-4">
+        <ul class="nav nav-price mb-0" role="tablist">
+            {% set mount_list = [] %}
+            {% for i in list %}
+                {% if i.mount not in mount_list %}
+                    {% set _ = mount_list.append(i.mount) %}
+                    <li>
+                        <a class="nav-link {% if loop.first %}active show{% endif %}" data-bs-toggle="tab"
+                           href="#tab{{ i.mount }}">
+                            {{ i.mount }} ماهه
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="tab-content">
+        {% for mount in mount_list %}
+        <div class="tab-pane fade {% if loop.first %}active show{% endif %}" id="tab{{ mount }}">
+            <div class="row d-flex align-items-center justify-content-center">
+                {% for i in list %}
+                    {% if i.mount == mount %}
+                    <div class="col-lg-4 col-xl-4 col-md-6 col-sm-12">
+                        <div class="card p-3 pricing-card">
+                            <div class="card-header d-block text-justified pt-2">
+                                <p class="tx-18 fw-semibold mb-1">{{ i.name }}</p>
+                                <p class="text-justify fw-semibold mb-1">
+                                    <span class="tx-30 me-2"></span>
+                                    <span class="tx-30 me-1">{{ i.price }}</span>
+                                    <span class="tx-25">
+                                        <span class="op-0-5 text-muted text-20">/</span>
+                                        ماه
+                                    </span>
+                                </p>
+                                <p class="tx-13 mb-1">{{ i.disc }}</p>
+                                <p class="tx-13 mb-1 text-secondary">صورتحساب ماهانه به طور منظم!</p>
+                            </div>
+                            <div class="card-body pt-2">
+                                <ul class="text-justify pricing-body ps-0">
+
+
+									<!-- Anti-Ghost -->
+<li class="{% if i.ghost == 0 %}text-muted{% endif %}">
+    <i class="mdi {% if i.ghost == 0 %}mdi-close-circle-outline text-danger{% else %}mdi-checkbox-marked-circle-outline text-success{% endif %} p-2 tx-16"></i>
+    انتی روح خودکار
+</li>
+
+<!-- Send -->
+<li class="{% if i.send == 0 %}text-muted{% endif %}">
+    <i class="mdi {% if i.send == 0 %}mdi-close-circle-outline text-danger{% else %}mdi-checkbox-marked-circle-outline text-success{% endif %} p-2 tx-16"></i>
+    ارسال: {{ i.send }}
+</li>
+
+<!-- Find -->
+<li class="{% if i.find == 0 %}text-muted{% endif %}">
+    <i class="mdi {% if i.find == 0 %}mdi-close-circle-outline text-danger{% else %}mdi-checkbox-marked-circle-outline text-success{% endif %} p-2 tx-16"></i>
+    کاربریابی: {{ i.find }}
+</li>
+
+<!-- Intraction -->
+<li class="{% if i.intraction == 0 %}text-muted{% endif %}">
+    <i class="mdi {% if i.intraction == 0 %}mdi-close-circle-outline text-danger{% else %}mdi-checkbox-marked-circle-outline text-success{% endif %} p-2 tx-16"></i>
+    تعامل کار خودکار: {{ i.intraction }}
+</li>
+
+<!-- Description -->
+<!-- <li class="{% if not i.disc %}text-muted{% endif %}">
+    <i class="mdi {% if not i.disc %}mdi-close-circle-outline text-danger{% else %}mdi-checkbox-marked-circle-outline text-success{% endif %} p-2 tx-16"></i>
+    توضیحات: {{ i.disc if i.disc else "ندارد" }}
+</li> -->
+
+                                    
+                                </ul>
+                            </div>
+                            <div class="card-footer text-center border-top-0 pt-1">
+                                <button class="btn btn-lg btn-secondary btn-block btn-orange-hover buy-button"
+                                        data-id="{{ i.id }}">
+                                    <span class="ms-4 me-4">هم اکنون خریداری کنید</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+							
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".buy-button").forEach(button => {
+        button.addEventListener("click", function () {
+            const packageId = this.dataset.id;
+            const originalText = this.innerHTML;
+            this.disabled = true;
+            this.innerHTML = "در حال انتقال...";
+
+            fetch("/api/add_shop", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ package_id: packageId })
+            })
+            .then(data => 
+			{
+			window.location.href ='/payment/shop_card';
+
+
+			}
+			)
+            
+            .catch(err => {
+                console.error("API error:", err);
+                alert("ارتباط با سرور برقرار نشد.");
+                this.disabled = false;
+                this.innerHTML = originalText;
+            });
+        });
+    });
+});
+</script>
+
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>        <!-- End scripts -->
+

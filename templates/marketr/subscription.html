@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="قالب ادمینِتو - بهینه شده با بوت استرپ">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>خرید اشتراک بازاریاب </title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+        <!-- app header code -->
+
+      {%include 'all_user_headr.html'%}
+      <!-- End app header Code -->
+      
+      <!-- app sidebar Code -->
+      {%include 'sidebar_all_user.html'%}
+        
+        <!-- End app sidebar Code -->
+
+
+		<!-- main-content -->
+		<style>
+		@keyframes fadeUp {
+			0% { opacity: 0; transform: translateY(40px); }
+			100% { opacity: 1; transform: translateY(0); }
+		}
+		.aykal-sub-card {
+			animation: fadeUp 1s cubic-bezier(.39,.575,.565,1) both;
+			transition: box-shadow 0.3s, transform 0.3s;
+			border-radius: 2rem !important;
+		}
+		.aykal-sub-card:hover {
+			box-shadow: 0 8px 32px #ffb86c55, 0 2px 8px #ffb86c33;
+			transform: translateY(-6px) scale(1.02);
+		}
+		.aykal-sub-btn {
+			border-radius: 1.5rem !important;
+			transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+		}
+		.aykal-sub-btn:hover {
+			background: linear-gradient(90deg, #ff6b6b 0%, #ffb86c 100%) !important;
+			box-shadow: 0 4px 16px #ffb86c77;
+			transform: scale(1.03);
+		}
+		</style>
+		<div class="main-content app-content" style="background: linear-gradient(135deg, #faf8fc 0%, #e0e7ef 100%); min-height: 100vh;">
+			<div class="container py-5">
+				<div class="row justify-content-center">
+					<div class="col-md-7 col-lg-6">
+						<div class="card shadow-lg border-0 aykal-sub-card" style="background: #fff9f3;">
+							<div class="card-body p-5">
+								<div class="text-center mb-4">
+									<div class="mb-3">
+										<span style="background: linear-gradient(135deg, #ffb86c 0%, #ff6b6b 100%); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; box-shadow: 0 4px 16px #ffb86c33;">
+											<i class="fe fe-user-plus text-white" style="font-size: 2rem;"></i>
+										</span>
+									</div>
+									<h3 class="card-title fw-bold mb-2" style="color: #ff6b6b;">اشتراک نمایندگی آیکال</h3>
+									<p class="mb-0 text-secondary">با خرید اشتراک، کد معرف اختصاصی خود را دریافت کنید</p>
+								</div>
+								<div class="text-center mb-4">
+									<span class="fw-bold text-success">هزینه اشتراک ماهانه:</span>
+									<span class="display-5 text-success d-block fw-bold mt-2">۱۷۵,۰۰۰ <span class="fs-5">تومان</span></span>
+								</div>
+								<form class="needs-validation" novalidate>
+									<div class="mb-4">
+										<label for="marketerName" class="form-label fw-semibold">نام بازاریاب</label>
+										<input type="text" class="form-control form-control-lg rounded-4 shadow-sm" id="marketerName" placeholder="نام خود را وارد کنید" required>
+										<div class="invalid-feedback">لطفا نام خود را وارد کنید.</div>
+									</div>
+									<div class="mb-4">
+										<label for="marketerPhone" class="form-label fw-semibold">شماره موبایل</label>
+										<input type="tel" class="form-control form-control-lg rounded-4 shadow-sm" id="marketerPhone" name="marketerPhone" placeholder="شماره موبایل خود را وارد کنید" pattern="09[0-9]{9}" maxlength="11" minlength="11" required>
+										<div class="invalid-feedback">شماره موبایل باید ۱۱ رقم و با 09 شروع شود.</div>
+									</div>
+									<button type="submit" class="btn btn-gradient w-100 py-3 fw-bold aykal-sub-btn" style="background: linear-gradient(90deg, #ffb86c 0%, #ff6b6b 100%); color: #fff; box-shadow: 0 2px 8px #ffb86c44; font-size: 1.2rem;">پرداخت و دریافت کد معرف</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main-content closed -->
+<!-- 
+		<div class="main-content app-content" style="background: linear-gradient(135deg, #232323 0%, #6e5849 100%); min-height: 100vh;">
+			<div class="container py-5">
+				<div class="row justify-content-center">
+					<div class="col-md-7 col-lg-6">
+						<div class="card shadow-lg border-0 rounded-4" style="background: #2d2a28;">
+							<div class="card-body p-5">
+								<div class="text-center mb-4">
+									<div class="mb-3">
+										<span style="background: linear-gradient(135deg, #a68a64 0%, #232323 100%); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; box-shadow: 0 4px 16px #a68a6433;">
+											<i class="fe fe-user-plus" style="font-size: 2rem; color: #fffbe6;"></i>
+										</span>
+									</div>
+									<h3 class="card-title fw-bold mb-2" style="color: #a68a64;">اشتراک نمایندگی آیکال</h3>
+									<p class="mb-0" style="color: #d3c6b3;">با خرید اشتراک، کد معرف اختصاصی خود را دریافت کنید</p>
+								</div>
+								<div class="text-center mb-4">
+									<span class="fw-bold" style="color: #fffbe6;">هزینه اشتراک ماهانه:</span>
+									<span class="display-5 d-block fw-bold mt-2" style="color: #a68a64;">۱۷۵,۰۰۰ <span class="fs-5" style="color: #fffbe6;">تومان</span></span>
+								</div>
+								<form>
+									<div class="mb-4">
+										<label for="marketerName" class="form-label fw-semibold" style="color: #fffbe6;">نام بازاریاب</label>
+										<input type="text" class="form-control form-control-lg rounded-3 shadow-sm" style="background: #232323; color: #fffbe6; border: 1px solid #a68a64;" id="marketerName" placeholder="نام خود را وارد کنید" required>
+									</div>
+									<div class="mb-4">
+										<label for="marketerPhone" class="form-label fw-semibold" style="color: #fffbe6;">شماره موبایل</label>
+										<input type="tel" class="form-control form-control-lg rounded-3 shadow-sm" style="background: #232323; color: #fffbe6; border: 1px solid #a68a64;" id="marketerPhone" placeholder="شماره موبایل خود را وارد کنید" required>
+									</div>
+									<button type="submit" class="btn w-100 py-3 fw-bold rounded-3" style="background: linear-gradient(90deg, #a68a64 0%, #232323 100%); color: #fffbe6; box-shadow: 0 2px 8px #a68a6444; font-size: 1.2rem; border: none;">پرداخت و دریافت کد معرف</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+-->
+
+
+
+
+
+
+    <!-- Footer code -->
+
+    <div class="main-footer ht-45">
+        <div class="container-fluid pd-t-0 ht-100p">
+            <span> <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span
+                    class="fa fa-heart text-danger"></span> توسط <a href="https://instagram.com/marsagencyir"> برنامه
+                    نویسان </a> mars agency</span>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+
+
+
+
+
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>
+	<!-- End scripts -->
+
+	<script>
+	// Enable Bootstrap validation
+	(function () {
+	  'use strict';
+	  var forms = document.querySelectorAll('.needs-validation');
+	  Array.prototype.slice.call(forms).forEach(function (form) {
+	    form.addEventListener('submit', function (event) {
+	      if (!form.checkValidity()) {
+	        event.preventDefault();
+	        event.stopPropagation();
+	      }
+	      form.classList.add('was-validated');
+	    }, false);
+	  });
+	})();
+	</script>
+
+</body>
+
+
+</html>

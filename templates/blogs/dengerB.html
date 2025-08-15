@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="هشدار ها">
+    <meta name="Author" content="برنامه نویسان ادمینتو">
+    <meta name="Keywords"
+        content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+    <!-- Title -->
+    <title>هشدار ها</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/x-icon">
+
+    <!-- styles code -->
+    <!-- Bootstrap css -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+    <!-- Style css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/plugins.css" rel="stylesheet">
+    <!-- Font css -->
+    <link href="assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+    <!-- Icons css -->
+    <link href="assets/css/icons.css" rel="stylesheet">
+
+    <!-- Animations css -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+
+
+    <!-- Switcher css -->
+    <link href="assets/switcher/css/switcher.css" rel="stylesheet">
+    <link href="assets/switcher/demo.css" rel="stylesheet">
+
+    <!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+    <!-- page -->
+    <div class="page custom-index">
+        <!-- app header code -->
+
+        <div class="main-header side-header sticky nav nav-item">
+            <div class="container-fluid main-container ">
+                <div class="main-header-left ">
+
+                    <div class="app-sidebar__toggle mobile-toggle" data-bs-toggle="sidebar">
+                        <a class="open-toggle" href="javascript:void(0);"><i class="header-icons"
+                                data-eva="menu-outline"></i></a>
+                        <a class="close-toggle" href="javascript:void(0);"><i class="header-icons"
+                                data-eva="close-outline"></i></a>
+                    </div>
+
+                    <!-- logo -->
+                    <div class="responsive-logo">
+                        <a href="index4.html" class="header-logo"><img src="assets/img/brand/logo.png" class="logo-11"
+                                alt="logo"></a>
+                        <a href="index4.html" class="header-logo"><img src="assets/img/brand/logo-white.png"
+                                class="logo-1" alt="logo"></a>
+                    </div>
+                    <!-- logo -->
+
+                </div>
+                <button class="navbar-toggler nav-link icon navresponsive-toggler vertical-icon ms-auto" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-4"
+                    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+                </button>
+                <div
+                    class="mb-0 navbar navbar-expand-lg navbar-nav-right responsive-navbar navbar-dark p-0  mg-lg-s-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                        <div class="main-header-right">
+                            <!-- search -->
+                            <!-- <div class="nav nav-item nav-link " id="bs-example-navbar-collapse-1">
+                                <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button type="reset" class="btn btn-default">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                            <button type="submit" class="btn btn-default nav-link">
+                                                <i class="fe fe-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div> -->
+                            <!-- search -->
+
+                            <div class="dropdown nav-item main-layout">
+                                <a href="javascript:void(0)" class="new theme-layout nav-link-bg layout-setting">
+                                    <span class="dark-layout"><i class="fe fe-moon"></i></span>
+                                    <span class="light-layout"><i class="fe fe-sun"></i></span>
+                                </a>
+                            </div>
+                            <div class="nav nav-item  navbar-nav-right mg-lg-s-auto">
+                                <div class="nav-item full-screen fullscreen-button">
+                                    <a class="new nav-link full-screen-link" href="javascript:void(0);"><i
+                                            class="fe fe-maximize"></i></a>
+                                </div>
+
+                                <!-- notifs -->
+                                <div class="dropdown nav-item main-header-notification">
+                                    <a class="new nav-link" href="javascript:void(0);"><i class="fe fe-bell"></i><span
+                                            class=" pulse"></span></a>
+                                    <div class="dropdown-menu">
+                                        <div class="menu-header-content bg-primary text-start d-flex rounded-top-5">
+                                            <div class="">
+                                                <h6 class="menu-header-title text-white mb-0">4 اعلان جدید</h6>
+                                            </div>
+                                            <div class="d-none my-auto ms-auto">
+                                                <a class="badge bg-pill bg-success float-end"
+                                                    href="javascript:void(0);">علامت زدن بعنوان خوانده شده</a>
+                                            </div>
+                                        </div>
+                                        <a class="d-flex p-3 border-bottom" href="mail.html">
+                                            <div class="notifyimg bg-warning-transparent">
+                                                <i class="fe fe-mail text-warning"></i>
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="notification-label mb-1">پیام جدید</h5>
+                                                <div class="notification-subtext">1 ساعت قبل</div>
+                                            </div>
+                                        </a>
+                                        <div class="main-notification-list Notification-scroll">
+                                            <a class="d-flex p-3" href="blog.html">
+                                                <div class="notifyimg bg-pink-transparent">
+                                                    <i class="fe fe-file-text text-pink"></i>
+                                                </div>
+                                                <div class="ms-3">
+                                                    <h5 class="notification-label mb-1">بلاگ های جدید</h5>
+                                                    <div class="notification-subtext">12 ساعت قبل</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <div class="dropdown-footer text-center">
+                                            <a href="blog.html" class="btn  btn-primary w-md tx-13">مشاهده همه<i class="fe fe-arrow-right tx-12 ms-2 lh-1"></i></a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- notifs -->
+
+
+
+                                <div class="dropdown main-profile-menu nav nav-item nav-link">
+                                    <a class="profile-user d-flex" href="javascript:void(0)"><img
+                                            src="assets/img/users/5.jpg" alt="user-img"
+                                            class="rounded-circle mCS_img_loaded"><span></span></a>
+
+                                    <div class="dropdown-menu">
+                                        <div class="main-header-profile header-img bg-primary rounded-top-5 p-3">
+                                            <h6>نماینده </h6><span> نماینده</span>
+                                        </div>
+                                        <a class="dropdown-item" href="profile.html"><i class="fe fe-user"></i> پروفایل
+                                            من</a>
+                                        <a class="dropdown-item" href="editprofile.html"><i class="fe fe-edit"></i>
+                                            ویرایش پروفایل</a>
+                                        <a class="dropdown-item" href="login.html"><i class="fe fe-log-out"></i>
+                                            خروج</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End app header Code -->
+
+
+
+        <!-- app sidebar Code -->
+
+        <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
+        <div class="sticky">
+            <aside class="app-sidebar sidebar-scroll">
+                <div class="main-sidebar-header active">
+                    <a class="desktop-logo logo-light active" href="index4.html"><img src="assets/img/brand/logo.png"
+                            class="main-logo" alt="logo"></a>
+                    <a class="desktop-logo logo-dark active" href="index4.html"><img
+                            src="assets/img/brand/logo-white.png" class="main-logo" alt="logo"></a>
+                    <a class="logo-icon mobile-logo icon-light active" href="index4.html"><img
+                            src="assets/img/brand/favicon.png" alt="logo"></a>
+                    <a class="logo-icon mobile-logo icon-dark active" href="index4.html"><img
+                            src="assets/img/brand/favicon-white.png" alt="logo"></a>
+                </div>
+                <div class="main-sidemenu">
+                    <!-- بخش نام و پروفایل -->
+                    <div class="main-sidebar-loggedin">
+                        <div class="app-sidebar__user">
+                            <div class="dropdown user-pro-body text-center">
+                                <div class="user-pic">
+                                    <img src="assets/img/users/5.jpg" alt="user-img"
+                                        class="rounded-circle mCS_img_loaded">
+                                </div>
+                                <div class="user-info mb-4">
+                                    <h6 class=" mb-0 text-dark">اسم نماینده</h6>
+                                    <span class="text-muted app-sidebar__user-name text-sm">نماینده</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- بخش نام و پروفایل -->
+
+
+                    <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg"
+                            fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                        </svg></div>
+                    <ul class="side-menu ">
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="index4.html"><i
+                                    class="side-menu__icon bx bx-home-alt"></i><span
+                                    class="side-menu__label">داشبورد</span><i class="angle fe fe-chevron"></i></a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="subscription.html">
+                                <i class="side-menu__icon bx bx-cart"></i>
+                                <span class="side-menu__label">خرید اشتراک</span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <button class="side-menu__item user-dashboard-btn">
+                                <i class="side-menu__icon bx bx-user-circle"></i>
+                                <span class="side-menu__label">رفتن به داشبورد کاربریم</span>
+                            </button>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="invoice.html">
+                                <i class="side-menu__icon bx bx-receipt"></i>
+                                <span class="side-menu__label">خرید های اخیر</span></a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="give-pay.html">
+                                <i i class="side-menu__icon bx bx-credit-card"></i>
+                                <span class="side-menu__label">درخواست پرداخت </span></a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="dengerB.html">
+                                <i class="side-menu__icon bx bx-error"></i>
+                                <span class="side-menu__label">هشدار ها</span></a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="landing-page.html">
+                                <i class="side-menu__icon bx bx-play-circle"></i>
+                                <span class="side-menu__label">فیلم های آموزشی</span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="faq.html">
+                                <i class="side-menu__icon bx bx-help-circle"></i>
+                                <span class="side-menu__label">سوالات متداول</span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="mail-compose.html">
+                                <i class="side-menu__icon bx bx-support"></i>
+                                <span class="side-menu__label">پشتیبانی و تیکت </span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="mail.html">
+                                <i class="side-menu__icon bx bx-envelope"></i>
+                                <span class="side-menu__label">پیام ها</span>
+                            </a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="landing-page.html">
+                                <i class="side-menu__icon bx bx-log-out"></i>
+                                <span class="side-menu__label">خروج</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                        </svg></div>
+                </div>
+            </aside>
+        </div>
+        <!-- End app sidebar Code -->
+
+
+
+
+
+        <!-- main-content -->
+        <div class="main-content app-content">
+            <div class="main-container container-fluid">
+                <!-- breadcrumb -->
+                <div class="breadcrumb-header justify-content-between">
+                    <div>
+                        <h4 class="content-title mb-2 mb-xl-0">هشدارها</h4>
+                    </div>
+                    <div class="d-flex my-auto">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-2 mb-md-0">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">صفحات</a></li>
+                                <li class="breadcrumb-item active " aria-current="page">هشدارهای لازم</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /breadcrumb -->
+                <!-- row -->
+                <div class="container">
+                    <!-- ROW-1 OPEN -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mt-1">
+                                <div class="card-body p-0 p-lg-5 text-dark">
+                                    <div class="statistics-info p-4">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="">
+                                                    <section>
+                                                        <h2>قوانین ویژه بازاریابان آیکال</h2>
+
+                                                        <h3>وظایف و تعهدات کلی</h3>
+                                                        <ul>
+                                                            <li>۱- رعایت صداقت و شفافیت در معرفی قابلیت‌های خدمات و
+                                                                قیمت‌های آیکال.</li>
+                                                            <li>۲- عدم اغراق یا فریب در توضیح کارایی مستقیم برای جذب
+                                                                مشتری.</li>
+                                                            <li>۳- ارائه اطلاعات به‌روز و رسمی فقط از منابع مورد تأیید
+                                                                تیم آیکال.</li>
+                                                        </ul>
+
+                                                        <h3>رفتار حرفه‌ای</h3>
+                                                        <ul>
+                                                            <li>۱- بازاریاب باید رفتار محترمانه، پاسخ‌گو و مسئولانه
+                                                                داشته باشد.</li>
+                                                            <li>۲- هرگونه تخلف اخلاقی یا قانونی منجر به لغو همکاری خواهد
+                                                                شد.</li>
+                                                        </ul>
+
+                                                        <h3>حفظ محرمانگی</h3>
+                                                        <ul>
+                                                            <li>۱- بازاریاب موظف است اطلاعات محرمانه مشتریان و سیستم
+                                                                آیکال را حفظ کند.</li>
+                                                            <li>۲- انتقال اطلاعات یا داده‌ها به شخص ثالث ممنوع است، مگر
+                                                                با اجازه رسمی و کتبی.</li>
+                                                            <li>۳- درصد پورسانت‌ها طبق قرارداد رسمی محاسبه و پرداخت
+                                                                می‌شود.</li>
+                                                            <li>۴- هرگونه تلاش برای دور زدن سیستم ثبت فروش یا جذب مستقیم
+                                                                مشتری بدون اطلاع شرکت ممنوع است و پیگرد قانونی دارد.
+                                                            </li>
+                                                        </ul>
+                                                    </section>
+                                                    </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="text-end">
+                                                    <img src="assets/landing/images/8.png" alt=""
+                                                        class="img-fluid w-60">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ROW-1 CLOSED -->
+                </div>
+            </div>
+
+        </div>
+        <!-- main-content closed -->
+
+
+
+
+
+
+
+
+        <!-- Footer code -->
+
+        <div class="main-footer ht-45">
+            <div class="container-fluid pd-t-0 ht-100p">
+                <span> <a href="javascript:void(0);" class="text-primary">ادمینِتو</a>. طراحی شده با عشق <span
+                        class="fa fa-heart text-danger"></span> توسط <a href="javascript:void(0);"> برنامه نویسان </a>
+                    ادمینِتو</span>
+            </div>
+        </div> <!-- End Footer -->
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- End Page -->
+    <!-- scripts code -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="assets/plugins/moment/moment.js"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- P-scroll js -->
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+    <!-- Switcher js -->
+    <script src="assets/switcher/js/switcher.js"></script>
+
+    <!-- Eva-icons js -->
+    <script src="assets/js/eva-icons.min.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="assets/plugins/side-menu/sidemenu.js"></script>
+
+    <!-- sticky js -->
+    <script src="assets/js/sticky.js"></script>
+
+    <!--- Index js -->
+    <script src="assets/js/script.js"></script>
+
+    <!--themecolor js-->
+    <script src="assets/js/themecolor.js"></script>
+
+    <!--swither-styles js-->
+    <script src="assets/js/swither-styles.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/custom.js"></script>
+    <!-- End scripts -->
+
+</body>
+
+
+</html>

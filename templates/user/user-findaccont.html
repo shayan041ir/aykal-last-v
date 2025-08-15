@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="داشبورد کاربر">
+    <meta name="Author" content="برنامه نویسان ادمینتو">
+    <meta name="Keywords"
+        content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+    <!-- Title -->
+    <title>داشبورد کاربر</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+    <!-- styles code -->
+    <!-- Bootstrap css -->
+    <link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+    <!-- Style css -->
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+    <link href="../static/assets/css/plugins.css" rel="stylesheet">
+    	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+
+    <!-- Icons css -->
+    <link href="../static/assets/css/icons.css" rel="stylesheet">
+
+    <!-- Animations css -->
+    <link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+    <!-- Switcher css -->
+    <link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+    <link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+    <!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+    </div>
+    <!-- /Loader -->
+
+
+    <!-- page -->
+    <div class="page custom-index">
+
+        <!-- app header code -->
+   {% include "all_user_headr.html" %}
+               
+               
+               <!-- app sidebar Code -->
+       		{% include "sidebar_all_user.html" %}\
+
+        <!-- main-content -->
+        <div class="main-content app-content">
+
+            <!-- container -->
+            <div class="main-container container-fluid">
+
+
+                <!-- breadcrumb -->
+                <div class="breadcrumb-header justify-content-between">
+                    <div>
+                        <!-- <h4 class="content-title mb-2 mb-xl-0">داشبورد کاربر</h4> -->
+                    </div>
+                    <div class="d-flex my-auto">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <!-- <li class="breadcrumb-item"><a href="landing-page.html">صفحه اصلی</a></li>
+                                <li class="breadcrumb-item active " aria-current="page">داشبورد کاربر</li> -->
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /breadcrumb -->
+<!-- go to blog -->
+<div class="row g-4 mt-3" dir="rtl">
+    <div class="col-12">
+        <a href="/landing/blog" class="dashboard-guide-card text-decoration-none">
+            <div class="dashboard-guide-body d-flex align-items-center justify-content-between">
+                <div class="dashboard-guide-icon">
+                    <i class="fas fa-book-open fa-2x"></i>
+                </div>
+                <div class="dashboard-guide-text text-end">
+                    <h5 class="mb-1 fw-bold text-dark">بلاگ آموزشی</h5>
+                    <p class="mb-0 small text-muted">آخرین مقالات و نکات آموزشی برای بهبود عملکرد خدمات ما</p>
+                </div>
+                <div>
+                    <span class="dashboard-guide-btn">مشاهده آموزش</span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- /go to blog -->
+
+<style>
+.dashboard-guide-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 16px; /* افزایش گوشه‌ها */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden; /* مهم: باعث اعمال border-radius به محتوا هم میشه */
+    display: block; /* اطمینان از اینکه کل لینک مثل بلوک رفتار کنه */
+}
+
+.dashboard-guide-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-guide-body {
+    padding: 16px 20px;
+    direction: rtl;
+    background-color: #fff;
+}
+
+.dashboard-guide-icon {
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    padding: 10px;
+    color: #7a5e42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.dashboard-guide-btn {
+    background-color: #7a5e42;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.dashboard-guide-btn:hover {
+    background-color: #5a4430;
+}
+
+.dashboard-guide-text {
+    flex-grow: 1;
+    margin: 0 15px;
+}
+</style>
+<br>
+
+                <!-- main-content-body -->
+                <div class="main-content-body">
+                    <div class="row">
+                        <!-- فیلترها -->
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card custom-card border-0 shadow-sm hover-shadow">
+                                <div class="card-header bg-transparent border-0">
+                                    <h3 class="card-title text-primary mb-0">
+                                        <i class="fe fe-search me-2"></i>روش جستجو
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <form id="searchForm" class="needs-validation" novalidate>
+                                        <div class="form-group">
+                                            <label class="form-label text-muted">انتخاب روش</label>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <div class="search-method-option">
+                                                    <input type="radio" name="searchMethod" id="hashtag" value="hashtag" class="btn-check" checked>
+                                                    <label class="btn btn-outline-primary rounded-pill hover-shadow" for="hashtag">
+                                                        <i class="fe fe-hash me-1"></i>هشتگ
+                                                    </label>
+                                                </div>
+                                                <div class="search-method-option">
+                                                    <input type="radio" name="searchMethod" id="location" value="location" class="btn-check">
+                                                    <label class="btn btn-outline-primary rounded-pill hover-shadow" for="location">
+                                                        <i class="fe fe-map-pin me-1"></i>لوکیشن
+                                                    </label>
+                                                </div>
+                                                <div class="search-method-option">
+                                                    <input type="radio" name="searchMethod" id="post" value="post" class="btn-check">
+                                                    <label class="btn btn-outline-primary rounded-pill hover-shadow" for="post">
+                                                        <i class="fe fe-link me-1"></i>لینک ریلز یا پست
+                                                    </label>
+                                                </div>
+                                                <div class="search-method-option">
+                                                    <input type="radio" name="searchMethod" id="page" value="page" class="btn-check">
+                                                    <label class="btn btn-outline-primary rounded-pill hover-shadow" for="page">
+                                                        <i class="fe fe-user me-1"></i>پیج هدف
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <label class="form-label text-muted">آدرس هدف</label>
+                                            <div class="input-group hover-shadow">
+                                                <span class="input-group-text bg-light border-end-0">
+                                                    <i class="fe fe-link text-muted"></i>
+                                                </span>
+                                                <input id="src_input" type="text" class="form-control border-start-0" placeholder="آدرس مورد نظر را وارد کنید" required>
+                                                <div class="invalid-feedback">لطفا آدرس هدف را وارد کنید</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <label class="form-label text-muted">ایجاد گروه</label>
+                                            <div class="input-group hover-shadow">
+                                                <span class="input-group-text bg-light border-end-0">
+                                                    <i class="fe fe-users text-muted"></i>
+                                                </span>
+                                                <input id="create_grop" type="text" class="form-control border-start-0" placeholder="نام گروه جدید را وارد کنید">
+                                            </div>
+                                        </div>
+
+                                        <div class="alert alert-warning mt-4 border-0 shadow-sm">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fe fe-alert-triangle fs-20 me-2"></i>
+                                                <div>
+                                                    <strong class="d-block">توجه:</strong>
+                                                    <span class="text-muted">هر 24 ساعت 100 الی 1000 کاربر قابل شناسایی میباشند</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group mt-4">
+                                            <label class="form-label text-muted">تعداد کاربر</label>
+                                            <div class="input-group hover-shadow">
+                                                <span class="input-group-text bg-light border-end-0">
+                                                    <i class="fe fe-user-plus text-muted"></i>
+                                                </span>
+                                                <input type="number" class="form-control border-start-0" min="1" max="1000" placeholder="مثال: 100" required>
+                                                <span class="input-group-text bg-light border-start-0">
+                                                    <span class="text-muted">کاربر</span>
+                                                </span>
+                                            </div>
+                                            <div class="mt-2">
+                                                <input type="range" class="form-range custom-range" min="1" max="1000" step="1" value="100">
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary w-100 mt-4 rounded-pill py-3 shadow-sm hover-shadow">
+                                            <i class="fe fe-search me-2"></i>
+                                            شروع جستجو
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- نتایج جستجو -->
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card custom-card border-0 shadow-sm hover-shadow">
+                                <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                    <h3 class="card-title text-primary mb-0">
+                                        <i class="fe fe-users me-2"></i>بانک کاربران
+                                    </h3>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-outline-primary rounded-pill hover-shadow">
+                                            <i class="fe fe-download me-1"></i>خروجی
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover text-nowrap">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th class="border-0">گروه</th>
+                                                    <th class="border-0">تعداد اعضا</th>
+                                                    <th class="border-0">تاریخ ایجاد</th>
+                                                    <th class="border-0">عملیات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                             
+                                               {% for i in grop_found %}
+                                                    <tr class="hover-shadow">
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar avatar-md bg-primary-transparent rounded-circle me-3">
+                                                                    <i class="fe fe-users text-primary"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <h6 class="mb-0">{{ i.name }}</h6>
+                                                                    <small class="text-muted">آخرین بروزرسانی: {{ i.hour }}</small>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="badge bg-primary-transparent text-primary">
+                                                                    {{ i.members | length }} عضو
+                                                                </span>
+                                                                <div class="progress ms-2" style="width: 100px; height: 5px;">
+                                                                    <div class="progress-bar bg-primary" style="width: 50%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="text-muted">{{ i.date }}</span>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btn-list">
+                                                                <button class="btn btn-sm btn-info rounded-pill me-1 hover-shadow view-group" data-id="{{ i.id }}">
+                                                                    <i class="fe fe-eye me-1"></i>مشاهده
+                                                                </button>
+                                                                <button class="btn btn-sm btn-success rounded-pill me-1 hover-shadow copy-group" data-id="{{ i.id }}">
+                                                                    <i class="fe fe-copy me-1"></i>کپی
+                                                                </button>
+                                                                <button class="btn btn-sm btn-danger rounded-pill hover-shadow delete-group" data-id="{{ i.id }}">
+                                                                    <i class="fe fe-trash-2 me-1"></i>حذف
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                   
+                                                {% endfor %}            
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /main-content-body -->
+
+                <!-- row -->
+                <div class="row row-sm ">
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /row -->
+
+
+        </div>
+        <!-- Container closed -->
+
+
+
+
+    </div>
+    <!-- main-content closed -->
+
+    
+    <!-- Footer code -->
+    <div class="main-footer ht-45">
+        <div class="container-fluid pd-t-0 ht-100p">
+            <span> <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span
+                    class="fa fa-heart text-danger"></span> توسط <a href="https://instagram.com/marsagencyir"> برنامه
+                    نویسان </a> mars agency</span>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    </div>
+    <!-- End Page -->
+    <!-- scripts code -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="../static/assets/plugins/moment/moment.js"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- P-scroll js -->
+    <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+    <!-- Switcher js -->
+    <script src="../static/assets/switcher/js/switcher.js"></script>
+
+    <!-- Eva-icons js -->
+    <script src="../static/assets/js/eva-icons.min.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+    <!-- sticky js -->
+    <script src="../static/assets/js/sticky.js"></script>
+
+    <!--- Index js -->
+    <script src="../static/assets/js/script.js"></script>
+
+
+
+
+
+    <!--themecolor js-->
+    <script src="../static/assets/js/themecolor.js"></script>
+
+    <!--swither-styles js-->
+    <script src="../static/assets/js/swither-styles.js"></script>
+
+    <!-- Custom js -->
+    <script src="../static/assets/js/custom.js"></script>
+    
+    <!-- User Find Account js -->
+    <script>
+        const sampleGroups = {{ g_j | tojson }};
+    </script>
+    <script src="../static/assets/js/user-findaccount.js"></script>
+
+    <!-- View Users Modal -->
+    <div class="modal fade" id="viewUsersModal" tabindex="-1" aria-labelledby="viewUsersModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewUsersModalLabel">لیست کاربران</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">تعداد کاربران: <span id="usersCount">0</span></span>
+                        <button class="btn btn-sm btn-outline-primary" id="copyAllUsers">
+                            <i class="fe fe-copy me-1"></i>کپی همه
+                        </button>
+                    </div>
+                    <div class="users-list" style="max-height: 400px; overflow-y: auto;">
+                        <div id="usersList" class="list-group"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End scripts -->
+
+</body>
+
+
+</html>

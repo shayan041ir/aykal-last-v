@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="Description" content="آیکال اپ بلاگ">
+  <meta name="Author" content="برنامه نویسان ادمینتو">
+  <meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+  <title>آیکال اپ بلاگ - {{ blog.title }}</title>
+  <link rel="icon" href="../../static/assets/img/brand/favicon.png" type="image/x-icon">
+  <link href="../../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+  <link href="../../static/assets/css/style.css" rel="stylesheet">
+  <link href="../../static/assets/css/plugins.css" rel="stylesheet">
+  <link href="../../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+  <link href="../../static/assets/css/icons.css" rel="stylesheet">
+  <link href="../../static/assets/css/animate.css" rel="stylesheet">
+  <link href="../../static/assets/switcher/css/switcher.css" rel="stylesheet">
+  <link href="../../static/assets/switcher/demo.css" rel="stylesheet">
+</head>
+<body class="main-body app sidebar-mini rtl landing-page horizontalmenu" dir="rtl">
+  <div id="global-loader">
+    <img src="../../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+  </div>
+  <div class="page">
+    <div class="page-main">
+      <div class="main-header side-header">
+        <div class="main-container container-fluid">
+          <div class="main-header-left">
+            <a class="main-header-menu-icon" href="javascript:void(0)" id="mainSidebarToggle"><span></span></a>
+            <div class="hor-logo">
+              <a class="main-logo" href="/">
+                <img src="../../static/assets/img/brand/logo-white.png" class="header-brand-img desktop-logo" alt="logo">
+                <img src="../../static/assets/img/brand/logo.png" class="header-brand-img desktop-logo-dark" alt="logo">
+              </a>
+            </div>
+          </div>
+          <div class="main-header-center">
+            <div class="responsive-logo">
+              <a href="/"><img src="../../static/assets/img/brand/logo.png" class="mobile-logo" alt="logo"></a>
+              <a href="/"><img src="../../static/assets/img/brand/logo-white.png" class="mobile-logo-dark" alt="logo"></a>
+            </div>
+          </div>
+          <div class="main-header-right">
+            <button class="navbar-toggler navresponsive-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fe fe-more-vertical header-icons navbar-toggler-icon"></i>
+            </button>
+            <div class="navbar navbar-expand-lg nav nav-item navbar-nav-right responsive-navbar navbar-dark">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                <div class="d-flex order-lg-2 ms-auto">
+                  <div class="header-nav-right p-3">
+                    <a href="/login" class="btn ripple btn-min w-sm btn-outline-primary me-2" target="_blank">خرید اشتراک</a>
+                    <a href="/login" class="btn ripple btn-min w-sm btn-primary me-2" target="_blank">ورود و ثبت نام</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="landing-top-header overflow-hidden">
+        <div class="top sticky">
+          <div class="landing-app-sidebar__overlay" data-bs-toggle="sidebar"></div>
+          <div class="landing-app-sidebar bg-transparent">
+            <div class="container">
+              <div class="main-sidemenu navbar px-0">
+                <div class="d-flex justify-content-start align-items-center">
+                  <a class="main-logo" href="landing-page.html">
+                    <div class="d-flex" style="max-width: 320px;">
+                      <img src="../../static/assets/img/brand/icon-text.png" style="width: 140px;" class="header-brand-img desktop-logo" alt="logo">
+                    </div>
+                    <img src="../../static/assets/img/brand/favicon.png" class="header-brand-img desktop-logo-dark" alt="logo">
+                  </a>
+                  <div class="slide-left disabled" id="slide-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                    </svg>
+                  </div>
+                  <ul class="side-menu">
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/">صفحه اصلی</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/#Features">امکانات</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/#pricinng">تعرفه ها</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/landing/blog">وبلاگ</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/landing/hamkaribama">همکاری باما</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/landing/faq">سوالات متداول</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/landing/rules">قوانین و مقررات</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/landing/about">درباره ما</a></li>
+                    <li class="slide"><a class="side-menu__item" data-bs-toggle="slide" href="/landing/tamasbama">ارتباط باما</a></li>
+                  </ul>
+                  <div class="slide-right" id="slide-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="header-nav-right d-none d-lg-flex">
+                  <a href="/login" class="btn ripple btn-min btn-secondary btn-block btn-orange-hover me-2" target="_blank">ورود و ثبت نام</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="main-content app-content">
+        <div class="main-container container-fluid">
+          <div class="row">
+            <div class="col-xxl-9 col-xl-8 col-lg-7 col-md-12">
+              <div class="card overflow-hidden">
+                <div class="item7-card-img px-4 pt-4">
+                  {% if blog.media_type == 'image' and blog.media_url %}
+                    <img src="{{ blog.media_url }}" alt="blog image" class="cover-image rounded-5 w-100">
+                  {% endif %}
+                </div>
+                <div class="card-body">
+                  <h5 class="font-weight-semibold text-dark">{{ blog.title }}</h5>
+                  <p class="text-muted">{{ blog.content | safe }}</p>
+                  {% if blog.tags %}
+                    <div class="tags mt-3">
+                      {% for tag in blog.tags.split(',') %}
+                        <a href="javascript:void(0);" class="tag rounded">{{ tag.strip() }}</a>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  {% if blog.category %}
+                    <p class="text-muted mt-2">دسته بندی: {{ blog.category }}</p>
+                  {% endif %}
+                </div>
+                <div class="card-footer pb-2 pt-2">
+                  <div class="item7-card-desc d-md-flex">
+                    <div class="d-flex align-items-center mt-0">
+                      <img src="../{{user.pic_path}}" class="avatar brround avatar-md me-3" alt="avatar-img">
+                      <div>
+                        <a href="profile.html" class="text-dark font-weight-bold"> {{user.first_name}}</a>
+                        <small class="d-block text-muted">{{ blog.created_at.strftime('%Y-%m-%d') }}</small>
+                      </div>
+                    </div>
+                    <div class="ms-auto mb-2 d-flex align-items-center mt-3">
+                      <a href="javascript:void(0);" class="me-3 d-flex align-items-center">
+                        <span class="fe fe-calendar text-muted me-2 tx-14"></span>
+                        <div class="mt-0 text-muted tx-12">{{ blog.created_at.strftime('%B %d, %Y') }}</div>
+                      </a>
+                
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if blog.media_type == 'video' and blog.media_url %}
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">ویدئو</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-sm-flex p-3 sub-review-section border subsection-color br-tl-0 br-tr-0 rounded-bottom">
+                      <video width="100%" controls>
+                        <source src="{{ blog.media_url }}" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+         
+                
+            </div>
+            <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-12">
+              <div class="card custom-card overflow-hidden">
+                <div class="card-header border-bottom">
+                  <h3 class="card-title mb-1">پست های محبوب</h3>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group mb-0">
+                    {% for post in popular_posts %}
+                      <li class="list-group-item d-flex border-0 pt-3 px-0">
+                        <img src="{{ post.media_url }}" class="avatar rounded-5 avatar-lg me-3 my-auto" alt="avatar-img">
+                        <div>
+                          <span class="d-block mb-1">{{ post.title }}</span>
+                          <p class="text-default tx-12 mb-0 font-weight-semibold white-space-nowrap">{{ post.content | truncate(50) }}</p>
+                          <small class="d-block text-muted mt-1">{{ post.created_at.strftime('%Y-%m-%d') }}</small>
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+              <div class="card custom-card overflow-hidden">
+                <div class="card-header border-bottom">
+                  <h3 class="card-title mb-1">دسته بندی ها</h3>
+                </div>
+                <div class="card-body">
+                  <div class="tags">
+                    {% for category in categories %}
+                      <a href="javascript:void(0);" class="tag rounded">{{ category }}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    </div>
+    
+    
+            <!-- Footer code -->
+            <div class="demo-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="card mb-0 bg-transparent">
+                            <div class="card-body p-0">
+                                <div class="top-footer">
+                                    <div class="row justify-content-between align-items-center flex-wrap mb-4">
+                                        <div class="col-12 d-flex justify-content-center justify-content-lg-start flex-wrap gap-4">
+                                            <a href="/">
+                                                <img src="../../static/assets/img/brand/Logo N01.png" alt="aykal" style="height: 70px;" />
+                                            </a>
+                                            <a href="/">
+                                                <img src="../../static/assets/img/brand/park.png" alt="پارک" style="height: 70px;" />
+                                            </a>
+                                            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=616910&Code=5ksvXDaaMTkMkaZqjN3TMHWkwdco0ium'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=616910&Code=5ksvXDaaMTkMkaZqjN3TMHWkwdco0ium' alt='' style='cursor:pointer' code='5ksvXDaaMTkMkaZqjN3TMHWkwdco0ium'></a>                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- لوگوها -->
+
+                                        <div class="col-lg-4 col-sm-12 col-md-12 reveal revealleft">
+											<h6>درباره آیکال</h6>
+											<p class="about-text-footer">
+												آیکال، سیستم نوآورانه هوش مصنوعی، با هدف توانمندسازی کسب‌وکارها، پژوهشگران و افراد خلاق طراحی شده است. ما با تلفیق دانش روز و فناوری‌های پیشرفته، مسیر تازه‌ای برای تعامل هوشمند، تحلیل داده و تصمیم‌گیری فراهم کرده‌ایم
+											</p>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-6 col-md-3 reveal revealleft">
+                                            <h6>ویژگی ها</h6>
+                                            <ul class="mb-5 mb-lg-0 ps-0">
+                                                <li><a href="index.html">کاربریابی</a></li>
+                                                <li><a href="alerts.html">ارسال انبوه</a></li>
+                                                <li><a href="form-elements.html">تعامل کار خودکار</a></li>
+                                                <li><a href="chart-chartjs.html">آنتی روح</a></li>
+                                                <li><a href="table-data.html">دایرکت هوشمند</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-6 col-md-3 reveal revealleft">
+                                            <h6>آشنایی با ما</h6>
+                                            <ul class="mb-5 mb-lg-0 ps-0">
+                                                <li><a href="/landing/about">تیم ما</a></li>
+                                                <li><a href="/landing/tamasbama">با ما تماس بگیرید</a></li>
+                                                <li><a href="/landing/about">درباره ما</a></li>
+                                                <li><a href="/landing/blog">وبلاگ</a></li>
+                                                <li><a href="/landing/rules">شرایط و خدمات</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-12 col-md-6 reveal revealleft">
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer class="main-footer px-0 text-center border-top mt-3 py-3">
+                                    <div class="row ">
+                                        <div class="col-md-12 col-sm-12">
+                                            کپی رایت © <span id="year"></span> <a
+                                                href="https://www.instagram.com/marsagencyir/">mars agency</a>.
+                                            طراحی شده با <span class="fa fa-heart text-danger"></span>  <a
+                                                href="https://www.instagram.com/marsagencyir/"> </a> تمامی
+                                            حقوق محفوظ است.
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer -->
+  </div>
+  <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+  <script src="../../static/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="../../static/assets/plugins/bootstrap/popper.min.js"></script>
+  <script src="../../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../static/assets/plugins/counters/counterup.min.js"></script>
+  <script src="../../static/assets/plugins/counters/waypoints.min.js"></script>
+  <script src="../../static/assets/plugins/counters/counters-1.js"></script>
+  <script src="../../static/assets/plugins/owl-carousel/owl.carousel.js"></script>
+  <script src="../../static/assets/landing/lib/company-slider/slider.js"></script>
+  <script src="../../static/assets/plugins/tabs/jquery.multipurpose_tabcontent.js"></script>
+  <script src="../../static/assets/plugins/tabs/tab-content.js"></script>
+  <script src="../../static/assets/plugins/rating/jquery-rate-picker.js"></script>
+  <script src="../../static/assets/plugins/rating/rating-picker.js"></script>
+  <script src="../../static/assets/plugins/ratings-2/jquery.star-rating.js"></script>
+  <script src="../../static/assets/plugins/ratings-2/star-rating.js"></script>
+  <script src="../../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="../../static/assets/landing/js/sidemenu.js"></script>
+  <script src="../../static/assets/js/sticky.js"></script>
+  <script src="../../static/assets/js/themecolor.js"></script>
+  <script src="../../static/assets/landing/js/landing.js"></script>
+  <script src="../../static/assets/switcher/js/switcher.js"></script>
+  <script src="../../static/assets/plugins/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>

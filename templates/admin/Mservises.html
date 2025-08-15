@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Description" content="ادیمین داشبورد" />
+    <meta name="Author" content="برنامه نویسان ادمینتو" />
+    <meta
+      name="Keywords"
+      content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین"
+    />
+
+    <!-- Title -->
+    <title>ادیمین داشبورد</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon" />
+
+    <!-- styles code -->
+    <!-- Bootstrap css -->
+    <link
+      href="../static/assets/plugins/bootstrap/css/bootstrap.css"
+      rel="stylesheet"
+      id="style"
+    />
+
+    <!-- Style css -->
+    <link href="../static/assets/css/style.css" rel="stylesheet" />
+    <link href="../static/assets/css/plugins.css" rel="stylesheet" />
+
+    <!-- Icons css -->
+    <link href="../static/assets/css/icons.css" rel="stylesheet" />
+    <!-- Font css -->
+		<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+    <!-- Animations css -->
+    <link href="../static/assets/css/animate.css" rel="stylesheet" />
+
+    <!-- Switcher css -->
+    <link href="../static/assets/switcher/css/switcher.css" rel="stylesheet" />
+    <link href="../static/assets/switcher/demo.css" rel="stylesheet" />
+
+    <!-- End styles -->
+  </head>
+
+  <body class="main-body app sidebar-mini ltr">
+    <!-- Loader -->
+    <div id="global-loader">
+      <img
+        src="../static/assets/img/loaders/loader-4.svg"
+        class="loader-img"
+        alt="Loader"
+      />
+    </div>
+    <!-- /Loader -->
+    <!-- page -->
+    <div class="page custom-index">
+      <!-- app header code -->
+      {% include "all_user_headr.html" %}
+
+      <!-- End app header Code -->
+
+      <!-- app sidebar Code -->
+       {% include "admin/admin_base.html" %}
+      <!-- End app sidebar Code -->
+
+      <!-- main-content -->
+      <div class="main-content app-content">
+        <!-- container -->
+        <div class="main-container container-fluid">
+          <!-- breadcrumb -->
+          <div class="breadcrumb-header justify-content-between">
+            <div>
+              <!-- <h4 class="content-title mb-2 mb-xl-0">داشبورد ادمین</h4> -->
+            </div>
+            <div class="d-flex my-auto">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <!-- <a href="index5.html">خانه</a> -->
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <!-- داشبورد ادمین -->
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <!-- /breadcrumb -->
+          <!-- main-content-body -->
+          <div class="main-content-body">
+            <div class="container mb-4">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="mb-0">مدیریت پکیج‌ها</h5>
+                <button
+                  data-bs-target="#packageModal"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  onclick="openAddPackage()"
+                  style="z-index:1;"
+                >
+                  افزودن پکیج جدید
+                </button>
+              </div>
+              <ul class="nav nav-tabs" id="packageTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="user-packages-tab" data-bs-toggle="tab" data-bs-target="#user-packages" type="button" role="tab">پکیج مشتری</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="marketer-packages-tab" data-bs-toggle="tab" data-bs-target="#marketer-packages" type="button" role="tab">پکیج بازاریاب</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="packageTabsContent">
+                <div class="tab-pane fade show active" id="user-packages" role="tabpanel">
+                  <table class="table table-bordered table-hover text-center">
+                    <thead class="table-light">
+                      <tr>
+                        <th>نام پکیج</th>
+                        <th>قیمت (ریال)</th>
+                        <th>ارسال</th>
+                        <th>آنتی</th>
+                        <th>یافتن</th>
+                        <th>انتی روح</th>
+                        <th>زمان</th>
+                        <th>عملیات</th>
+                      </tr>
+                    </thead>
+                    <tbody id="packagesTableBody">
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="marketer-packages" role="tabpanel">
+                  <table class="table table-bordered table-hover text-center">
+                    <thead class="table-light">
+                      <tr>
+                        <th>نام پکیج</th>
+                        <th>قیمت (ریال)</th>
+                        <th>تاریخ ایجاد</th>
+                        <th>عملیات</th>
+                      </tr>
+                    </thead>
+                    <tbody id="marketerPackagesTableBody">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="packageModal"
+              tabindex="-1"
+              aria-labelledby="packageModalLabel"
+              aria-hidden="true"
+              data-bs-backdrop="false"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="packageModalLabel">
+                      افزودن/ویرایش پکیج
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul class="nav nav-tabs" id="packageTabs" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="basic-tab" data-bs-toggle="tab" data-bs-target="#basic" type="button" role="tab">پکیج مشتری</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="market-tab" data-bs-toggle="tab" data-bs-target="#market" type="button" role="tab">پکیج بازاریاب</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="packageTabsContent">
+                      <div class="tab-pane fade show active" id="basic" role="tabpanel">
+                        <form id="packageForm">
+                          <input type="hidden" id="packageId" />
+                          <div class="mb-3">
+                            <label for="packageName" class="form-label">نام پکیج</label>
+                            <input type="text" class="form-control" id="packageName" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="packagePrice" class="form-label">قیمت (ریال)</label>
+                            <input type="number" class="form-control" id="packagePrice" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="packageanti" class="form-label">انتی روح</label>
+                            <input type="number" class="form-control" id="packageanti" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="packagefound" class="form-label">کاربر یاب</label>
+                            <input type="number" class="form-control" id="packagefound" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="packagesend" class="form-label">ارسال</label>
+                            <input type="number" class="form-control" id="packagesend" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="packagedirect" class="form-label">دایرکتم</label>
+                            <input type="number" class="form-control" id="packagedirect" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="packagetime" class="form-label">زمان</label>
+                            <input type="number" class="form-control" id="packagetime" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="packageDesc" class="form-label">توضیحات</label>
+                            <textarea class="form-control" id="packageDesc" rows="2" ></textarea>
+                          </div>
+                          <button id="add_pack_save" type="submit" class="btn btn-success w-100">ذخیره</button>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="market" role="tabpanel">
+                        <form id="marketForm">
+                          <div class="mb-3">
+                            <label for="marketName" class="form-label">نام پکیج</label>
+                            <input type="text" class="form-control" id="marketName" required />
+                          </div>
+                          <div class="mb-3">
+                            <label for="marketPrice" class="form-label">قیمت (ریال)</label>
+                            <input type="number" class="form-control" id="marketPrice" required />
+                          </div>
+                          <button type="submit" class="btn btn-success w-100">ذخیره</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /container -->
+        </div>
+        <!-- Container closed -->
+      </div>
+      <!-- main-content closed -->
+
+      <!-- Footer code -->
+
+      <div class="main-footer ht-45">
+        <div class="container-fluid pd-t-0 ht-100p">
+          <span>
+            <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی
+            شده با عشق <span class="fa fa-heart text-danger"></span> توسط
+            <a href="https://instagram.com/marsagencyir"> برنامه نویسان </a>
+            mars agency</span
+          >
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <!-- End Page -->
+
+    <!-- scripts code -->
+    <!-- Back-to-top -->
+    <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+    <!-- JQuery min js -->
+    <script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle js -->
+    <script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+    <script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Ionicons js -->
+    <script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+    <!-- Moment js -->
+    <script src="../static/assets/plugins/moment/moment.js"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- P-scroll js -->
+    <script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+    <!-- Switcher js -->
+    <script src="../static/assets/switcher/js/switcher.js"></script>
+
+    <!-- Eva-icons js -->
+    <script src="../static/assets/js/eva-icons.min.js"></script>
+
+    <!-- Sidebar js -->
+    <script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+    <!-- sticky js -->
+    <script src="../static/assets/js/sticky.js"></script>
+
+    <!--- Index js -->
+    <script src="../static/assets/js/script.js"></script>
+
+    <!--- Chart bundle min js -->
+    <script src="../static/assets/plugins/chart.js/Chart.bundle.min.js"></script>
+
+    <!-- JQuery sparkline js -->
+    <script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!--- Internal Sampledata js -->
+    <script src="../static/assets/js/chart.flot.sampledata.js"></script>
+
+    <!-- ApexChart -->
+    <script src="../static/assets/js/apexcharts.min.js"></script>
+
+    <!--- Internal Vector-maps js -->
+    <script src="../static/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../static/assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+
+    <!--- Index js -->
+    <script src="../static/assets/js/index5.js"></script>
+
+    <!--themecolor js-->
+    <script src="../static/assets/js/themecolor.js"></script>
+
+    <!--swither-styles js-->
+    <script src="../static/assets/js/swither-styles.js"></script>
+
+    <!-- Custom js -->
+    <script src="../static/assets/js/custom.js"></script>
+
+    <script>
+      async function renderPackages() {
+        try {
+          const response = await fetch('/api/packages', {
+            method: 'POST'
+          });
+
+          if (!response.ok) {
+            throw new Error('Failed to fetch packages');
+          }
+
+          const data = await response.json();
+          
+          // Clear both tables
+          document.getElementById("packagesTableBody").innerHTML = "";
+          document.getElementById("marketerPackagesTableBody").innerHTML = "";
+
+          // Loop for normal user packages using package.to_dict()
+          data.user_packs.forEach(pkg => {
+            document.getElementById("packagesTableBody").innerHTML += `
+              <tr>
+                <td>${pkg.name || ''}</td>
+                <td>${pkg.price || 0}</td>
+                <td>${pkg.send || 0}</td>
+                <td>${pkg.ghost || 0}</td>
+                <td>${pkg.find || 0}</td>
+                <td>${pkg.disc || pkg.option || ''}</td>
+                <td>${pkg.time || 0}</td>
+                <td>
+                  <button class='btn btn-danger btn-sm' onclick='deletePackage(${pkg.id})'>حذف</button>
+                </td>
+              </tr>
+            `;
+          });
+
+          // Loop for marketer packages using marketer_pack.to_dict()
+          data.marketer_packs.forEach(pkg => {
+            document.getElementById("marketerPackagesTableBody").innerHTML += `
+              <tr>
+                <td>${pkg.name || ''}</td>
+                <td>${pkg.price || 0}</td>
+                <td>${pkg.time || ''}</td>
+                <td>
+                  <button class='btn btn-danger btn-sm' onclick='deleteMarketerPackage(${pkg.id})'>حذف</button>
+                </td>
+              </tr>
+            `;
+          });
+
+        } catch (error) {
+          console.error('Error loading packages:', error);
+          alert('خطا در بارگذاری پکیج‌ها');
+        }
+      }
+
+      function openAddPackage() {
+        document.getElementById("packageModalLabel").innerText =
+          "افزودن پکیج جدید";
+        document.getElementById("packageId").value = "";
+        document.getElementById("packageName").value = "";
+        document.getElementById("packagePrice").value = "";
+        document.getElementById("packagesend").value = "";
+        document.getElementById("packageanti").value = "";
+        document.getElementById("packagefound").value = "";
+        document.getElementById("packageDesc").value = "";
+        document.getElementById("packagetime").value = "";
+      }
+
+      function openEditPackage(id) {
+        const pkg = packages.find((p) => p.id === id);
+        document.getElementById("packageModalLabel").innerText = "ویرایش پکیج";
+        document.getElementById("packageId").value = pkg.id;
+        document.getElementById("packageName").value = pkg.name;
+        document.getElementById("packagePrice").value = pkg.price;
+        document.getElementById("packageDesc").value = pkg.desc;
+        document.getElementById("packagetime").value = pkg.time;
+        var modal = new bootstrap.Modal(
+          document.getElementById("packageModal")
+        );
+        modal.show();
+      }
+
+      function deletePackage(id) {
+        if (confirm("آیا از حذف این پکیج مطمئن هستید؟")) {
+          fetch('/api/delete', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: id, type: 'user' })
+          })
+          .then(response => {
+            if (response.ok) {
+              renderPackages();
+            } else {
+              alert("خطا در حذف پکیج!");
+            }
+          })
+          .catch(error => {
+            console.error("Error:", error);
+            alert("خطا در حذف پکیج!");
+          });
+        }
+      }
+
+      function deleteMarketerPackage(id) {
+        if (confirm("آیا از حذف این پکیج مطمئن هستید؟")) {
+          fetch('/api/delete', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: id, type: 'marketer' })
+          })
+          .then(response => {
+            if (response.ok) {
+              renderPackages();
+            } else {
+              alert("خطا در حذف پکیج!");
+            }
+          })
+          .catch(error => {
+            console.error("Error:", error);
+            alert("خطا در حذف پکیج!");
+          });
+        }
+      }
+
+      document.getElementById("packageForm").onsubmit = function (e) {
+        e.preventDefault();
+        console.log("Form submitted");
+        const id = document.getElementById("packageId").value;
+        const name = document.getElementById("packageName").value;
+        const price = document.getElementById("packagePrice").value;
+        const send= document.getElementById("packagesend").value ;
+        const anti= document.getElementById("packageanti").value ;
+        const found=document.getElementById("packagefound").value;
+        const desc = document.getElementById("packageDesc").value;
+        const time = document.getElementById("packagetime").value;
+        if (id) {
+          // ویرایش
+          const pkg = packages.find((p) => p.id == id);
+          pkg.name = name;
+          pkg.price = price;
+          pkg.desc = desc;
+        } else {
+          // افزودن
+         const data = {
+        id: id,
+        pack_name: name,
+        type: "user",
+        price: price,
+        send: send,
+        ghost: anti,
+        find: found,
+        disc: desc,
+        time:time
+    };
+        fetch("/api/add_pack", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to add package");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        
+        packages.push(data); // اگر می‌خواهی لیست محلی را هم بروز کنی
+        renderPackages();
+        bootstrap.Modal.getInstance(
+          document.getElementById("packageModal")
+        ).hide();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("خطایی رخ داده است.");
+      });
+        }
+        renderPackages();
+        bootstrap.Modal.getInstance(
+          document.getElementById("packageModal")
+        ).hide();
+      };
+
+      // بازایاب اسکریپت
+      document.getElementById("marketForm").onsubmit = function(e) {
+        e.preventDefault();
+        const marketName = document.getElementById("marketName").value;
+        const marketPrice = document.getElementById("marketPrice").value;
+        
+        const data = {
+          type: "marketer",
+          pack_name: marketName,
+          price: marketPrice
+        };
+
+        fetch("/api/add_pack", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to add market finder package");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          renderPackages();
+          bootstrap.Modal.getInstance(document.getElementById("packageModal")).hide();
+          document.getElementById("marketName").value = "";
+          document.getElementById("marketPrice").value = "";
+        })
+        .catch((error) => {
+          console.error(error);
+          alert("خطایی رخ داده است.");
+        });
+      };
+
+      // بارگذاری اولیه
+      renderPackages();
+    </script>
+    <!-- End scripts -->
+  </body>
+</html>

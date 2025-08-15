@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="سبد خرید">
+	<meta name="Author" content="برنامه نویسان ادمینتو">
+	<meta name="Keywords" content="قالب مدیریت ادمنتو , داشبورد مدیریتی , تم مدیریتی , قالب  html , قالب  مدیریت بوت استرپ  , طراحی قالب مدیریت , طراحی قالب ادمین">
+
+	<!-- Title -->
+	<title>سبد خرید</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../static/assets/img/brand/favicon.png" type="image/x-icon">
+
+	<!-- styles code -->
+	<!-- Bootstrap css -->
+	<link href="../static/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" id="style">
+
+	<!-- Style css -->
+	<link href="../static/assets/css/style.css" rel="stylesheet">
+	<link href="../static/assets/css/plugins.css" rel="stylesheet">
+
+	<!-- Icons css -->
+	<link href="../static/assets/css/icons.css" rel="stylesheet">
+	<!-- Font css -->
+	<link href="../static/assets/font/Morabba/fontiran.css" rel="stylesheet">
+	<!-- Animations css -->
+	<link href="../static/assets/css/animate.css" rel="stylesheet">
+
+
+
+	<!-- Switcher css -->
+	<link href="../static/assets/switcher/css/switcher.css" rel="stylesheet">
+	<link href="../static/assets/switcher/demo.css" rel="stylesheet">
+
+	<!-- End styles -->
+
+</head>
+
+<body class="main-body app sidebar-mini ltr">
+
+	<!-- Loader -->
+	<div id="global-loader">
+		<img src="../static/assets/img/loaders/loader-4.svg" class="loader-img" alt="Loader">
+	</div>
+	<!-- /Loader -->
+	<!-- page -->
+	<div class="page custom-index">
+
+		<!-- main-content -->
+		<div class="main-content app-content"  style="margin-inline-start:0;">
+
+			<!-- container -->
+			<div class="main-container container-fluid">
+
+
+				<!-- breadcrumb -->
+				<div class="breadcrumb-header justify-content-between">
+					<div>
+						<h4 class="content-title mb-2 mb-xl-0">سبد خرید</h4>
+					</div>
+					<div class="d-flex my-auto">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active " aria-current="page">سبد خرید</li>
+								<li class="breadcrumb-item active " aria-current="page">سبد خرید</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- /breadcrumb -->
+				<!-- row opened -->
+				<div class="row">
+					<div class="col-md-12 col-xl-8">
+						<div class="card">
+							<div class="card-body">
+								<div class="product-details table-responsive text-nowrap">
+									<table class="table table-bordered table-hover mb-0 text-nowrap">
+										<thead>
+											<tr>
+												<th>نام پکیج</th>
+												<th class="w-150">تعداد</th>
+												<th>قیمت</th>
+												<th>عمل</th>
+											</tr>
+										</thead>
+										<tbody id="cart-items">
+											<!-- Cart items will be loaded here dynamically -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-xl-4">
+			
+						<div class="card">
+							<div class="card-header">
+								<div class="card-title">سفارش تابستانی</div>
+
+							</div>
+							<div class="card-body">
+								<div class="row mb-4">
+									<div class="col-6"><input class="productcart form-control" type="text" placeholder="کد تخفیف"></div>
+									<div class="col-6"><a href="javascript:void(0);" class="btn btn-primary btn-md">اعمال</a></div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<tbody>
+											<tr>
+												<td>جمع سبد خرید</td>
+												<td class="text-end" id="cart-total">ریال0</td>
+											</tr>   
+											<tr>
+												<td><span>تخفیف</span></td>
+												<td class="text-end text-muted"><span>ریال0</span></td>
+											</tr>
+											<tr>
+												<td><span>مجموع قیمت</span></td>
+												<td><h2 class="price text-end mb-0" id="final-total">ریال0</h2></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<form id="checkout-form" class="text-center">
+									<!-- <button class="btn btn-secondary float-start mt-2 m-b-20 " type="submit" value="Proceed To Checkout">ادامه به پرداخت</button> -->
+									<button  class="btn btn-success mt-2 float-end" type="submit" value="Continue Shopping">ادامه خرید</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- row closed -->
+
+
+			</div>
+			<!-- Container closed -->
+		</div>
+		<!-- main-content closed -->
+	
+    <!-- Footer code -->
+
+    <div class="main-footer ht-45">
+        <div class="container-fluid pd-t-0 ht-100p">
+            <span> <a href="javascript:void(0);" class="text-primary">آیکال</a>. طراحی شده با عشق <span
+                    class="fa fa-heart text-danger"></span> توسط <a href="https://instagram.com/marsagencyir"> برنامه
+                    نویسان </a> mars agency</span>
+        </div>
+    </div>
+    <!-- End Footer -->
+	</div>
+	<!-- End Page -->
+	<!-- scripts code -->
+	<!-- Back-to-top -->
+	<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+	<!-- JQuery min js -->
+	<script src="../static/assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Bundle js -->
+	<script src="../static/assets/plugins/bootstrap/popper.min.js"></script>
+	<script src="../static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Ionicons js -->
+	<script src="../static/assets/plugins/ionicons/ionicons.js"></script>
+
+	<!-- Moment js -->
+	<script src="../static/assets/plugins/moment/moment.js"></script>
+
+	<!-- JQuery sparkline js -->
+	<script src="../static/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- P-scroll js -->
+	<script src="../static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../static/assets/plugins/perfect-scrollbar/p-scroll.js"></script>
+
+	<!-- Switcher js -->
+	<script src="../static/assets/switcher/js/switcher.js"></script>
+
+	<!-- Eva-icons js -->
+	<script src="../static/assets/js/eva-icons.min.js"></script>
+
+	<!-- Sidebar js -->
+	<script src="../static/assets/plugins/side-menu/sidemenu.js"></script>
+
+	<!-- sticky js -->
+	<script src="../static/assets/js/sticky.js"></script>
+
+	<!--- Index js -->
+	<script src="../static/assets/js/script.js"></script>
+
+
+	<!-- Select2.min js -->
+	<script src="../static/assets/plugins/select2/js/select2.min.js"></script>
+	<script src="../static/assets/js/select2.js"></script>
+
+
+	<!--themecolor js-->
+	<script src="../static/assets/js/themecolor.js"></script>
+
+	<!--swither-styles js-->
+	<script src="../static/assets/js/swither-styles.js"></script>
+
+	<!-- Custom js -->
+	<script src="../static/assets/js/custom.js"></script>        <!-- End scripts -->
+<script>
+document.getElementById('checkout-form').addEventListener('submit', function(e) {
+
+    e.preventDefault(); // prevent normal form submission
+
+    // Get cart info (to get pack_id)
+    fetch('/api/shop_cart_info', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (!data || !data.pack_id) {
+            alert('هیچ بسته‌ای در سبد خرید شما وجود ندارد.');
+            return;
+        }
+
+        // Now send pack_id to payment API
+        fetch('/api/zibal_buy', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ package_id: data.pack_id })
+        })
+        .then(res => res.json())
+        .then(result => {
+            if (result.buy_url) {
+                window.location.href = result.buy_url; // Redirect to Zibal
+            } else {
+                alert(result.error || 'پرداخت با خطا مواجه شد.');
+            }
+        })
+        .catch(error => {
+            console.error('Error contacting Zibal:', error);
+            alert('خطا در ارسال درخواست پرداخت.');
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching cart info:', error);
+        alert('خطا در دریافت اطلاعات سبد خرید.');
+    });
+});
+</script>
+
+
+	<script>
+		// Function to load cart items
+		function loadCartItems() {
+			fetch('/api/shop_cart_info',{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({})
+			})
+				.then(response => response.json())
+				.then(data => {
+					const cartItemsContainer = document.getElementById('cart-items');
+					
+					// If data is empty or has no properties, clear the container and return
+					if (!data || Object.keys(data).length === 0) {
+						cartItemsContainer.innerHTML = '';
+						document.getElementById('cart-total').textContent = 'ریال0';
+						document.getElementById('final-total').textContent = 'ریال0';
+						return;
+					}
+					
+					cartItemsContainer.innerHTML = `
+						<tr>
+							<td>
+								<div class="media align-items-center">
+									<div class="media-body">
+										<div class="card-item-desc mt-0">
+											<h6 class="font-weight-semibold mb-1 text-uppercase">${data.pack_name}</h6>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<span>1</span>
+							</td>
+							<td class="text-center">${data.price} <span>ریال</span></td>
+							<td class="text-center">
+								<a href="javascript:void(0);" class="btn btn-danger btn-sm text-white" onclick="deleteCartItem(${data.pack_id})" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
+							</td>
+						</tr>
+					`;
+					
+					// Update totals
+					document.getElementById('cart-total').textContent = `ریال${data.price}`;
+					document.getElementById('final-total').textContent = `ریال${data.price}`;
+				})
+				.catch(error => {
+					console.error('Error:', error);
+					// Clear the container and reset totals on error
+					const cartItemsContainer = document.getElementById('cart-items');
+					cartItemsContainer.innerHTML = '';
+					document.getElementById('cart-total').textContent = 'ریال0';
+					document.getElementById('final-total').textContent = 'ریال0';
+				});
+		}
+
+		// Function to delete cart item
+		function deleteCartItem(packId) {
+			fetch('/api/del_shop_cart', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ pack_id: packId })
+			})
+			.then(response => loadCartItems())
+			.then(data => {
+				if (data.error) {
+					console.error('Error:', data.error);
+					return;
+				}
+				// Reload cart items after successful deletion
+				loadCartItems();
+			})
+			.catch(error => console.error('Error:', error));
+		}
+
+		// Load cart items when page loads
+		document.addEventListener('DOMContentLoaded', loadCartItems);
+	</script>
+
+</body>
+
+
+</html>

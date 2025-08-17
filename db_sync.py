@@ -54,7 +54,10 @@ import shutil
 import logging
 #DROP TABLE IF EXISTS alembic_version;
 MIGRATION_DIR = 'migrations'
-DATABASE_URI = 'mysql+mysqlconnector://root:vtesnoWyky2bngz7mRQzrGCm@sahand.liara.cloud:30285/practical_keller'
+# DATABASE_URI = 'mysql+mysqlconnector://root:vtesnoWyky2bngz7mRQzrGCm@sahand.liara.cloud:30285/practical_keller'
+DATABASE_URI = "mysql+mysqlconnector://root:1234m@127.0.0.1:3306/aykal_db"
+
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI

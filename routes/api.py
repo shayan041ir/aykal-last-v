@@ -79,6 +79,39 @@ s_url='http://54.36.68.41:5100'
 line='\n=======================---------===============================\n'
 site_api=Blueprint('apis',__name__,url_prefix='/api')
 
+
+@site_api.route('/anti_gost_append', methods=['POST'])
+def append_ghost():
+    try:
+        data = request.get_json()
+
+        username = data.get("username")
+        password = data.get("password")
+        email = data.get("email")
+        phone = data.get("phone")
+
+        # Basic validation
+        if not username or not password or not email or not phone:
+            return jsonify({"status": "error", "message": "Missing required fields"}), 400
+
+
+
+       
+        new_acount= models.anti_g(
+                user_id=current_user.id,
+                acount_name=username,
+                acount_password=password,
+                email=email
+        ) 
+
+        models.db.session.add(new_acount)
+        models.db.session.commit()
+   
+
+        return jsonify({"status": "success", "message": "Form submitted successfully!"}), 200
+
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500  
 @site_api.route('/job', methods=['POST'])
 def job():
     data = request.get_json()

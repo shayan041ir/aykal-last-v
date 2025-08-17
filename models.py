@@ -90,6 +90,17 @@ class sms_verfy(db.Model):
 
 
 
+
+class anti_g(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    user_id = db.Column(db.Integer, nullable=False)
+    acount_name = db.Column(db.String(100), nullable=False)
+    acount_password = db.Column(db.String(255), nullable=False)   # consider hashing later!
+    email = db.Column(db.String(120), nullable=False)
+ 
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+
 #sale
 class sale(db.Model): 
     id = db.Column(db.Integer, primary_key=True)

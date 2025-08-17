@@ -3,6 +3,7 @@ from flask_login import LoginManager, current_user,login_required
 from models import User,sms_verfy,db,sale,sale_way
 import models
 from time import sleep
+from routes.funtions import commen_func
 from routes.api import get_bazaryab
 debug_line='-------------------------'
 class   sellers_sigin_up:
@@ -34,6 +35,26 @@ def check_role_admin():
 @login_required
 def Addblog():
     return render_template('admin/Addblog.html',user=current_user)
+@admin_bp.route('/g_requests', methods=['GET'])
+@login_required
+def g_requests():
+    g_list = models.anti_g.query.all()
+
+    result = []
+    for g in g_list:
+        user = g.user  # from relationship
+        result.append({
+            "img": user.pic_path if user and user.pic_path else "/static/default.png",
+            "name": f"{user.first_name} {user.last_name}" if user else "Unknown",
+            "phone": g.phone if hasattr(g, "phone") else "-",   # ✅ phone from anti_g
+            "date": commen_func.dateJ(g.created_at),
+        })
+
+    return render_template(
+        'admin/anti-and-taamol.html',
+        user=current_user,
+        g_list=result
+    )
 
 
 @admin_bp.route('/Mcomments',methods=['GET'])

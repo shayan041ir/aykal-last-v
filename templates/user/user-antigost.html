@@ -233,25 +233,8 @@
                                 </div>
                             </form>
                             <!-- اسکریپت -->
-                            <script>
-                            const form = document.getElementById('myForm');
-                            const alertBox = document.getElementById('formAlert');
-
-                            form.addEventListener('submit', function(e) {
-                                e.preventDefault(); // جلوگیری از ارسال واقعی فرم (برای تست یا ارسال Ajax)
-                                
-                                // اینجا می‌تونی ارسال AJAX انجام بدی، فعلاً فقط نمایش اعلان:
-                                alertBox.classList.remove('d-none'); // نمایش اعلان
-
-                                // پاک کردن فرم بعد از ارسال (اختیاری)
-                                form.reset();
-
-                                // بستن خودکار اعلان بعد از چند ثانیه (اختیاری)
-                                setTimeout(() => {
-                                alertBox.classList.add('d-none');
-                                }, 4000);
-                            });
-                            </script>
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -344,6 +327,47 @@
     <!-- End scripts -->
 
 </body>
+<script>
+document.getElementById("myForm").addEventListener("submit", async function (e) {
+    e.preventDefault(); // stop normal form submit
+
+    // Collect form values
+    const username = this.querySelector("input[type='text']").value;
+    const password = this.querySelector("#passwordField").value;
+    const email = this.querySelector("input[type='email']").value;
+    const phone = this.querySelector("input[type='tel']").value;
+
+    // Build payload
+    const data = {
+        username: username,
+        password: password,
+        email: email,
+        phone: phone
+    };
+
+    try {
+        // Send API request (replace /api/register with your endpoint)
+        const response = await fetch("/api/anti_gost_append", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            // Show success alert
+            document.getElementById("formAlert").classList.remove("d-none");
+            this.reset(); // clear form
+        } else {
+            alert("Error: " + response.statusText);
+        }
+    } catch (err) {
+        console.error("Fetch error:", err);
+        alert("Something went wrong!");
+    }
+});
+</script>
 
 
 </html>

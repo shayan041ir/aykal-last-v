@@ -94,23 +94,29 @@
 									<div class="table-responsive"  style="max-height: 300px; overflow-y: auto;">
 										<table class="table border-width border-0 mb-0">
 											<tbody> 
-												<tr>
-													<td class="border-top-0">
-														<div class="d-flex">
-															<div class="me-2">
-																<span class="avatar rounded-5"><img src="../static/assets/img/users/1.jpg" alt="img" class="rounded-5"></span>
-															</div>
-															<div class="flex-1">
-																<h6 class="mb-1">پری اسکوپ</h6>
-															</div>
-														</div>
-													</td>
-													<td class="border-top-0">
-														<span class="text-muted">1404/2/3</span>
-														<div class="tx-18">09146491018</div>
-													</td>
-												</tr>
+												{% for i in g_list %}
+<tr>
+    <td class="border-top-0">
+        <div class="d-flex">
+            <div class="me-2">
+                <span class="avatar rounded-5">
+                    <img src="{{ i.img }}" alt="img" class="rounded-5">
+                </span>
+            </div>
+            <div class="flex-1">
+                <h6 class="mb-1">{{ i.name }}</h6>
+            </div>
+        </div>
+    </td>
+    <td class="border-top-0">
+        <span class="text-muted">{{ i.date }}</span>
+        <div class="tx-18">{{ i.phone }}</div>   <!-- now anti_g.phone -->
+    </td>
+</tr>
+{% endfor %}
+
 											</tbody>
+
 										</table>
 									</div>
 								</div>

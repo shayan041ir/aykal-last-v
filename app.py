@@ -1,9 +1,9 @@
 from flask import Flask , blueprints,render_template,redirect,url_for,request, send_from_directory
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 import models
-from routes import api_login
+from routes.api import api_login
 from routes.admin import admin_dashbord
-from routes import api
+from routes.api import api
 from routes.marketer import marketer_dash
 from routes.user import user_dashbord
 from routes.mail import mail

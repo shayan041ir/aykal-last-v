@@ -5,6 +5,7 @@ import models
 from random import randint
 import jdatetime
 from routes.funtions import commen_func
+from routes.api import api
 line='------------------------------------'
 
 payment_bp=Blueprint('payment',__name__,url_prefix='/payment')
@@ -14,8 +15,8 @@ payment_bp=Blueprint('payment',__name__,url_prefix='/payment')
 '''
 
 class Zibal:
-    def __init__(self, merchant="682e1dc3a45c72001b40d080", callback_url="http://aykalapp.com/api/verify"):
-    # def __init__(self, merchant="zibal", callback_url="http://aykalapp.com/api/verify"):
+    # def __init__(self, merchant="682e1dc3a45c72001b40d080", callback_url="http://aykalapp.com/api/verify"):
+    def __init__(self, merchant="zibal", callback_url="http://aykalapp.com/api/verify"):
         """
         Initialize the Zibal payment gateway integration.
         :param merchant: Your merchant code provided by Zibal.
@@ -117,20 +118,13 @@ def package():
     sub_fee=models.marketer_pack.query.filter_by().first()
     amount=sub_fee.price if sub_fee else '180,000'
     if request.method == 'POST':
-        name = request.form.get('marketerName')
-        phone = request.form.get('marketerPhone')
         import os
         os.system('cls')
-        print(line,name,phone)
-        # Prevent phone number tampering
-        if phone != current_user.phone_number:
-            flash('شماره موبایل غیرمعتبر است.', 'danger')
-            return redirect(url_for('payment.package'))
-
-       
-        if name != current_user.first_name:
-            current_user.name = name
-            models.db.session.commit()  
-            print('new_name is:',name)
-        
+        url=api.zibal_pay_up(
+                    price=amount if isinstance(amount, (int, float)) else 18000,
+                    description='هزینه ثبت نام بازاریاب',
+                    user=current_user.phone_number
+                    )
+        print('this is post',url)
+        return redirect(url)
     return render_template('payment/subscription.html',user=current_user,sub_fee=amount)

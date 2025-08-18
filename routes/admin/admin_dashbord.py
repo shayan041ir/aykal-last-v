@@ -4,7 +4,7 @@ from models import User,sms_verfy,db,sale,sale_way
 import models
 from time import sleep
 from routes.funtions import commen_func
-from routes.api import get_bazaryab
+from routes.api.api import get_bazaryab
 debug_line='-------------------------'
 class   sellers_sigin_up:
     def __init__(self, name=None,date=None,price=None,img_path=None,phone=None,stats=0):

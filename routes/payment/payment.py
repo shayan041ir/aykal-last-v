@@ -15,8 +15,8 @@ payment_bp=Blueprint('payment',__name__,url_prefix='/payment')
 '''
 
 class Zibal:
-    # def __init__(self, merchant="682e1dc3a45c72001b40d080", callback_url="http://aykalapp.com/api/verify"):
-    def __init__(self, merchant="zibal", callback_url="http://aykalapp.com/api/verify"):
+    def __init__(self, merchant="682e1dc3a45c72001b40d080", callback_url="http://aykalapp.com/api/verify"):
+    # def __init__(self, merchant="zibal", callback_url="http://aykalapp.com/api/verify"):
         """
         Initialize the Zibal payment gateway integration.
         :param merchant: Your merchant code provided by Zibal.
@@ -121,10 +121,16 @@ def package():
         import os
         os.system('cls')
         url=api.zibal_pay_up(
-                    price=amount if isinstance(amount, (int, float)) else 18000,
+                    price=amount if isinstance(amount, (int, float)) else 180000000,
                     description='هزینه ثبت نام بازاریاب',
                     user=current_user.phone_number
                     )
-        print('this is post',url)
-        return redirect(url)
+        # if isinstance(url,str):
+        if url!='e':
+            print('this is post',url)
+            return redirect(url)
+        else:
+            print('this is else')
+            flash('لطفا بعدا امتحان کنید')
+            return render_template('payment/subscription.html',user=current_user,sub_fee=amount)
     return render_template('payment/subscription.html',user=current_user,sub_fee=amount)

@@ -260,14 +260,8 @@ def zibal_buy():
         error_msg = zibal_response.get('message', 'درخواست پرداخت با خطا مواجه شد')
         print('Zibal error:', zibal_response)
         return jsonify({'error': error_msg}), 400
-def zibal_pay_up(price,description,user): 
-    
-    
-
-    
-    dergah = payment.Zibal(callback_url='https://aykalapp.com/payment/verify')
-
-    
+def zibal_pay_up(price,description,user):     
+    dergah = payment.Zibal(callback_url='https://aykalapp.com/payment/verify')  
     now = jdatetime.datetime.now()
     order_id = f"mkt_{user}_{now.year}_{now.month}_{now.second}"
 
@@ -287,7 +281,7 @@ def zibal_pay_up(price,description,user):
         return url
     else:
         print('Zibal error:', zibal_response)
-        return 400
+        return 'e'
 
 
 

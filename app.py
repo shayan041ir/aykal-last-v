@@ -12,7 +12,7 @@ from routes.payment import payment
 from routes.bots import bots
 from routes.instagram_api import insta_api
 from routes.landing import landing_r
-from werkzeug.utils import secure_filename
+
 from routes.blog import blog
 import os
 from app import models
@@ -26,7 +26,7 @@ def read_secret_key():
 
 app.config['SECRET_KEY'] ='aykla'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:vtesnoWyky2bngz7mRQzrGCm@sahand.liara.cloud:30285/practical_keller'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:vtesnoWyky2bngz7mRQzrGCm@sahand.liara.cloud:30285/practical_keller'
 app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+mysqlconnector://root:1234m@127.0.0.1:3306/aykal_db"
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:SrNroLvPnQvWQjgygUdXzXKc@aykaldb-v2:3306/nice_kepler'

@@ -98,6 +98,7 @@ def login():
 @app.route('/')
 def landing():
     blogs = models.Blog.query.order_by(models.Blog.created_at.desc()).all()
+    
     return render_template('landing/landing-page.html',list=commen_func.list_pack(), blogs=blogs)
 
 

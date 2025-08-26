@@ -65,13 +65,20 @@ def Mcomments():
 @admin_bp.route('/tickets/<int:ticket_id>/close', methods=['POST'])
 @login_required
 def close_ticket(ticket_id):
-    if current_user.role not in [models.UserRole.ADMIN, models.UserRole.SUPPORT]:
+    if current_user.role !=  models.UserRole.ADMIN:
         return redirect('/')
 
-    ticket = models.tiket.query.get_or_404(ticket_id)
-    ticket.role = models.sale_status.done
+    ticket = models.tiket.query.filter_by(id=ticket_id).first()
+    ticket.role = models.sale_status.sucsses
+    print(debug_line,current_user.role ,debug_line)
+    print(debug_line,ticket.role,debug_line)
+    print(debug_line)
+    print("Before commit:", ticket.role, ticket.id)
+    db.session.add(ticket)
     db.session.commit()
-    return redirect(url_for('admin_bp.tickets'))
+    print("After commit", ticket.role, ticket.id)
+    print(debug_line)
+    return redirect(url_for('admin.tickets'))
 
 
 @admin_bp.route('/ticket/<int:ticket_id>', methods=['GET'])
@@ -104,7 +111,9 @@ def tickets():
 
     # Only parent tickets (no replies)
     tickets = models.tiket.query.filter_by(parent_id=None).order_by(models.tiket.created_at.desc()).all()
-
+    # print(debug_line,tickets,debug_line)
+    for i in tickets:
+        print(debug_line,i.role,debug_line)
     return render_template('admin/tickets.html', user=current_user, tickets=tickets)
 
 
@@ -159,8 +168,8 @@ def biadabha():
 @admin_bp.route('/Mlanding',methods=['GET'])
 @login_required
 def Mlanding():
-    return render_template('/admin/Mlanding.html',user=current_user)
-
+    # return render_template('/admin/Mlanding.html',user=current_user)
+    return redirect('/')
 
 @admin_bp.route('/Add-MiniAdmin',methods=['GET'])
 @login_required

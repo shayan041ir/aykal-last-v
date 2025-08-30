@@ -172,14 +172,16 @@
                 <div class="card-body">
                   <ul class="list-group mb-0">
                     {% for post in popular_posts %}
-                      <li class="list-group-item d-flex border-0 pt-3 px-0">
-                        <img src="{{ post.media_url }}" class="avatar rounded-5 avatar-lg me-3 my-auto" alt="avatar-img">
-                        <div>
-                          <span class="d-block mb-1">{{ post.title }}</span>
-                          <p class="text-default tx-12 mb-0 font-weight-semibold white-space-nowrap">{{ post.content | truncate(50) }}</p>
-                          <small class="d-block text-muted mt-1">{{ post.created_at.strftime('%Y-%m-%d') }}</small>
-                        </div>
-                      </li>
+                      <a href="/blog/blog-details/{{ post.id }}">
+                        <li class="list-group-item d-flex border-0 pt-3 px-0">
+                            <img src="{{ post.media_url }}" class="avatar rounded-5 avatar-lg me-3 my-auto" alt="avatar-img">
+                            <div>
+                              <span class="d-block mb-1">{{ post.title }}</span>
+                              <p class="text-default tx-12 mb-0 font-weight-semibold white-space-nowrap">{{ post.content | truncate(50) }}</p>
+                              <small class="d-block text-muted mt-1">{{ post.created_at.strftime('%Y-%m-%d') }}</small>
+                            </div>
+                          </li>
+                      </a>  
                     {% endfor %}
                   </ul>
                 </div>
@@ -234,11 +236,10 @@
                                         <div class="col-lg-2 col-sm-6 col-md-3 reveal revealleft">
                                             <h6>ویژگی ها</h6>
                                             <ul class="mb-5 mb-lg-0 ps-0">
-                                                <li><a href="index.html">کاربریابی</a></li>
-                                                <li><a href="alerts.html">ارسال انبوه</a></li>
-                                                <li><a href="form-elements.html">تعامل کار خودکار</a></li>
-                                                <li><a href="chart-chartjs.html">آنتی روح</a></li>
-                                                <li><a href="table-data.html">دایرکت هوشمند</a></li>
+                                                <li><a href="/blog/blog-details/9">کاربریابی</a></li>
+                                                <li><a href="/blog/blog-details/12">ارسال انبوه</a></li>
+                                                <li><a href="/blog/blog-details/10">تعامل کار خودکار</a></li>
+                                                <li><a href="/blog/blog-details/11">آنتی روح</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-lg-2 col-sm-6 col-md-3 reveal revealleft">
